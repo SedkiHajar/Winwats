@@ -37,6 +37,17 @@ body{
   color: #F9C010;
 }
 
+
+.nav-linkk{
+  color: #F9C010;
+  font-size:1.8rem;
+    font-weight:200;
+    position: absolute;
+    left: 7%;
+}
+.nav-linkk:hover{
+  color: #F9C010;
+}
 /*--- Landing Page ---*/
 
 
@@ -186,7 +197,7 @@ hr.fixed{
 
 footer {
   background-color:black;
-  color:white;
+  color:#F9C010;
   padding:2rem 0 2rem;
   margin-top:0rem;
 }
@@ -195,7 +206,7 @@ footer strong{
   color:#1C90C9; 
 }
 footer a {
-  color:white;
+  color:#1C90C9;
 }
 footer p {
   color:#1C90C9;
@@ -207,7 +218,7 @@ footer svg.svg-inline--fa{
   margin:1.2rem .5rem 0 0;
 }
 footer svg.svg-inline--fa:hover{
-  color:#1C90C9!important;
+  color:#F9C010!important;
 }
 hr.socket{
   width:100%;
