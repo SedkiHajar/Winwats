@@ -30,19 +30,13 @@
                 <a class="nav-link" href="#accueil">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#espaceE">Services</a>
+                <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#espaceA">Smart Home</a>
+                <a class="nav-link" href="#products">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#espaceE">Safety System</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#espaceT">Green Energy</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#about-sec">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
@@ -64,10 +58,8 @@
 <div class="caption text-center">
     <h1>Choisir WINWATS c'est <br>choisir l'avenir</h1>
     <!--  <h2>Une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion</h2>-->
-    <a class="btn btn-outline-light btn-lg" href="#">Visitez notre Showroom</a>
-    <br>
-    <br>
-    <a class="btn btn-outline-light btn-lg" href="#">Voir notre Catalogue</a>
+    <!--  <a class="btn btn-outline-light btn-lg" href="#">Visitez notre Showroom</a>-->
+    
 </div>  <!--- End Landing Page Section -->
 
 </div>  <!--- End accueil Section -->
@@ -82,9 +74,9 @@
 
 
 
-<!--- Start espaceA Section -->
+<!--- Start espaceA Section 
 <div id="espaceA" class="offset">
-<!--- Start Jumbotron -->
+<!--- Start Jumbotron 
 
 <div class="narrow text-center">
 
@@ -99,8 +91,8 @@
         <a class="btn btn-secondary btn-md" href="loginA" >Connexion</a>
       </div>
     </div>
-  </div> <!--- End Row -->   
- </div><!--- End Narrow -->
+  </div> <!--- End Row   
+ </div><!--- End Narrow 
 
 <div class="row">
     <div class="col-md-6 clients">
@@ -146,8 +138,8 @@
 
 
 
-<!--- Start espaceE Section -->
-<div id="espaceE" class="offset">
+<!--- Start services Section -->
+<div id="services" class="offset">
 <div class="fixed-background">
 <div class="row dark text-center">
     <div class="col-12">
@@ -190,13 +182,14 @@
 
 </div>
 </div>
-<!--- End espaceE Section -->
+<!--- End services Section -->
 
 
 
 
 
-<!--- Start espaceT Section -->
+<!--- Start espaceT Section 
+
 <div id="espaceT" class="offset">
 <div class="fixed-background espaceT">
 <div class="row dark text-center">
@@ -224,18 +217,46 @@
         <div class="feature">
             <h1 class="lead">Connectez-vous pour gérer vos transports et vos conducteurs</h1>
     </div>
-</div> <!--- End Row Dark --->
+</div> <!--- End Row Dark
     <div class="fixed-wrap">
         <div class="fixed">
             <hr class="fixed"></hr>
         </div>
     </div>
-</div> <!--- End Fixed Background --->
+</div> <!--- End Fixed Background 
 
 </div>
 
 </div>
 <!--- End espaceT Section -->
+
+
+
+<!--- Start about Section -->
+<section id="about-sec" >
+   <div class="container">
+      <div class="row align-items-center">
+         
+            <div class="col-md-5 text-center">
+                 <img src="img/smart2.jpg" width="450" height="150" class="img-fluid watch-img">
+            </div>
+            <div class="col-md-7 text-lg-left text-center text-color about-text">
+                <h2>A PROPOS DE WINWATS</h2>
+                <p class="text">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion.
+                                </p>
+                <a class="btn btn-outline-dark btn-lg" href="#">Nos activités</a>
+                <a class="btn btn-outline-dark btn-lg" href="#">Showroom</a>
+                <a class="btn btn-outline-dark btn-lg" href="#">Catalogue</a>
+            </div>
+       
+      </div>
+    </div>
+</section>
+
+<!--- End about Section -->
+
+
+
 
 
 <!--- Start contact Section -->
@@ -248,6 +269,7 @@
         <p><div class="feature"><i class="fas fa-map-marker-alt"></i></div>46, Bd Zerktouni 2ème étage App6 - Casablanca <br> Showroom: 66 Hay Fath 3 rue n:4 Ain Chock Casablanca</p>
         <p>  <div class="feature">  <i class="fas fa-phone"></i>  </div>(+212)(552-4744) </p>
         <p><div class="feature"><i class="fas fa-envelope"></i></div>info@winwats.com </p>
+        <a class="btn btn-outline-dark btn-lg" href="#">Contactez-nous</a>
         <!--  <p>Suivez-nous sur nos réseaux sociaux:</p>
         <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>

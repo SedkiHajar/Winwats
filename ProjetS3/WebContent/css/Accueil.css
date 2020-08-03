@@ -20,7 +20,7 @@ body{
   font-weight:700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background: black!important;
+  background: white!important;
 } 
 .navbar-brand img{
   height:3rem;
@@ -50,7 +50,7 @@ spam{
 
 
 .home-inner{
-  background-image: url(../img/smarthome.jpg);
+  background-image: url(../img/smart2.jpg);
 }
 .caption {
   width:100%;
@@ -193,13 +193,63 @@ hr.fixed{
 }
 
 
+/*---About Section---*/
+#about-sec{
+  margin-top:75px;
+}
+.text-color{
+  color:#000;
+}
+.watch-img{
+  margin-top: 35px;
+}
+.watch-img{
+  animation-name:imgLeft;
+  animation-duration:3s;
+}
+.about-text{
+  animation-name:textRight;
+  animation-duration:3s;
+}
+@Keyframes imgLeft{
+  0%{
+       transform:translateX(-120px);
+       opacity:0;
+  }
+  100%{
+       transform:translateX(0);
+       opacity:1;
+  }
+}
+@Keyframes textRight{
+  0%{
+       transform:translateX(30px);
+       opacity:0;
+  }
+  100%{
+       transform:translateX(0);
+       opacity:1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*---Contact Section---*/
 
 
 footer {
-  background-color:black;
+  background-color:white;
   color:#F9C010;
   padding:2rem 0 2rem;
   margin-top:0rem;
