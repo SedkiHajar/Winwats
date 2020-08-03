@@ -13,7 +13,7 @@
 
 
 <body data-spy="scroll" data-target="#navbarResponsive">
-
+<!--gggggggggggggggggggggggggggggggggggg-->
 <!--- Start Accueil Section -->
 <div id="accueil" >
 <!--- Navigation -->
