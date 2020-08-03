@@ -204,8 +204,8 @@ blockquote .svg-inline--fa{
 }
 
 
-/*--- services section---*/
-#services{
+/*--- concept section---*/
+#concept{
 	margin-top:-40px;
 }
 hr.fixed{
@@ -239,7 +239,10 @@ hr.fixed{
 }
 
 
-/*---products Section---*/
+/*---services Section---*/
+#services{
+  margin-top:-40px;
+}
 .seller-item img{
   max-width:300px;
   height:300px;
