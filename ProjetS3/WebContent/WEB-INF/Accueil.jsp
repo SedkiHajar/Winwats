@@ -21,7 +21,7 @@
     <a class="navbar-brand" href="#"> <img src="img/logo.png"/> </a>
     
     <a class="navbar-brand" href="#" ><spam>WINWATS</spam></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -181,7 +181,7 @@
 </div> <!--- End Fixed Background --->
 
 </div>
-</div>
+
 <!--- End services Section -->
 
 
@@ -230,6 +230,44 @@
 </div>
 <!--- End espaceT Section -->
 
+<!--- Start products Section -->
+<div id="products" class="seller py-5">
+<div class="container">
+    <!-- section title -->
+<div class="row">
+        <div class="col-12 text-center">
+            <h1 class="heading">NOS PRODUITS</h1>
+        </div>
+   
+<!--Row-->
+
+    <div class="col-sm-4">
+       <div class="seller-item">
+            <img src="img/smarthome.jpg" alt="" class="img-fluid photo img-top"></img>
+            <p>SMARTHOME</p>
+       </div>
+    </div>
+    <!-- End of col -->
+    <div class="col-sm-4 ">
+       <div class="seller-item">
+            <img src="img/security_assessment.jpg" alt="" class="img-fluid photo img-top">
+            <p>SAFETY SYSTEM</p>
+       </div>
+    </div>
+    <!-- End of col -->
+    <div class="col-sm-4">
+       <div class="seller-item">
+            <img src="img/green2.jpg" alt="" class="img-fluid photo img-top">
+            <p>GREEN ENERGY</p>
+       </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
 
 
 <!--- Start about Section -->
@@ -237,16 +275,16 @@
    <div class="container">
       <div class="row align-items-center">
          
-            <div class="col-md-5 text-center">
-                 <img src="img/smart2.jpg" width="450" height="150" class="img-fluid watch-img">
+            <div class="col-md-7 text-center">
+                 <img src="img/about.png" width="450" height="150" class="img-fluid watch-img">
             </div>
-            <div class="col-md-7 text-lg-left text-center text-color about-text">
-                <h2>A PROPOS DE WINWATS</h2>
+            <div class="col-md-4 text-lg-left text-center text-color about-text">
+                <h3>A PROPOS DE WINWATS</h3>
                 <p class="text">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion.
                                 </p>
-                <a class="btn btn-outline-dark btn-lg" href="#">Nos activités</a>
-                <a class="btn btn-outline-dark btn-lg" href="#">Showroom</a>
-                <a class="btn btn-outline-dark btn-lg" href="#">Catalogue</a>
+                <a class="btn btn-outline-dark btn-lg" href="#">Nos activités</a><br>
+                <br><a class="btn btn-outline-dark btn-lg" href="#">Showroom</a><br>
+                <br><a class="btn btn-outline-dark btn-lg" href="#">Catalogue</a>
             </div>
        
       </div>

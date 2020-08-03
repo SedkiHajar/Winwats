@@ -40,9 +40,11 @@ body{
 
 
 spam{
-  color: #F9C010;
-  
+	color: #F9C010;
+	
 }
+
+
 .nav-linkk:hover{
   color: #F9C010;
 }
@@ -53,10 +55,10 @@ spam{
   background-image: url(../img/smart2.jpg);
 }
 .caption {
-  width:100%;
-  max-width:100%;
+  width:60%;
+  max-width:30%;
   position: absolute;
-  top: 30%;
+  top: 20%;
   z-index:1;
   text-transform:uppercase;
 }
@@ -128,8 +130,9 @@ h3.heading{
 
 
 .row img{
-  width:100%;
-  border-radius:50%;
+  max-width:100%;
+  height:500px;
+  /*--border-radius:50%; */
   left:1rem;
 }
 blockquote .svg-inline--fa{
@@ -161,7 +164,10 @@ blockquote .svg-inline--fa{
 }
 
 
-/*--- espaceE section---*/
+/*--- services section---*/
+#services{
+	margin-top:-40px;
+}
 hr.fixed{
   background-image :url(../img/transport.jpg);
   z-index:-1;
@@ -193,43 +199,92 @@ hr.fixed{
 }
 
 
+/*---products Section---*/
+.seller-item img{
+  max-width:300px;
+  height:300px;
+  /*--border-radius:50%;*/
+  /*--left:1rem;*/
+}
+
+.img-top{
+	margin-top:10px;}
+.seller-item{
+	text-align:right;
+}
+
+.seller-item p{
+	position:absolute;
+	right:30px;
+	left:30px;
+	padding: 10px 0;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+	opacity:0;
+	transition:opacity 0.35s,transform 0.35s;
+	bottom:2px;
+	line-height:1.5;
+	transform:translate3d(0, 100% ,0);
+	
+}
+
+.seller-item:hover p{
+	opacity:1;
+	transform:translate3d(0,0,0);
+}
+
+
+.seller{
+	background: #1C90C9;
+	color:white;
+	margin-top: 30px;
+}
+
+
+
+
+
+
 /*---About Section---*/
 #about-sec{
-  margin-top:75px;
+	margin-top:1200px;
+	background-color:#FFFFED;
+	
 }
 .text-color{
-  color:#000;
+	color:#000;
 }
 .watch-img{
-  margin-top: 35px;
+	margin-top: 35px;
 }
 .watch-img{
-  animation-name:imgLeft;
-  animation-duration:3s;
+	animation-name:imgLeft;
+	animation-duration:3s;
 }
 .about-text{
-  animation-name:textRight;
-  animation-duration:3s;
+	animation-name:textRight;
+	animation-duration:3s;
 }
 @Keyframes imgLeft{
-  0%{
-       transform:translateX(-120px);
-       opacity:0;
-  }
-  100%{
-       transform:translateX(0);
-       opacity:1;
-  }
+	0%{
+	     transform:translateX(-120px);
+	     opacity:0;
+	}
+	100%{
+	     transform:translateX(0);
+	     opacity:1;
+	}
 }
 @Keyframes textRight{
-  0%{
-       transform:translateX(30px);
-       opacity:0;
-  }
-  100%{
-       transform:translateX(0);
-       opacity:1;
-  }
+	0%{
+	     transform:translateX(30px);
+	     opacity:0;
+	}
+	100%{
+	     transform:translateX(0);
+	     opacity:1;
+	}
 }
 
 
