@@ -24,6 +24,7 @@ body{
 } 
 .navbar-brand img{
   height:3rem;
+ 
 }
 .navbar-nav li{
   padding-right:.7rem;
@@ -38,12 +39,9 @@ body{
 }
 
 
-.nav-linkk{
+spam{
   color: #F9C010;
-  font-size:1.8rem;
-    font-weight:200;
-    position: absolute;
-    left: 7%;
+  
 }
 .nav-linkk:hover{
   color: #F9C010;
@@ -58,7 +56,7 @@ body{
   width:100%;
   max-width:100%;
   position: absolute;
-  top: 15%;
+  top: 30%;
   z-index:1;
   text-transform:uppercase;
 }
@@ -77,6 +75,11 @@ body{
   padding-bottom:1.6rem;
   color: white;
   
+}
+
+
+
+
 }
 .btn-lg{
   border-width:medium;
@@ -146,7 +149,7 @@ blockquote .svg-inline--fa{
 
 
 .feature svg.svg-inline--fa{
-  color:#1C90C9;
+  color:#F9C010;
 }
 .feature h3{
   font-size: 1.3rem;

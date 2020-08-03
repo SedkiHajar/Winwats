@@ -19,7 +19,8 @@
 <!--- Navigation -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#"> <img src="img/logo.png"/> </a>
-    <p class="nav-linkk" href="#accueil">WINWATS</p>
+    
+    <a class="navbar-brand" href="#" ><spam>WINWATS</spam></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,6 +28,9 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#accueil">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#espaceE">Services</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#espaceA">Smart Home</a>
@@ -38,7 +42,7 @@
                 <a class="nav-link" href="#espaceT">Green Energy</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contact">About</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
@@ -58,14 +62,22 @@
     </div>
 </div>
 <div class="caption text-center">
-    <h1>Bienvenue sur notre site</h1>
-    <h2>Une meilleure gestion du transport des entreprises</h2>
-    <a class="btn btn-outline-light btn-lg" href="#contact">Contactez-nous</a>
+    <h1>Choisir WINWATS c'est <br>choisir l'avenir</h1>
+    <!--  <h2>Une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion</h2>-->
+    <a class="btn btn-outline-light btn-lg" href="#">Visitez notre Showroom</a>
+    <br>
+    <br>
+    <a class="btn btn-outline-light btn-lg" href="#">Voir notre Catalogue</a>
 </div>  <!--- End Landing Page Section -->
 
 </div>  <!--- End accueil Section -->
 
+<!--- Start service Section -->
+<div id="services" class="offset">
 
+
+
+</div><!--- End services Section -->
 
 
 
@@ -139,28 +151,35 @@
 <div class="fixed-background">
 <div class="row dark text-center">
     <div class="col-12">
-        <h3 class="heading">Espace Entreprise</h3>
+        <h3 class="heading">Qu’est-ce qui fait la force de WINWATS</h3>
         <div class="heading-underline"></div>
         <br></br>
-    </div>     
-    <div class="col-md-6">
+    </div>  
+    
+       
+    <div class="col-md-4">
         <div class="feature">
-            <i class="fas fa-address-card fa-3x"></i>
-        </div>
-        <a class="btn btn-secondary btn-md" href="registerE" >Inscription</a>
-        <br></br>
-        <div class="feature">
-            <h1 class="lead">Si vous etes une entreprise appartenant à un regroupement de société,n'hésitez pas de vous inscrire en remplissant un formulaire, aprés validation de votre accés par l'Admin,vous aurez la possibilité de gérer vos employés qui bénéficieront par la suite d'un service de ransport optimisés.</h1>
+            <i class="fas fa-medal fa-3x"></i>
+            <h3 class="heading" >Simplicité</h3>
+            <h1 class="lead">Nos écrans tactiles et interrupteurs sont faciles à commander. Une simple pression sur le bouton, et l’action souhaitée se déclenche : diminuer l’intensité de l’éclairage, démarrer l’installation audio, ouvrir les volets roulants … Nous faisons de votre maison une habitation intelligente !</h1>
         </div>
     </div>
-    <div class="col-md-6">
+    
+    
+    <div class="col-md-4">
         <div class="feature">
-            <i class="fas fa-wifi fa-3x"></i>
+            <i class="fas fa-thumbs-up fa-3x"></i>
+            <h3 class="heading" >Qualité </h3>
+            <h1 class="lead">Nous pouvons commander à distance des systèmes d’éclairage, des appareils électriques, des volets roulants, des appareils audio ou vidéo et des systèmes d’alarme dans votre habitation ou immeuble. Nous accordons beaucoup d’attention au développement d’interfaces utilisateur simple d’utilisation.</h1>
         </div>
-        <a class="btn btn-secondary btn-md" href="loginE" >Connexion</a>
-        <br></br>
+    </div>
+    
+    <div class="col-md-4">
         <div class="feature">
-            <h1 class="lead">Connectez-vous pour gérer vos employés</h1>
+            <i class="fas fa-lock fa-3x"></i>
+            <h3 class="heading" >Sécurité</h3>
+            <h1 class="lead">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir. La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</h1>
+        </div>
     </div>
 </div> <!--- End Row Dark --->
     <div class="fixed-wrap">
@@ -225,11 +244,14 @@
 <div class="row justify-content-center">
     <div class="col-md-5 text-center">
         <strong>Contact Info</strong>
-        <p>(+212)(552-4744)<br>info@winwats.com</p>
-        <p>Suivez-nous sur nos réseaux sociaux:</p>
+        
+        <p><div class="feature"><i class="fas fa-map-marker-alt"></i></div>46, Bd Zerktouni 2ème étage App6 - Casablanca <br> Showroom: 66 Hay Fath 3 rue n:4 Ain Chock Casablanca</p>
+        <p>  <div class="feature">  <i class="fas fa-phone"></i>  </div>(+212)(552-4744) </p>
+        <p><div class="feature"><i class="fas fa-envelope"></i></div>info@winwats.com </p>
+        <!--  <p>Suivez-nous sur nos réseaux sociaux:</p>
         <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>-->
     </div>
     <hr class="socket">
     &copy; WINWATS 
