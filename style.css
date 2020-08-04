@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+body{
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+ background-color: #FFFFED;
+ /* background-image: url(img/logo.gif);*/
+}
+.container img{
+	box-shadow: 2px 4px #F9C010;
+}
+i{
+	color:#F9C010;
+}
+.paragraphe{
+	margin-top: 10px;
+	background-color: white;
+	opacity: 0.9;
+	border: 1px solid  #1C90C9;
+	box-shadow: 2px 4px  #1C90C9;
+}
+p{
+	text-align: justify;
+	color: grey;
+	font-size: 15px;
+}
+p b{
+	color: #1C90C9;
+}
+.formulaire{
+	background-color: white;
+	opacity: 0.9;
+	margin-top: 60px;
+	border: 1px solid  #1C90C9;
+	box-shadow: 2px 4px  #1C90C9;
+	margin-bottom: 60px;
+}
+
+form h4{
+	margin:30px;
+	color:#F9C010;
+	text-align: center;
+	 }
+form label{
+	color:#1C90C9;
+}
+.btn{
+	margin-bottom: 30px;
+}
