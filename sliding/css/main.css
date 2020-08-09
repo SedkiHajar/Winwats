@@ -2,6 +2,7 @@ body{
   font-family: 'Acme', sans-serif;
 }
 .navbar{
+  position: absolute;
   height: 100px;
   background-color: white;
 }
