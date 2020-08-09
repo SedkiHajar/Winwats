@@ -73,7 +73,7 @@
 .carousel-item p {
   margin: 30px 0 50px;
   font-size: 23px;
-  color: #fff;
+  color: white;
 }
 .carousel-item button {
   padding: 8px 20px;
@@ -303,7 +303,7 @@ a.navbar-brand:hover{
 
 .services{
   background: white;
-  background: linear-gradient(to right, white,grey);
+  /*background: linear-gradient(to right, white,grey);*/
    margin-bottom: -50px;
 }
 
