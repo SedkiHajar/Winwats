@@ -14,7 +14,7 @@ body{
   color: #F9C010;
   text-shadow: 1px 1px 2px #000000;
 }
-.btn{
+.btn-nav{
   background-color:#F9C010 ; 
   text-align: center;
   color: white; 
@@ -23,7 +23,7 @@ body{
 
   
 }
-.btn:hover{
+.btn-nav:hover{
    background-color: #1C90C9 ;
   color: white;
    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
