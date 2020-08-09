@@ -303,6 +303,7 @@ a.navbar-brand:hover{
 .services{
   background: white;
   background: linear-gradient(to right, white,grey);
+   margin-bottom: -50px;
 }
 
 .services a:hover {
@@ -373,4 +374,121 @@ a.navbar-brand:hover{
 
 .up spam{
   color: #1C90C9;
+}
+
+
+
+
+
+
+
+
+
+
+/*==Footer===*/
+.footer{
+  background: #1C90C9;
+  color: #F9C010;
+
+}
+/*.fab{
+  padding-left: 10px;
+}*/
+
+
+
+
+
+
+.footer i{
+  color: #F9C010;
+}
+
+
+
+
+
+
+
+
+
+
+.sns a{
+    /* a태그는 inline구조로, 크기값을 줄 수 없다. 
+    하지만 display: inline-block을 하여 이제 크기값을 줄 수 있음
+    */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 15px;
+    background-color: #fff;
+
+    margin : 10px;
+    /* a태그안의 아이콘을 수직, 수평중앙시키기 */
+    text-align: center;  /*수평중앙*/
+    line-height: 3.6; 
+    /*수직중앙, 이 속성을 자신의 높이값만큼 주면 수직중앙에 위치함*/
+
+
+    /* a태그의 가상 자식요소인 before의 위치 고정을 위해 position은 relative를 함 */
+    position: relative;
+    overflow: hidden;  
+    /*가상클래스는 부모위에 겹치있음-
+    > a의 자식인 before의 넘친 부분을 없애기 위해
+    (네모모양을 부모와 같은 둥글며 겉선이 흰색인 상태로 하기 위해) 
+    자식의 넘치는 부분을 숨기게 함*/
+}
+
+/* */
+.sns a:before {
+    content : '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    /*(가상클래스는 부모요소위에 겹쳐있음)*/
+    left : 0;
+    bottom: 0;
+    /*bottom을 0으로 주어, 밑에서 부터 나타나게함 
+    heignt가 0이었다가 100%로 되면 되는 구조
+    */
+    background-color: blue;
+    transition: 0.5s;
+    /*before에서 이벤트 발생시 0.5초동안 이벤트가 발생하게 함*/
+    
+
+}
+
+.sns a:hover:before{
+    height: 100%;
+}
+
+/* hover시 아이콘별로 다른 색이 되게 
+sns의 자식인 a의 형제의 가상클래스인 before
+*/
+.sns a:nth-child(1):before{
+    background-color: #3b5999;
+}
+
+.sns a:nth-child(2):before{
+    background-color: #55acee;
+    
+}
+
+.sns a:nth-child(3):before{
+    background-color: #D22255;
+    
+}
+
+
+
+/* i태그의 아이콘에 relative를 주면, 글자가 나옴...왜??? */
+.sns a .fa-2x {
+    position: relative;
+    transition: 0.5s;  /*i태그에 효과발생시 0.5동안 발생시킴*/
+}
+/* i아이콘의 글자를 회전시킴 */
+.sns a:hover .fa-2x{
+    transform: rotateY(360deg);
+    color : white;
 }
