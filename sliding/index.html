@@ -53,7 +53,7 @@
   </ul>
     <ul class="navbar-nav ml-auto ">
       <li class="nav-item ">
-        <a class="btn-nav   nav-link" href="#">NOUS CONTACTER</a>
+        <a class="btn-nav   nav-link" href="#contact">NOUS CONTACTER</a>
       </li>
       <!--<li class="nav-item">
         <a class="btn-nav   nav-link" href="#">login</a>
@@ -76,7 +76,9 @@
                 <p style="color: white;" class="animated lightSpeedIn delay-2s">
                   Nous mettons à profit notre expertise et notre créativité pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.
                 </p>
-                <button type="button" class="animated jackInTheBox delay-3s">Catalogue</button>
+                
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-3s">Catalogue</button>
+               
               </div>
               <div class="col-md-6">
                 <div class="img-box">
@@ -219,18 +221,81 @@
           </div>
       </section>
       <!---End of Service Section=======-->
+        <!--Contact us Section-->
+       <!--Contact US-->
+       
+    <section id="contact" class="contact py-5">
+      <div class="container">
+        <h1 class="brand"><span>NOUS</span> Contacter</h1>
+        <div class="wrapper animated bounceInLeft">
+            <div class="company-info">
+                <h3>Nos informations</h3>
+                <ul>
+                    <li><i class="fa fa-road "></i><br> 46, Bd Zerktouni 2ème étage App6 - Casablanca<br>
+                                                 Showroom: 66 Hay Fath 3 rue n:4 Ain Chock Casablanca</li>
+                    <br><li><i class="fa fa-phone"></i><br> (+212)(552-4744) </li>
+                    <br><li><i class="fa fa-envelope"></i><br> info@winwats.com</li>
+                </ul>
+            </div>
+            <div class="contacter">
+                <!--<h3>Email Me</h3>-->
+                <form action="#">
+                    <p>
+                        <label for="#">Nom</label>
+                        <input class="form-control" type="text" name="nom">
+                    </p>
+                    <p>
+                        <label for="#">Adresse</label>
+                        <input  class="form-control" type="text" name="adresse">
+                    </p>
+                    <p>
+                        <label for="#">Code postal</label>
+                        <input  class="form-control" type="texte" name="code">
+                    </p>
+                    <p>
+                        <label for="#">Ville</label>
+                        <input  class="form-control" type="text" name="ville">
+                    </p>
+                    <p>
+                        <label for="#">E-mail</label>
+                        <input  class="form-control" type="email" name="email">
+                    </p>
+                    <p>
+                        <label for="#">Téléphone</label>
+                        <input class="form-control" type="tel" name="tel">
+                    </p>
+                    <p>
+                        <label for="#">Société</label>
+                        <input class="form-control" type="text" name="societe">
+                    </p>
+                    <p>
+                        <label for="#">Je suis</label>
+                        <select class="form-control" type="select" name="suis">
+                           <option valeur="fr">Installateur</option>
+                           <option valeur="nl">Client</option>
+                           <option valeur="al">Architect</option>
+                        </select>
+                    </p>
+                    <p class="full">
+                        <label for="#">Message</label>
+                        <textarea class="form-control" name="message" id="msg" cols="30" rows="5"></textarea>
+                    </p>
+                    <p class="full">
+                        <button>Envoyer</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--End of Contact Section-->
        <!--Footer-->
     <footer class="footer mt-5">
-      <div class="text-center py-5">
-          <h2 class="py-3">WINWATS</h2>
-         <div class="mx-auto heading-line"></div>
-       </div>
+      
       <div class="container">
           <div class="row mb-3">
               <div class="col-lg-8 offset-lg-2 text-center">
-                  <p><div class="feature"><i class="fas fa-map-marker-alt"></i></div>46, Bd Zerktouni 2ème étage App6 - Casablanca <br> Showroom: 66 Hay Fath 3 rue n:4 Ain Chock Casablanca</p>
-                  <p>  <div class="feature">  <i class="fas fa-phone"></i>  </div>(+212)(552-4744) </p>
-                  <p><div class="feature"><i class="fas fa-envelope"></i></div>info@winwats.com </p>
+                  
                   <div class="sns justify-content-center">
                     <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
                     <a href="#"><i class="fab fa-twitter fa-2x"></i></a>

@@ -388,7 +388,7 @@ a.navbar-brand:hover{
 
 /*==Footer===*/
 .footer{
-  background: #1C90C9;
+  background: #92bde7;
   color: #F9C010;
 
 }
@@ -402,7 +402,7 @@ a.navbar-brand:hover{
 
 
 .footer i{
-  color: #F9C010;
+  color: #485e74;
 }
 
 
@@ -496,6 +496,139 @@ sns의 자식인 a의 형제의 가상클래스인 before
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/** {
+    box-sizing: border-box;
+}*/
+
+.contact{
+    box-sizing: border-box;
+    background: #92bde7;
+    color: #485e74;
+    line-height: 1.3;
+    font-family: 'Acme' ,sans-serif;
+    padding: 1em;
+    margin-bottom: -60px;
+}
+
+.contact .container {
+    /* max-width: 1170px; */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+
+    
+}
+
+.contact ul li{
+  text-align: center;
+}
+
+
+.contact ul i{
+  position: absolute;
+    left:150px;
+}
+
+.contact .brand {
+    text-align: center;
+}
+
+.contact .brand span {
+    color: #fff;
+}
+
+.contact .wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+.contact .wrapper > * {
+    padding: 1em;
+}
+
+.contact .company-info {
+    background: #c9e6ff;
+}
+
+.contact .company-info h3, .company-info ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contacter {
+    background: #f9feff;
+}
+
+/* FORM STYLES */
+.contacter form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.contacter form label {
+    display: block;
+}
+
+.contacter form p {
+    margin: 0;
+}
+
+.contacter form .full {
+    grid-column: 1 / 3;
+}
+
+.contacter form button, .contacter form input ,.contacter form select, .contacter form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #c9e6ff;
+}
+
+.contacter form button {
+    background: #c9e6ff;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.contacter form button:hover, .contacter form button:focus {
+    background: #92bde7;
+    color: #fff;
+    outline: 0;
+    transition: background-color 0.5s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px) {
+    .contact .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .contact .wrapper > * {
+        padding: 2em;
+    }
+
+    .contact .compnay-info h3,.contact .company-info ul,.contact .brand {
+        text-align: left;
+    }
+}
 
 
 
