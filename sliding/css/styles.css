@@ -4,6 +4,12 @@
   font-family: 'Acme' ,sans-serif;
 }
 
+
+
+.carousel-control-next{
+  position:absolute;
+  left:1270px;
+}
 .carousel-item {
   height: 100vh;
 }
