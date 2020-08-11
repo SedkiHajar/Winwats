@@ -1,3 +1,5 @@
+<?php include 'sendemail.php';  ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +13,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="animate.min.css">
     <!-- google fony-->
@@ -237,53 +239,65 @@
                     <br><li><i class="fa fa-envelope"></i><br> info@winwats.com</li>
                 </ul>
             </div>
+
+          <!--alert message start-->
+          
+          <!--alert message end-->
+
+
+
+
+
+
             <div class="contacter">
                 <!--<h3>Email Me</h3>-->
-                <form action="#">
+                <h4 class="sent-notification"><?php echo $alert;?></h4>
+                <form action="#contact"  id="myform" role="form" method="post" enctype="multipart/form-data">
                     <p>
-                        <label for="#">Nom</label>
-                        <input class="form-control" type="text" name="nom">
+                        <label for="nom">Nom</label>
+                        <input required=""  type="text" name="nom">
+                    </p>
+                    <!--<p>
+                        <label for="adresse">Adresse</label>
+                        <input  required=""  type="text" name="adresse" id="adresse">
                     </p>
                     <p>
-                        <label for="#">Adresse</label>
-                        <input  class="form-control" type="text" name="adresse">
+                        <label for="code">Code postal</label>
+                        <input  required="" type="text" name="code" id="code">
                     </p>
                     <p>
-                        <label for="#">Code postal</label>
-                        <input  class="form-control" type="texte" name="code">
-                    </p>
+                        <label for="ville">Ville</label>
+                        <input  required=""  type="text" name="ville" id="ville">
+                    </p>-->
                     <p>
-                        <label for="#">Ville</label>
-                        <input  class="form-control" type="text" name="ville">
+                        <label for="email">E-mail</label>
+                        <input  required=""  type="email" name="email" id="email">
                     </p>
-                    <p>
-                        <label for="#">E-mail</label>
-                        <input  class="form-control" type="email" name="email">
-                    </p>
-                    <p>
-                        <label for="#">Téléphone</label>
-                        <input class="form-control" type="tel" name="tel">
-                    </p>
-                    <p>
-                        <label for="#">Société</label>
-                        <input class="form-control" type="text" name="societe">
-                    </p>
-                    <p>
-                        <label for="#">Je suis</label>
-                        <select class="form-control" type="select" name="suis">
-                           <option valeur="fr">Installateur</option>
-                           <option valeur="nl">Client</option>
-                           <option valeur="al">Architect</option>
+                    <!--<p>
+                        <label for="tel">Téléphone</label>
+                        <input required="" type="tel" name="tel" id="tel">
+                    </p>-->
+                    <!--<p>
+                        <label for="societe">Société</label>
+                        <input required=""  type="text" name="societe" id="societe">
+                    </p>-->
+                    <!--<p>
+                        <label for="suis">Je suis</label>
+                        <select  type="select" name="suis" id="suis">
+                           <option >Installateur</option>
+                           <option >Client</option>
+                           <option >Architect</option>
                         </select>
+                    </p>-->
+                    <p class="full">
+                        <label for="msg">Message</label>
+                        <textarea required="" class="form-control" name="msg" id="msg" cols="30" rows="5"></textarea>
                     </p>
                     <p class="full">
-                        <label for="#">Message</label>
-                        <textarea class="form-control" name="message" id="msg" cols="30" rows="5"></textarea>
-                    </p>
-                    <p class="full">
-                        <button>Envoyer</button>
+                        <button name="submit" class="send-btn" type="submit" >Envoyer</button>
                     </p>
                 </form>
+
             </div>
         </div>
     </div>
@@ -311,6 +325,48 @@
       </div>
 
   </footer>
+  
+  <script type="text/javascript">
+    if(window.history.replaceState){
+      window.history.replaceState(null,null,window.location.href);
+    }
+  </script>
+  <!--<script type="text/javascript">
+    function sendEmail(){
+      var nom=$("#nom");
+      var email=$("#email");
+      var societe=$("#societe");
+      var msg=$("#msg");
 
+      if(isNotEmpty(nom)&&isNotEmpty(email)&&isNotEmpty(societe)&&isNotEmpty(msg)){
+        $.ajax({
+          url:'sendEmail.php',
+          method: 'POST',
+          dataType: 'json',
+          data:{
+            name:nom.val(),
+            email:email.val(),
+            societe:societe.val(),
+            msg:msg.val()
+          }, success: function(response){
+            $('#myform')[0].reset();
+            $('#sent-notification').text("message sent successfully.");
+
+          }
+        });
+      }
+    }
+    function isNotEmpty(caller){
+      if(caller.val()==""){
+        caller.css('border','1px solid red');
+        return false;
+      }
+      else
+      {
+        caller.css('border', '');
+        return true;
+      }
+    }
+  </script>-->
   </body>
 </html>
