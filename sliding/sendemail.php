@@ -11,10 +11,13 @@ if(isset($_POST['submit'])){
 
 $nom= $_POST['nom'];
 $email= $_POST['email'];
+$adresse= $_POST['adresse'];
 $msg= $_POST['msg'];
-
-
-
+$code= $_POST['code'];
+$ville= $_POST['ville'];
+$tel= $_POST['tel'];
+$societe= $_POST['societe'];
+$suis= $_POST['suis'];
 //$mail->SMTPDebug = 4;                               // Enable verbose debug output
 
 try{
@@ -36,7 +39,7 @@ $mail->addAddress('sedkihajar1998@gmail.com');     // Add a recipient
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Winwats(Contact Page)';
-$mail->Body    = "<h3>Name: $nom <br> Email: $email <br> Message: $msg </h3>";
+$mail->Body    = "<h3>Nom: $nom <br> Adresse: $adresse <br> Code postal: $code <br> Ville: $ville <br> Email: $email <br> Téléphone: $tel<br> Société: $societe <br> Je suis: $suis <br> Message: $msg </h3>";
 
 
 $mail->send();
