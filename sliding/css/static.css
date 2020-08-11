@@ -1,0 +1,13 @@
+.uppage{
+	margin-bottom: 100px;
+	background-image: linear-gradient( #05619C, green);
+	padding: 60px;
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+p{
+  text-align: justify;
+}
