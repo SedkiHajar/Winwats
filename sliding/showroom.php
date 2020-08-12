@@ -1,5 +1,5 @@
 
-<?php include 'header.php';  ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +18,8 @@
     <title>Index</title>
   </head>
   <body>
+
+<?php include 'header.php';  ?>
   <div class="showa"> 
       <div class="uppage">
         <h1>Showroom</h1>
@@ -51,7 +53,7 @@
             </div>
       </div>
       </div>
-    
+    <div  style="margin-bottom: 700px"></div>
   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
