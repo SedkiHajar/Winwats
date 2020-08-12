@@ -1,22 +1,28 @@
+
+<?php include 'header.php';  ?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Showroom</title>
-    <link rel="stylesheet" href="css/static.css">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
-   </head>
-
-  <body >
-  <div class="uppage">
-    <h1>Showroom</h1>
-  </div>
-  <div class="txt container ">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Css-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- awsome icone-->
+     
+     <!-- google fony-->
+     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>Index</title>
+  </head>
+  <body>
+  <div class="showa"> 
+      <div class="uppage">
+        <h1>Showroom</h1>
+      </div>
+      <div class="txt container ">
       <div class="row">
             <div id="desc" class="col-sm col-md-5 col-lg-5">
               <p>
@@ -42,15 +48,16 @@
                       </div>
                 </div>
            
-          </div>
-        </div>
+            </div>
       </div>
-    </body>
-     <!-- < -->
-     <!-- Optional JavaScript -->
+      </div>
+    
+  </div>
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <?php include 'footer.php';  ?>
   </body>
 </html>

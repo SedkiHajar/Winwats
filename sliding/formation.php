@@ -1,4 +1,6 @@
+
 <?php include 'sendform.php';  ?>
+<?php include 'header.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Css-->
-    <link rel="stylesheet" type="text/css" href="formation.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- awsome icone-->
      
      <!-- google fony-->
@@ -16,6 +18,7 @@
     <title>Index</title>
   </head>
   <body>
+    <div class=forma >
   	<div class="uppage">
     <h1>Formation</h1>
   </div>
@@ -45,6 +48,8 @@
      <!--formulaire  -->
      <div class="formulaire container">
      <div class="container" id="cont">
+      <br>
+      
       <h4 class="sent-notification"><?php echo $alert;?></h4>
     <form action="#cont"  id="myform" role="form" method="post" enctype="multipart/form-data">
       <br>
@@ -117,7 +122,7 @@
 </div> <br>
 </div>
 
-
+</div>
 
 <script type="text/javascript">
     if(window.history.replaceState){
@@ -129,5 +134,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <?php include 'footer.php';  ?>
   </body>
 </html>

@@ -3,13 +3,13 @@
   padding: 0;
   font-family: 'Acme' ,sans-serif;
 }
-.uppage{
+.showa .uppage{
 	margin-bottom: 40px;
 	background-image: linear-gradient( #F9C010 , #0C84C5);
 	padding: 60px;
 }
 
-h1{
+.showa h1{
 	/*text-align: center;*/
 	color: white;
 	font-size:50px;
@@ -18,20 +18,20 @@ h1{
 	margin-right: 200px;
 
 }
-p{
+.showa p{
   text-align: justify;
 }
 
 
 
-span{
+.showa span{
 	margin-left: 50px;
 	margin-bottom: 100px;
 }
 
 
 
-#showroom{
+.showa #showroom{
 	
 	width: 750px;
 	position:absolute;
@@ -40,7 +40,7 @@ span{
 }
 
 
-#desc{
+.showa #desc{
 	
 	width: 800px;
 	position:absolute;

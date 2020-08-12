@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg   " >
     <ul class="navbar-nav  ">
       <li class="nav-item active">
-        <a class="nav-link" href="#" >ACCUEIL <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item  dropdown  ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,10 +40,10 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="showroom.html">SHOWROOM</a>
+        <a class="nav-link" href="showroom.php">SHOWROOM</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="formation.html" >FORMATION</a>
+        <a class="nav-link" href="formation.php" >FORMATION</a>
       </li>
       
     </ul>
@@ -63,7 +63,7 @@
     </ul>
   </div>
 </nav>
-    <!-- and nav -->
+    <!-- end nav -->
     <div
       id="carouselExampleControls"
       class="carousel slide carousel-fade"
@@ -177,10 +177,10 @@
 
                   <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
                       <span class="service-icon">
-                         <a href="#"><i class="fas fa-medal"></i>  </a>                         
+                         <a ><i class="fas fa-medal"></i>  </a>                         
                       </span>
                       <div class="grow">
-                   <a href="#" class="font-weight-bold text-uppercase"><h5>CONFORT</h5></a>
+                   <a  class="font-weight-bold text-uppercase"><h5>CONFORT</h5></a>
                    </div>
                       <p class="text-left ">Au travail, dans votre fauteuil, pendant un
                          voyage…, contrôlez quand vos appareils
@@ -196,10 +196,10 @@
                   <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
                     <span class="service-icon">
       
-                       <a href="#"><i class="fas fa-battery-full"></i> </a>                        
+                       <a ><i class="fas fa-battery-full"></i> </a>                        
                     </span>
                    <div class="grow">
-                   <a href="#" class="font-weight-bold text-uppercase"><h5>ECONOMIE D'ENERGIE</h5></a>
+                   <a  class="font-weight-bold text-uppercase"><h5>ECONOMIE D'ENERGIE</h5></a>
                    </div>
                  <p class=" text-left">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes. Vous pouvez notamment diminuer la consommation électrique liée :<br>
                  • Au chauffage et à la climatisation;<br>
@@ -211,10 +211,10 @@
                 <!--Single Service-->
                 <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
                     <span class="service-icon">
-                        <a href="#"><i class="fas fa-lock"></i>  </a>                          
+                        <a ><i class="fas fa-lock"></i>  </a>                          
                     </span>
            <div class="grow">
-                   <a href="#" class="font-weight-bold text-uppercase"><h5>SÉCURITÉ</h5></a>
+                   <a class="font-weight-bold text-uppercase"><h5>SÉCURITÉ</h5></a>
                    </div>
            <p class="text-left">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</p>
                 </div>

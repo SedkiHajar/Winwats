@@ -6,19 +6,19 @@
 }
 
 
-.btn{
+.forma .btn{
 	color:#188CC8;
 	width:120px;
 	margin-left:450px;
 }
 
-.uppage{
+.forma .uppage{
 	margin-bottom: 40px;
 	background-image: linear-gradient( #F9C010 , #0C84C5);
 	padding: 60px;
 }
 
-h1{
+.forma h1{
 	/*text-align: center;*/
 	color: white;
 	font-size:50px;
@@ -30,30 +30,30 @@ h1{
 
 
 
-p{
+.forma p{
 	text-align: justify;
 	
 }
-p b{
+.forma p b{
 	color: #1C90C9;
 }
 
 
 
-.container img{
+.forma .container img{
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-i{
+.forma i{
 	color:#F9C010;
 }
-.paragraphe{
+.forma .paragraphe{
 	margin-top: 10px;
 	background-color: white;
 	opacity: 0.9;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.formulaire{
+.forma .formulaire{
 	margin-top: 10px;
 	background-color: white;
 	opacity: 0.9;
@@ -61,11 +61,11 @@ i{
 	margin-bottom: 60px;
 }
 
-form h4{
+.forma form h4{
 	margin:30px;
 	color:#F9C010;
 	text-align: center;
 	 }
-form label{
+.forma form label{
 	color:#1C90C9;
 }

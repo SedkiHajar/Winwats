@@ -420,7 +420,7 @@ a.navbar-brand:hover{
 
 
 
-.sns a{
+.footer .sns a{
     /* a태그는 inline구조로, 크기값을 줄 수 없다. 
     하지만 display: inline-block을 하여 이제 크기값을 줄 수 있음
     */
@@ -448,7 +448,7 @@ a.navbar-brand:hover{
 }
 
 /* */
-.sns a:before {
+.footer .sns a:before {
     content : '';
     position: absolute;
     width: 100%;
@@ -466,23 +466,23 @@ a.navbar-brand:hover{
 
 }
 
-.sns a:hover:before{
+.footer .sns a:hover:before{
     height: 100%;
 }
 
 /* hover시 아이콘별로 다른 색이 되게 
 sns의 자식인 a의 형제의 가상클래스인 before
 */
-.sns a:nth-child(1):before{
+.footer .sns a:nth-child(1):before{
     background-color: #3b5999;
 }
 
-.sns a:nth-child(2):before{
+.footer .sns a:nth-child(2):before{
     background-color: #55acee;
     
 }
 
-.sns a:nth-child(3):before{
+.footer .sns a:nth-child(3):before{
     background-color: #D22255;
     
 }
@@ -490,14 +490,126 @@ sns의 자식인 a의 형제의 가상클래스인 before
 
 
 /* i태그의 아이콘에 relative를 주면, 글자가 나옴...왜??? */
-.sns a .fa-2x {
+.footer .sns a .fa-2x {
     position: relative;
     transition: 0.5s;  /*i태그에 효과발생시 0.5동안 발생시킴*/
 }
 /* i아이콘의 글자를 회전시킴 */
-.sns a:hover .fa-2x{
+.footer .sns a:hover .fa-2x{
     transform: rotateY(360deg);
     color : white;
+}
+
+/* showroom  SECTION */
+
+
+.showa .uppage{
+  margin-bottom: 40px;
+  background-image: linear-gradient( #92BDE7 , #92BDE7);
+  padding: 60px;
+}
+
+.showa h1{
+  /*text-align: center;*/
+  color: white;
+  font-size:50px;
+  position:absolute;
+  left:40px;
+  margin-right: 200px;
+
+}
+.showa p{
+  text-align: justify;
+}
+
+
+
+.showa span{
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+
+
+.showa #showroom{
+  
+  width: 750px;
+  position:absolute;
+  left:500px;
+
+}
+
+
+.showa #desc{
+  
+  width: 800px;
+  position:absolute;
+  left:30px;
+}
+
+/* FORMATION  SECTION */
+.forma .btn{
+  color:#188CC8;
+  width:120px;
+  margin-left:450px;
+}
+
+.forma .uppage{
+  margin-bottom: 40px;
+  background-image: linear-gradient( #92BDE7 , #92BDE7);
+  padding: 60px;
+}
+
+.forma h1{
+  /*text-align: center;*/
+  color: white;
+  font-size:50px;
+  position:absolute;
+  left:160px;
+  margin-right: 200px;
+
+}
+
+
+
+.forma p{
+  text-align: justify;
+  
+}
+.forma p b{
+  color: #1C90C9;
+}
+
+
+
+.forma .container img{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.forma i{
+  color:#F9C010;
+}
+.forma .paragraphe{
+  margin-top: 10px;
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.forma .formulaire{
+  margin-top: 10px;
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 60px;
+}
+
+.forma form h4{
+  margin:30px;
+  color:#F9C010;
+  text-align: center;
+   }
+.forma form label{
+  color:#1C90C9;
 }
 
 
@@ -508,9 +620,7 @@ sns의 자식인 a의 형제의 가상클래스인 before
 
 
 
-
-
-
+/* CONTACT  SECTION */
 
 
 
