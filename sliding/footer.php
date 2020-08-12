@@ -26,26 +26,24 @@
 
 
 
-<footer class="footer mt-5">
-      
-      <div class="container">
-          <div class="row mb-3">
-              <div class="col-lg-8 offset-lg-2 text-center">
-                  
-                  <div class="sns justify-content-center">
-                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                    
-                    </div>
-             </div>
-          </div>
-          <div class="copyright text-center py-3 border-top text-light">
-            <p>&copy; Copy Right Winwats</p>
-              
-          </div>
-      </div>
-
-  </footer>
-   </body>
-</html>
+<section id="footer">
+     
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>  
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6">©copyrght winwat.</p>
+        </div>
+        <hr>
+      </div>  
+    </div>
+  </section>
+  <!-- ./Footer -->
