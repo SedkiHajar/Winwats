@@ -46,7 +46,7 @@
       
     </ul>
     <ul class="navbar-nav mx-auto ">
-  <a class="navbar-brand" href="#" >
+  <a class="navbar-brand" href="index.php" >
     <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
     WINWATS
   </a>
