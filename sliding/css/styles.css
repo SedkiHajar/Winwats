@@ -16,14 +16,34 @@
 
 
 
-.img-box {
-  width: 850px;
+.img-box .pic-three{
+  width: 750px;
   position: absolute;
-  left:-160px;
-  top:130px;
+  left:-15px;
+  top:-250px;
 }
 
-.pic-one {
+
+.img-box .pic-one{
+  width: 750px;
+  position: absolute;
+  left:-150px;
+  top:100px;
+}
+.img-box .pic-two{
+  width: 750px;
+  position: absolute;
+  left:-150px;
+  top:100px;
+}
+.img-box .pic-three{
+  width: 750px;
+  position: absolute;
+  left:-150px;
+  top:100px;
+}
+
+.pic-onee {
   width: 100%;
 }
 /*.pic-two {
@@ -112,7 +132,7 @@
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 85vh;
+  height: 100vh;
   color: white;
   
     background-image: radial-gradient(circle, white, #05619C, #05619C);

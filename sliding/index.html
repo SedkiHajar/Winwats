@@ -44,7 +44,7 @@
               </div>
               <div class="col-md-6">
                 <div class="img-box">
-                  <img src="images/sic-1.png" class="pic-one animated zoomIn delay-1s " />
+                  <img src="images/sic-11.png" class="pic-one animated zoomIn delay-1s " />
                   <!--<img src="images/sic-2.png" class="pic-two animated fadeInLeft delay-4s" />
                   <img src="images/sic-3.png" class="pic-three animated fadeInUp delay-3s" />
                   <img src="images/pic-4.png" class="pic-four animated fadeInDown delay-3s" />
@@ -67,7 +67,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="img-box">
-                      <img src="images/sic-1.png" class="img-one animated zoomIn delay-1s " />
+                      <img src="images/sic-11.png" class="pic-two animated zoomIn delay-1s " />
                       <!--<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
                       <img src="images/img-3.png" class="img-three animated zoomIn delay-3s" />
                       <img src="images/img-4.png" class="img-four animated fadeInDown delay-3s" />
@@ -90,7 +90,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="img-box">
-                      <img src="images/sic-1.png" class="img-one animated zoomIn delay-1s" />
+                      <img src="images/sic-11.png" class="pic-three animated zoomIn delay-1s" />
                       <!--<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
                       <img src="images/img-3.png" class="img-three animated zoomIn delay-3s" />
                       <img src="images/img-4.png" class="img-four animated fadeInDown delay-3s" />
