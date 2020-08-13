@@ -29,7 +29,7 @@
             <div id="desc" class="col-sm col-md-5 col-lg-5">
               <p>
 
-                    <span> Notre  équipe expérimentée réfléchit en permanence à la question de savoir comment encore améliorer nos solutions domotiques perfectionnées.</span><br><br> <span>Au fil des ans, nous nous sommes bâtis une solide réputation sur les plans de la qualité et de l’innovation. </span><br><br><span>Dans notre showroom vous pourrez découvrir les derniers techniques et nos produites domotiques intelligentes, un must si vous avez des projets de construction ou de rénovation.</span><br><br><span> Vous êtes installateur ou architecte. Nous vous accueillerons alors volontiers, ainsi que vos clients dans notre espace sensoriel inspirant : vous pourrez y avoir et vous familiariser avec tous derniers modèles d’écrans tactiles, d’interrupteurs, de capteurs, de détecteurs et d’interfaces et bien d’autres choses encore.</span><br><br>
+                    <span> Notre  équipe expérimentée réfléchit en permanence à la question de savoir comment encore améliorer nos solutions domotiques perfectionnées.</span> <span>Au fil des ans, nous nous sommes bâtis une solide réputation sur les plans de la qualité et de l’innovation. </span><br><br><span>Dans notre showroom vous pourrez découvrir les derniers techniques et nos produites domotiques intelligentes, un must si vous avez des projets de construction ou de rénovation.</span><br><br><span> Vous êtes installateur ou architecte. Nous vous accueillerons alors volontiers, ainsi que vos clients dans notre espace sensoriel inspirant : vous pourrez y avoir et vous familiariser avec tous derniers modèles d’écrans tactiles, d’interrupteurs, de capteurs, de détecteurs et d’interfaces et bien d’autres choses encore.</span><br><br>
                     <span>Prenez rendez-vous en adressant un courriel à info@winwats.com ou appelez-nous sur le numéro : <spam style="color: #F9C010;">05524744</spam>.</span>
 
               </p>
@@ -37,6 +37,12 @@
            
             <div class="col-sm col-md-7 col-lg-7">
                 <div id="showroom" class="carousel slide carousel-fade" data-ride="carousel">
+                  <ol style="position: absolute;
+                            top: 375px;" class="carousel-indicators">
+                      <li data-target="#showroom" data-slide-to="0" class="active"></li>
+                      <li data-target="#showroom" data-slide-to="1"></li>
+                      <li data-target="#showroom" data-slide-to="2"></li>
+                  </ol>
                       <div class="carousel-inner">
                             <div class="carousel-item active">
                                     <img src="images/showroom1.jpg" width="100%" height="400px" alt="...">
@@ -53,8 +59,8 @@
             </div>
       </div>
       </div>
-    <div  style="margin-bottom: 700px"></div>
-  </div>
+    <!--<div  style="margin-bottom: 700px"></div>
+  </div>-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
