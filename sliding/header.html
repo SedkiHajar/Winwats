@@ -30,11 +30,11 @@
           PRODUITS
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <ul class="list-group list-group-horizontal-sm">
-          <a style="text-decoration: none;"class="list-group-item" href="#"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="#"><h5>SAFETY SYSTEM</h5><img src="images/activite1.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="#"><h5>GREEN ENERGY</h5><img src="images/activite1.png"></a>
-        </ul>
+         <ul class="list-group list-group-horizontal-sm">
+            <a style="text-decoration: none"class="list-group-item" href="#"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
+            <a style="text-decoration: none;"class="list-group-item" href="#"><h5>SAFETY SYSTEM</h5><img src="images/activite2.png"></a>
+            <a style="text-decoration: none;"class="list-group-item" href="#"><h5>GREEN ENERGY</h5><img src="images/activite3.png"></a>
+         </ul>
         </div>
       </li>
       <li class="nav-item">
