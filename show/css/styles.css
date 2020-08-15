@@ -16,34 +16,14 @@
 
 
 
-.img-box .pic-three{
-  width: 750px;
+.img-box {
+  width: 850px;
   position: absolute;
-  left:-15px;
-  top:-250px;
+  left:-160px;
+  top:130px;
 }
 
-
-.img-box .pic-one{
-  width: 750px;
-  position: absolute;
-  left:-150px;
-  top:100px;
-}
-.img-box .pic-two{
-  width: 750px;
-  position: absolute;
-  left:-150px;
-  top:100px;
-}
-.img-box .pic-three{
-  width: 750px;
-  position: absolute;
-  left:-150px;
-  top:100px;
-}
-
-.pic-onee {
+.pic-one {
   width: 100%;
 }
 /*.pic-two {
@@ -132,7 +112,7 @@
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   color: white;
   
     background-image: radial-gradient(circle, white, #05619C, #05619C);
@@ -304,21 +284,20 @@ a.navbar-brand:hover{
    color: #F9C010
 
 }
-/*.navbar-brand img{
+.navbar-brand img{
    transition: width 0.5s, height 0.5s;
 }
 .navbar-brand img:hover{
   width: 65px;
   height: 45px;
-}*/
+}
 .list-group-item img{
   width: 200px;
-  /*transition: width 1s;*/
+  transition: width 1s;
 }
-
-/*.list-group-item img:hover{
+.list-group-item img:hover{
   width: 300px;
-}*/
+}
 .list-group-item h5{
   color :#F9C010;
 }
@@ -509,8 +488,6 @@ a.navbar-brand:hover{
     transform: rotateY(360deg);
     color : white;
 }
-<<<<<<< HEAD
-=======
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
@@ -565,7 +542,6 @@ section .section-title {
 }
 }
 
->>>>>>> 74244ee8f588c9ccb5de4519737f7fd173b8bf3e
 
 
 
@@ -821,131 +797,3 @@ section .section-title {
 
 
 
-/* Footer */
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-section {
-    padding: 60px 0;
-}
-
-section .section-title {
-    text-align: center;
-    color: #007b5e;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-#footer {
-    background: #1C90C9 !important;
-}
-
-#footer ul.social li a i {
-    margin-right: 5px;
-  font-size:25px;
-  -webkit-transition: .5s all ease;
-  -moz-transition: .5s all ease;
-  transition: .5s all ease;
-}
-#footer ul.social li:hover a i {
-  font-size:30px;
-  margin-top:-10px;
-}
-#footer ul.social li a,
-#footer ul.quick-links li a{
-  color:#ffffff;
-}
-#footer ul.social li a:hover{
-  color:#eeeeee;
-}
-
-#footer ul.quick-links li a i{
-  margin-right: 5px;
-}
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
-}
-
-@media (max-width:767px){
-  #footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-}
-}
-/* DEMO GENERAL ============================== */
-.hover {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 60%;
-}
-
-.hover-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  transition: all 0.4s;
-}
-
-.hover img {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
-}
-
-.hover-content {
-  position: relative;
-  z-index: 99;
-}
-
-
-/* DEMO 1 ============================== */
-.hover-1 img {
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  width: 105%;
-  position: absolute;
-  top: 0;
-  left: -5%;
-  transition: all 0.3s;
-}
-
-.hover-1-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  transition: all 0.4s;
-}
-
-.hover-1 .hover-overlay {
-  background: rgba(0, 0, 0, 0);
-}
-
-.hover-1-description {
-  transform: translateY(0.5rem);
-  transition: all 0.4s;
-  opacity: 0;
-}
-
-.hover-1:hover .hover-1-content {
-  bottom: 2rem;
-}
-
-.hover-1:hover .hover-1-description {
-  opacity: 1;
-  transform: none;
-}
-
-.hover-1:hover img {
-  width: 120%;
-  left: 0;
-}
-
-.hover-1:hover .hover-overlay {
-   background: rgba(0, 0, 0, 0.8);
-  opacity: 0.5;
-}
