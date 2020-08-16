@@ -10,16 +10,16 @@
     <title>WINWATS</title>
     <link rel="stylesheet" href="css/styles.css" />
      
-    <!--<link
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="animate.min.css">-->
+    <link rel="stylesheet" href="animate.min.css">
     <!-- google fony-->
-    <!--<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>-->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
      <?php 
@@ -43,18 +43,20 @@ $result = $db->query("SELECT * FROM images ");
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
              <?php //$nomCat= $row['titre'];?>
-            <form action="page.php" method="GET">
-
+            <!--<form action="page.php" method="POST">-->
+            <a href="page.php?cat='<?php echo $row['titre'] ?>' ">
+              <p><?php echo '<br>' .$row['titre'] ?></p> </a>
 
               
 
 
               <h3 class="hover-1-title text-uppercase font-weight-bold mb-0">
-                   <button name="nomCat" type="submit" class="font-weight-light" ><?php echo '<br>' .$row['titre'] ?></button>
+                
+                   <!--<button name="nomCat" type="submit" class="font-weight-light" ><?php echo '<br>' .$row['titre'] ?></button>-->
 
               </h3>
             
-            </form>
+            
             
 
             <a href="#" ><p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['discription'] ?></p></a>

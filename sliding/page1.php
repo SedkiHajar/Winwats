@@ -25,13 +25,13 @@
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
  //$nomCat= $_POST['nomCat'];
-if (isset($_GET['cat'])){
-	$nomCat=$_GET['cat'];
+if (isset($_GET['spe'])){
+	$nom=$_GET['spe'];
 
  
 
 // Get image data from database 
-$result = $db->query("SELECT p.image,p.description,p.titre FROM images i, produit p where i.id=p.idCat and i.titre=$nomCat "); 
+$result = $db->query("SELECT * FROM produit where titre=$nom "); 
 ?>
 
 
@@ -48,7 +48,7 @@ $result = $db->query("SELECT p.image,p.description,p.titre FROM images i, produi
            <?php echo '<br>' .$row['titre'] ?>
             
             <?php echo '<br>' .$row['description'] ?>
-            <a href="page1.php?spe='<?php echo $row['titre'] ?>'">plus d'info</a>
+            
             <?php  } ?> 
 
           </div>
