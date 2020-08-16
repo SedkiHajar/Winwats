@@ -29,7 +29,7 @@ require_once 'bddconn.php'; ?>
 
 
     <p><label>Select Image :</label><input type="file" name="image"></p>
-    <p><label>Select Pdf:</label><input type="file" name="filePdf"></p>
+    <!--<p><label>Select Pdf:</label><input type="file" name="filePdf"></p>-->
      <p><label>titre:</label><input type="text" name="titre"></p>
     <p><label>description:</label><input type="text" name="description"></p>
     <input type="submit" name="submit" value="Upload">
