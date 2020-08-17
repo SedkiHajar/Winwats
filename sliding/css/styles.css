@@ -6,6 +6,19 @@
 
 
 
+
+
+#exzoom {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+}
+
+
+
 .carousel-control-next{
   position:absolute;
   left:1270px;
