@@ -6,16 +6,17 @@ require_once 'dbConfig.php';
 $status = $statusMsg = ''; 
 if(isset($_POST["submit"])){ 
     $status = 'error';
-     if((!empty($_FILES["image"]["name"]))AND (!empty($_POST['discription']))AND (!empty($_POST['nom']))) {  
+     if((!empty($_FILES["image"]["name"]))AND (!empty($_POST['discription']))AND (!empty($_POST['nom']))AND (!empty($_POST['genre']))) {  
         // Get file info
         $disc=$_POST['discription'];
         $nom=$_POST['nom'];
+        $genre=$_POST['genre'];
         // Allow certain file formats
             $image = $_FILES['image']['tmp_name']; 
             $imgContent = addslashes(file_get_contents($image)); 
          
             // Insert image content into database 
-            $insert = $db->query("INSERT into caregories(image,description,nom)VALUES('$imgContent','$disc','$nom')"); 
+            $insert = $db->query("INSERT into caregories(image,description,nom,genre)VALUES('$imgContent','$disc','$nom','$genre')"); 
              
             if($insert){ 
                 $status = 'success'; 
@@ -32,4 +33,4 @@ if(isset($_POST["submit"])){
 // Display status message 
 echo $statusMsg; 
 ?>
-<a href="view.php">view</a>
+<a href="form.html">form</a>

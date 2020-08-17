@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <title>Produit</title>
+    <title>WINWATS</title>
     <link rel="stylesheet" href="css/styles.css" />
      
     <link
@@ -21,6 +21,10 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
+   <div class="showa"> 
+      <div class="uppage">
+        <h1>Showroom</h1>
+      </div>
    <?php 
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
@@ -52,6 +56,7 @@ $result = $db->query("SELECT * FROM produit WHERE idcat=$id ");
 <?php }else{ ?> 
     <p class="status error">Image(s) not found...</p> 
 <?php } ?>
+</div> 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -1,5 +1,4 @@
 <?php include 'sendemail.php';  ?>
-<?php include 'header.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,11 +20,56 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
+
+      <nav class="navbar navbar-expand-lg   " >
+    <ul class="navbar-nav  ">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item  dropdown  ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PRODUITS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul class="list-group list-group-horizontal-sm">
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/activite1.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/activite1.png"></a>
+        </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="showroom.php">SHOWROOM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="formation.php" >FORMATION</a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav mx-auto ">
+  <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    WINWATS
+  </a>
+  </ul>
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item ">
+        <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="btn-nav   nav-link" href="#">login</a>
+      </li>-->
+    </ul>
+  </div>
+</nav>
+
+
      <?php 
+     $genre=$_GET['genre'];
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
 // Get image data from database 
-$result = $db->query("SELECT * FROM caregories "); 
+$result = $db->query("SELECT * FROM caregories WHERE genre='$genre'"); 
 ?>
 <?php if($result->num_rows > 0){ ?> 
   <div class="gallery"> 
