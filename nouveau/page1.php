@@ -47,9 +47,10 @@ $result = $db->query("SELECT * FROM produit WHERE id=$id ");
 
 
             <div class="trending" style="margin-left: 120px;">  
-           <h1><?php echo '<br>' .$row['titre'] ?></h1>
+           <h1><?php echo '<br>' .$row['titre'] ?> </h1>
             
-            <h2><?php echo '<br>' .$row['description'] ?></h2>
+            <h2><?php echo '<br>' .$row['description'] ?> <a href="pdf.php?id=<?php echo ($row['id']); ?>">pdf</a></h2>
+
             
             <?php  } ?> 
             </div>
