@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product Image Magnifier</title>
     <link rel="stylesheet" href="src/jquery.exzoom.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
      
     <link
       rel="stylesheet"
@@ -23,6 +23,47 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg  " >
+    <ul class="navbar-nav  ">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item  dropdown  ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PRODUITS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul class="list-group list-group-horizontal-sm">
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/activite2.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/activite3.png"></a>
+        </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="showroom.php">SHOWROOM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="formation.php" >FORMATION</a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav mx-auto ">
+  <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    WINWATS
+  </a>
+  </ul>
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item ">
+        <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="btn-nav   nav-link" href="#">login</a>
+      </li>-->
+    </ul>
+  </div>
+</nav>
 <?php 
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
@@ -37,8 +78,8 @@ $result = $db->query("SELECT * FROM produit WHERE id=$id ");
         <?php while($row = $result->fetch_assoc()){ ?> 
         	<div class="exzoom" id="exzoom">
               <div class="exzoom_img_box">
-                 <ul class='exzoom_img_ul'>
-                    <li><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="card-img-top" alt="...">
+                 <ul class='exzoom_img_ul'  >
+                    <li><img  src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="card-img-top" alt="..."  >
                     </li>
                  </ul>
               </div>
@@ -46,10 +87,10 @@ $result = $db->query("SELECT * FROM produit WHERE id=$id ");
             </div>
 
 
-            <div class="trending" style="margin-left: 120px;">  
-           <h1><?php echo '<br>' .$row['titre'] ?> </h1>
+            <div class="trending" style="margin-left: 520px;margin-top: 5px;">  
+           <h1><span style="color:#F9C010;"><?php echo '<br>' .$row['titre'] ?> </span> </h1>
             
-            <h2><?php echo '<br>' .$row['description'] ?> <a href="pdf.php?id=<?php echo ($row['id']); ?>">pdf</a></h2>
+            <p><span style="color:#1B8CC6;"><?php echo '<br>' .$row['description'] ?> <!--<a href="pdf.php?id=<?php //echo ($row['id']); ?>">pdf</a>--></span></p>
 
             
             <?php  } ?> 
@@ -67,6 +108,7 @@ $result = $db->query("SELECT * FROM produit WHERE id=$id ");
  </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="src/jquery.exzoom.js"></script>
+    
 
     <script>
         $(function(){
@@ -90,7 +132,7 @@ $result = $db->query("SELECT * FROM produit WHERE id=$id ");
 
         });
     </script>
-
+<?php //include 'footer.php';  ?>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ require_once 'dbConfig.php';
 $status = $statusMsg = ''; 
 if(isset($_POST["submit"])){ 
     $status = 'error';
-     if((!empty($_FILES["image"]["name"]))AND (!empty($_POST['discription']))AND (!empty($_POST['nom']))AND (!empty($_POST['genre']))) {  
+     if((!empty($_FILES["image"]["name"]))AND (!empty($_POST['nom']))AND (!empty($_POST['genre']))) {  
         // Get file info
         $disc=$_POST['discription'];
         $nom=$_POST['nom'];

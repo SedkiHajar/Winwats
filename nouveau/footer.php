@@ -26,7 +26,7 @@
 
 
 
-<section id="footer">
+<section id="footer" style="background: #92BDE7 !important;">
      
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
@@ -34,13 +34,14 @@
             <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook" style="color: white;"></i></a></li>
             <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
             <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
           </ul>
         </div>
         <hr>
       </div>  
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6 text-center">©copyrght winwat.</p>
+          <p class="h6 text-center">©Copyright WINWATS.</p>
         </div>
         <hr>
       </div>  

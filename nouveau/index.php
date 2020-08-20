@@ -1,5 +1,5 @@
 <?php include 'sendemail.php';  ?>
-<?php include 'header.php';  ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,6 +21,48 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg   " >
+    <ul class="navbar-nav  ">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item  dropdown  ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PRODUITS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul class="list-group list-group-horizontal-sm">
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/activite2.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/activite3.png"></a>
+        </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="showroom.php">SHOWROOM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="formation.php" >FORMATION</a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav mx-auto ">
+  <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    WINWATS
+  </a>
+  </ul>
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item ">
+        <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="btn-nav   nav-link" href="#">login</a>
+      </li>-->
+    </ul>
+  </div>
+</nav>
+
     <!-- nav<-->
    
     <!-- end nav -->
@@ -34,7 +76,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6">
-                <h1 style="color: white;"class="animated fadeInLeft delay-1s">Smarthome</h1>
+                <h1 style="color: #F9C010;"class="animated fadeInLeft delay-1s">Smarthome</h1>
                 <p style="color: white;" class="animated lightSpeedIn delay-2s">
                   Nous mettons à profit notre expertise et notre créativité pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.
                 </p>
@@ -59,7 +101,7 @@
             <div class="container">
                 <div class="row">
                   <div class="col-md-6">
-                    <h1 style="color: white;" class="animated fadeInLeft delay-1s">Safety System</h1>
+                    <h1 style="color: #F9C010;" class="animated fadeInLeft delay-1s">Safety System</h1>
                     <p style="color: white;" class="animated lightSpeedIn delay-2s">
                       Nos Objectifs sont le Confort et la sécurité Total de vous et Vos Logements.
                     </p>
@@ -67,7 +109,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="img-box">
-                      <img src="images/sic-1.png" class="img-one animated zoomIn delay-1s " />
+                      <img src="images/sic-1.png" class="pic-two animated zoomIn delay-1s " />
                       <!--<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
                       <img src="images/img-3.png" class="img-three animated zoomIn delay-3s" />
                       <img src="images/img-4.png" class="img-four animated fadeInDown delay-3s" />
@@ -82,7 +124,7 @@
             <div class="container">
                 <div class="row">
                   <div class="col-md-6">
-                    <h1 style="color: white;" class="animated fadeInLeft delay-1s">Green energy</h1>
+                    <h1 style="color: #F9C010;" class="animated fadeInLeft delay-1s">Green energy</h1>
                     <p style="color: white;" class="animated lightSpeedIn delay-2s">
                       Notre équipe possède une solide expérience dans la pose de panneaux solaires.
                     </p>
@@ -90,7 +132,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="img-box">
-                      <img src="images/sic-1.png" class="img-one animated zoomIn delay-1s" />
+                      <img src="images/sic-1.png" class="pic-three animated zoomIn delay-1s" />
                       <!--<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
                       <img src="images/img-3.png" class="img-three animated zoomIn delay-3s" />
                       <img src="images/img-4.png" class="img-four animated fadeInDown delay-3s" />
@@ -128,7 +170,7 @@
       <section id="services" class="services py-5 text-center">
           <div class="container">
               <div class="row">
-                <h3 style="color: #1C90C9;" class="text-center">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion.</h3>
+                <h3 style="color: #F9C010;" class="text-center">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion.</h3>
                   <!--Single Service-->
 
                   <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
@@ -136,9 +178,9 @@
                          <a ><i class="fas fa-medal"></i>  </a>                         
                       </span>
                       <div class="grow">
-                   <a  class="font-weight-bold text-uppercase"><h5>CONFORT</h5></a>
+                   <a  class="font-weight-bold text-uppercase" ><h5 style="color: #F9C010;">CONFORT</h5></a>
                    </div>
-                      <p class="text-left ">Au travail, dans votre fauteuil, pendant un
+                      <p class="text-center " >Au travail, dans votre fauteuil, pendant un
                          voyage…, contrôlez quand vos appareils
                          électroniques, systèmes d’éclairage ou
                         systèmes de chauffage depuis votre
@@ -155,12 +197,9 @@
                        <a ><i class="fas fa-battery-full"></i> </a>                        
                     </span>
                    <div class="grow">
-                   <a  class="font-weight-bold text-uppercase"><h5>ECONOMIE D'ENERGIE</h5></a>
+                   <a  class="font-weight-bold text-uppercase"><h5 style="color: #F9C010;">ECONOMIE D'ENERGIE</h5></a>
                    </div>
-                 <p class=" text-left">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes. Vous pouvez notamment diminuer la consommation électrique liée :<br>
-                 • Au chauffage et à la climatisation;<br>
-                 • A l'éclairage;<br>
-                 • Au fonctionnement des appareils électriques (ordinateur, télévision, électroménager, routeur internet...).<br>
+                 <p class=" text-center">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes.<br>
                   En réduisant la consommation énergétique, vous diminuez le recours aux énergies fossiles traditionnelles et les émissions de gaz à effet de serre qui résultent de leur exploitation.</p>
                 </div>
                 <!--end of Service=-->
@@ -170,9 +209,9 @@
                         <a ><i class="fas fa-lock"></i>  </a>                          
                     </span>
            <div class="grow">
-                   <a class="font-weight-bold text-uppercase"><h5>SÉCURITÉ</h5></a>
+                   <a class="font-weight-bold text-uppercase"><h5 style="color: #F9C010;">SÉCURITÉ</h5></a>
                    </div>
-           <p class="text-left">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</p>
+           <p class="text-center">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</p>
                 </div>
                 <!--end of Service=-->
               </div>
@@ -191,7 +230,7 @@
                 <ul>
                     <li><i class="fa fa-road "></i><br> 46, Bd Zerktouni 2ème étage App6 - Casablanca<br>
                                                  Showroom: 66 Hay Fath 3 rue n:4 Ain Chock Casablanca</li>
-                    <br><li><i class="fa fa-phone"></i><br> (+212)(552-4744) </li>
+                    <br><li><i class="fa fa-phone"></i><br> +212552-4744 </li>
                     <br><li><i class="fa fa-envelope"></i><br> info@winwats.com</li>
                 </ul>
             </div>
@@ -305,6 +344,27 @@
       }
     }
   </script>-->
-  <?php include 'footer.php';  ?>
+  <section id="footer" style="background: #92BDE7 !important;">
+     <hr width="100%" color="white">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>  
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 text-center">©Copyright WINWATS.</p>
+        </div>
+        <hr>
+      </div>  
+    </div>
+  </section>
+  
   </body>
 </html>

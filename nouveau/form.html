@@ -1,10 +1,10 @@
 <h1>por la categorie</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    <p><label>Select Image :</label><input type="file" name="image"></p>
+    <p><label>Select Image :</label><input type="file" name="image" ></p>
      <p><label>titre:</label><input type="text" name="nom"></p>
     <p><label>discription:</label><input type="text" name="discription"></p>
     <p><label for="pet-select">Choisir un genre:</label>
-	<select name="genre">
+    <select name="genre">
     <option value="">--choisisez un genre--</option>
     <option value="smart">MART HOME</option>
     <option value="safety">SAFETY SYSTEM</option>
@@ -14,10 +14,12 @@
 </form>
 <h1>pour les produit de chaque categorie</h1>
 <form action="upload1.php" method="post" enctype="multipart/form-data">
-    <p><label>Select Image :</label><input type="file" name="image"></p>
-    <p><label>Select Pdf:</label><input type="file" name="filePdf"></p>
+    <p><label>Select Image :</label><input type="file" name="image[]"multiple="multiple"></p>
      <p><label>titre:</label><input type="text" name="titre"></p>
-    <p><label>discription:</label><input type="text" name="discription"></p>
+    <p><label>discription:</label><textarea  name="discription"
+          rows="50" cols="33">
+
+</textarea></p>
     <p><label>idcat:</label><input type="number" name="idcat"></p>
 
     <input type="submit" name="submit" value="Upload">
