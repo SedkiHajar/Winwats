@@ -21,7 +21,7 @@
   </head>
   <body>
 
-      <nav class="navbar navbar-expand-lg   " >
+      <nav class="navbar navbar-expand-lg  " >
     <ul class="navbar-nav  ">
       <li class="nav-item active">
         <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
@@ -33,8 +33,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <ul class="list-group list-group-horizontal-sm">
           <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/activite1.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/activite1.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/activite2.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/activite3.png"></a>
         </ul>
         </div>
       </li>
@@ -82,7 +82,7 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'");
         <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img  src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>"  /> 
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
-            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light"><?php echo '<br>' .$row['nom']."". $row['id']; ?></span></h3>
+            <p class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light" style="color:black;position: relative;top:-190px;"><?php echo '<br>' .$row['nom']; ?></span></p>
             <p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?></p>
           </div>
         </div>
@@ -98,6 +98,7 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'");
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <?php include 'footer.php';  ?>
+    
   </body>
+  <?php include 'footer.php';  ?>
 </html>

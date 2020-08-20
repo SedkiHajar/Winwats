@@ -404,7 +404,7 @@ a.navbar-brand:hover{
   color: #F9C010;
 }*/
 .services h5{
-  color: #1C90C9;
+  /*color: #1C90C9;*/
   font-size:30px;
 }
 
@@ -842,7 +842,7 @@ section .section-title {
     text-transform: uppercase;
 }
 #footer {
-    background: #1C90C9 !important;
+    background: #92BDE7 !important;
 }
 
 #footer ul.social li a i {
