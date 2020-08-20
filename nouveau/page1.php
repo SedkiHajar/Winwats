@@ -68,32 +68,36 @@
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
 // Get image data from database 
+$titre=$_GET['titre'];
 $id=$_GET['id'];
-$result = $db->query("SELECT * FROM produit WHERE id=$id "); 
+$result = $db->query("SELECT * FROM imageprod WHERE titre='$titre'");
+$resu = $db->query("SELECT * FROM produit WHERE  titre='$titre' "); 
+
+
 ?>
 <?php if($result->num_rows > 0){ ?>
     <div class="gallery"> 
     <div class="container p-5">
     <div class="row">
-        <?php while($row = $result->fetch_assoc()){ ?> 
         	<div class="exzoom" id="exzoom">
               <div class="exzoom_img_box">
                  <ul class='exzoom_img_ul'  >
+                   <?php while($row = $result->fetch_assoc()){ ?> 
                     <li><img  src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="card-img-top" alt="..."  >
-                    </li>
+                    </li> <?php  } ?> 
                  </ul>
               </div>
               <div class="exzoom_nav"></div> 
             </div>
 
-
+            <?php while($row = $resu->fetch_assoc()){ ?> 
             <div class="trending" style="margin-left: 520px;margin-top: 5px;">  
            <h1><span style="color:#F9C010;"><?php echo '<br>' .$row['titre'] ?> </span> </h1>
             
             <p><span style="color:#1B8CC6;"><?php echo '<br>' .$row['description'] ?> <!--<a href="pdf.php?id=<?php //echo ($row['id']); ?>">pdf</a>--></span></p>
-
+<?php  } ?>
             
-            <?php  } ?> 
+           
             </div>
 
           

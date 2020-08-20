@@ -72,17 +72,17 @@ require_once 'dbConfig.php';
 $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'"); 
 ?>
 <?php if($result->num_rows > 0){ ?> 
-  <div class="gallery"> 
+  <div class="gallery" > 
     <div class="container p-5">
     <div class="row">
        <?php while($row = $result->fetch_assoc()){ ?> 
       <!-- DEMO 1 Item-->
        <?php ?>
-      <div class="col-lg-6 mb-3 mb-lg-0">
+      <div class="col-lg-6 mb-3 mb-lg-0" style="margin-bottom: 20px;">
         <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img  src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>"  /> 
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
-            <p class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light" style="color:black;position: relative;top:-190px;"><?php echo '<br>' .$row['nom']; ?></span></p>
+            <h1 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light" style=""><?php echo '<br>' .$row['nom']; ?></span></h1>
             <p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?></p>
           </div>
         </div>
