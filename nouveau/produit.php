@@ -78,15 +78,19 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'");
        <?php while($row = $result->fetch_assoc()){ ?> 
       <!-- DEMO 1 Item-->
        <?php ?>
-      <div class="col-lg-6 mb-3 mb-lg-0" style="margin-bottom: 20px;">
-        <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img  src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>"  /> 
-          <div class="hover-overlay"></div>
-          <div class="hover-1-content px-5 py-4">
-            <h1 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light" style=""><?php echo '<br>' .$row['nom']; ?></span></h1>
-            <p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?></p>
-          </div>
+      <div class="col-lg-4 mb-3 mb-lg-0" style="margin-top: 40px;">
+      <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img style="width: 19rem;height :13rem;" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
+        <div class="hover-overlay" style="width: 88%;"></div>
+        <div class="hover-1-content text-center px-5 py-4">
+          <h5 style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
+            <span class="font-weight-light" style="text-align: center"><?php echo '<br>' .$row['nom']; ?></span>
+          </h5>
+          <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
+          </p>-->
         </div>
-      </div></a>
+        </div>
+      </div>
+      </a>
         <?php } ?> 
     </div>
     </div> 

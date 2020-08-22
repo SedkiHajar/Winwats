@@ -923,8 +923,11 @@ section .section-title {
 .hover-1-content {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0px;
   z-index: 99;
+  /*margin-bottom: 75px;
+  text-align: center;*/
+  color:transparent;
  
 }
 
@@ -932,14 +935,28 @@ section .section-title {
   background: rgba(0, 0, 0, 0);
 }
 
-.hover-1-description {
+/*.hover-1-description {
   transform: translateY(0.5rem);
   opacity: 0;
-}
+}*/
 
+
+
+
+
+.hover-1:hover .hover-overlay {
+  background:#F9C010;
+  opacity: 0.9;
+  
+
+}
 .hover-1:hover .hover-1-content {
   bottom: 2rem;
+  visibility: none;
+  color:white;
 }
+
+
 
 .hover-1:hover .hover-1-description {
   opacity: 1;
@@ -950,19 +967,12 @@ section .section-title {
   /*width: 100%;*/
   /*left: 0;*/
 }
-.hover-1 h1{
-  color:white;position: relative;top:50%; visibility:visible;
+/*.hover-1 h3{
+  color:white;position: relative;top:50%; 
 }
-.hover-1 h1:hover{
- color:#F9C010;position:relative;top:50%; visibility:visible;
-}
+.hover-1 h3:hover{
+ color:red;position:relative;top:50%; visibility:visible;
+}*/
 
 
 
-
-.hover-1:hover .hover-overlay {
-   background:#208DCA;
-  opacity: 0.7;
-  width: 95%;
-
-}
