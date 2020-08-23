@@ -110,6 +110,30 @@ $resu = $db->query("SELECT * FROM produit WHERE  titre='$titre' ");
 <?php }?>  
 
  </div>
+
+<section id="footer" style="background: #92BDE7 !important;margin-top:150px;">
+     
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>  
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 text-center">©Copyright WINWATS.</p>
+        </div>
+        <hr>
+      </div>  
+    </div>
+  </section>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="src/jquery.exzoom.js"></script>
     

@@ -85,7 +85,7 @@ $result = $db->query("SELECT * FROM produit WHERE idcat=$id ");
        	<div class="card" style="width: 18rem;height :18rem;">
   			<img width="350" height="200" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="card-img-top" alt="..."  >
   			<div class="card-body">
-    			<h5 class="card-title" ><span style="color:#F9C010;"><?php echo $row['titre']; ?></span></h5>
+    			<p class="card-title" ><span style="color:#F9C010;"><?php echo $row['titre']; ?></span></p>
     			</a>
   			</div>
 		</div>
@@ -99,9 +99,32 @@ $result = $db->query("SELECT * FROM produit WHERE idcat=$id ");
 <?php } ?>
 </div> 
 
+<section id="footer" style="background: #92BDE7 !important;margin-top:70px;">
+     
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>  
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 text-center">©Copyright WINWATS.</p>
+        </div>
+        <hr>
+      </div>  
+    </div>
+  </section>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <?php include 'footer.php';  ?>
+    <?php //include 'footer.php';  ?>
+
   </body>
 </html>
