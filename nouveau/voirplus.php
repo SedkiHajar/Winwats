@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="animate.min.css">
     <!-- google fony-->
@@ -82,14 +82,14 @@ $result = $db->query("SELECT * FROM produit WHERE idcat=$id ");
        <?php ?>
        <a style="text-decoration:none;" href="page1.php?id=<?php echo ($row['id']);?>&amp;titre=<?php echo ($row['titre']);?>" >
         <div class="col-lg-3 mb-3 mb-lg-0 " style="margin-left: 40px;margin-top: 40px;">
-       	<div class="card" style="width: 18rem;height :18rem;">
-  			<img width="350" height="200" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="card-img-top" alt="..."  >
-  			<div class="card-body">
-    			<p class="card-title" ><span style="color:#F9C010;"><?php echo $row['titre']; ?></span></p>
-    			</a>
-  			</div>
-		</div>
-		</div>
+        <div class="card" style="width: 18rem;height :18rem;">
+        <img width="350" height="200" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="card-img-top" alt="..."  >
+        <div class="card-body">
+          <p class="card-title" ><span style="color:#F9C010;"><?php echo $row['titre']; ?></span></p>
+          </a>
+        </div>
+    </div>
+    </div>
         <?php } ?> 
     </div>
     </div> 
