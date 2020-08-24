@@ -21,7 +21,7 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg   " >
+    <nav class="navbar navbar-expand-lg  " >
     <ul class="navbar-nav  ">
       <li class="nav-item active">
         <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
@@ -32,9 +32,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <ul class="list-group list-group-horizontal-sm">
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/activite1.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/activite2.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/activite3.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/a.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/b.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/c.png"></a>
         </ul>
         </div>
       </li>
@@ -86,7 +86,7 @@
               </div>
               <div class="col-md-6">
                 <div class="img-box">
-                  <img src="images/sic-1.png" class="pic-one animated zoomIn delay-1s " />
+                  <img src="images/test.png" class="pic-one animated zoomIn delay-1s " />
                   <!--<img src="images/sic-2.png" class="pic-two animated fadeInLeft delay-4s" />
                   <img src="images/sic-3.png" class="pic-three animated fadeInUp delay-3s" />
                   <img src="images/pic-4.png" class="pic-four animated fadeInDown delay-3s" />
