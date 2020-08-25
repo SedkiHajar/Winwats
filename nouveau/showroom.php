@@ -46,10 +46,10 @@
                   </ol>
                       <div class="carousel-inner">
                             <div class="carousel-item active">
-                                    <img src="images/showroom1.jpg" width="100%" height="400px" alt="...">
+                                    <img src="images/showroom2.jpg" width="100%" height="400px" alt="...">
                             </div>
                             <div class="carousel-item">
-                                     <img src="images/showroom2.jpg" width="100%" height="400px" alt="...">
+                                     <img src="images/showroom1.jpg" width="100%" height="400px" alt="...">
                             </div>
                             <div class="carousel-item">
                                      <img src="images/showroom3.jpeg" width="100%" height="400px" alt="...">

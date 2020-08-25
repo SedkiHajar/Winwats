@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>WINWATS</title>
     <link rel="stylesheet" href="css/styles.css" />
+    
      
     <link
       rel="stylesheet"
@@ -32,9 +33,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <ul class="list-group list-group-horizontal-sm">
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img src="images/a.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img src="images/b.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img src="images/c.png"></a>
+          <a  style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img height="200" src="images/a.png" ></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img height="200"src="images/b.png"></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img height="200" src="images/c.png"></a>
         </ul>
         </div>
       </li>
@@ -62,11 +63,111 @@
     </ul>
   </div>
 </nav>
-
     <!-- nav<-->
    
     <!-- end nav -->
-    <div
+
+    <section id="main" style="margin-top: -70px;">
+        <div id="Carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#Carousel" data-slide-to="1"></li>
+            <li data-target="#Carousel" data-slide-to="2"></li>
+            <li data-target="#Carousel" data-slide-to="3"></li>
+            <li data-target="#Carousel" data-slide-to="4"></li>
+
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item carousel-image-1 active" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+    background-image:url('images/slide2.jpg');
+    background-size: cover;
+    height:800px;height: 750px;">
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
+  left:-400px;top:30px;">
+                  <h1 class="display-3 h-color">SmartHome</h1>
+                  <p class="lead">Nous mettons à profit notre expertise et notre créativité <br>pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.</p>
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item carousel-image-2 " style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+    background-image:url('images/e.jpg');
+    background-size: cover;
+    height:800px;height: 750px;">
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
+  top:10px;left:-500px;">
+                  <h1 class="display-3 h-color">SmartHome</h1>
+                  <p class="lead">Nous mettons à profit notre expertise et notre créativité <br>pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.</p>
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item carousel-image-3 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+    background-image:url('images/p.jpg');
+    background-size: cover;
+    height:800px;height: 750px;">
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
+  top:50px;">
+                  <h1 class="display-3 h-color">SmartHome</h1>
+                  <p class="lead">Nous mettons à profit notre expertise et notre créativité <br>pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.</p>
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                </div>
+              </div>
+            </div>
+          
+
+
+
+          <div class="carousel-item carousel-image-4 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+    background-image:url('images/slide4.jpg');
+    background-size: cover;
+    height:800px;height: 750px;">
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-right mb-5" style="position:absolute;
+  top:50px;">
+                  <h1 class="display-3 h-color">Safety System</h1>
+                  <p class="lead">Nos Objectifs sont le Confort et la sécurité Total de vous et Vos Logements.</p>
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                </div>
+              </div>
+            </div>
+          
+
+
+
+          <div class="carousel-item carousel-image-5 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+    background-image:url('images/slide5.jpg');
+    background-size: cover;
+    height:800px;height: 750px;">
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-right mb-5" style="position:absolute;
+  top:50px;">
+                  <h1 class="display-3 h-color">Green energy</h1>
+                  <p class="lead">Notre équipe possède une solide expérience dans la pose de panneaux solaires.</p>
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+    
+          <a href="#Carousel" data-slide="prev" class="carousel-control-prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+    
+          <a href="#Carousel" data-slide="next" class="carousel-control-next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </section>
+
+    <!--<div
       id="carouselExampleControls"
       class="carousel slide carousel-fade"
       data-ride="carousel"
@@ -86,13 +187,17 @@
               </div>
               <div class="col-md-6">
                 <div class="img-box">
-                  <img src="images/test.png" class="pic-one animated zoomIn delay-1s " />
-                  <!--<img src="images/sic-2.png" class="pic-two animated fadeInLeft delay-4s" />
+                  <img src="images/test.png" class="pic-one animated zoomIn delay-1s " />-->
+
+
+
+
+                  <!--comment<img src="images/sic-2.png" class="pic-two animated fadeInLeft delay-4s" />
                   <img src="images/sic-3.png" class="pic-three animated fadeInUp delay-3s" />
                   <img src="images/pic-4.png" class="pic-four animated fadeInDown delay-3s" />
                   <img src="images/pic-5.png" class="pic-five animated fadeInRight delay-4s" />
                   <img src="images/pic-6.png" class="pic-six animated jackInTheBox delay-5s" />-->
-                </div>
+                <!--</div>
               </div>
             </div>
           </div>
@@ -109,13 +214,13 @@
                   </div>
                   <div class="col-md-6">
                     <div class="img-box">
-                      <img src="images/sic-1.png" class="pic-two animated zoomIn delay-1s " />
-                      <!--<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
+                      <img src="images/sic-1.png" class="pic-two animated zoomIn delay-1s " />-->
+                      <!--comment<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
                       <img src="images/img-3.png" class="img-three animated zoomIn delay-3s" />
                       <img src="images/img-4.png" class="img-four animated fadeInDown delay-3s" />
                       <img src="images/img-5.png" class="img-five animated fadeInRight delay-4s" />-->
     
-                    </div>
+                    <!--</div>
                   </div>
                 </div>
           </div>
@@ -132,13 +237,13 @@
                   </div>
                   <div class="col-md-6">
                     <div class="img-box">
-                      <img src="images/sic-1.png" class="pic-three animated zoomIn delay-1s" />
-                      <!--<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
+                      <img src="images/sic-1.png" class="pic-three animated zoomIn delay-1s" />-->
+                      <!--comment<img src="images/img-2.png" class="img-two animated fadeInLeft delay-4s" />
                       <img src="images/img-3.png" class="img-three animated zoomIn delay-3s" />
                       <img src="images/img-4.png" class="img-four animated fadeInDown delay-3s" />
                       <img src="images/img-5.png" class="img-five animated fadeInRight delay-4s" />-->
     
-                    </div>
+                   <!-- </div>
                   </div>
                 </div>
         </div>
@@ -163,14 +268,15 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+    </div>-->
     
 
     <!--Service Section==========-->
       <section id="services" class="services py-5 text-center">
           <div class="container">
               <div class="row">
-                <h3 style="color: #F9C010;" class="text-center">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie et anti-intrusion.</h3>
+                <h3 style="color: #06629C;" class="text-center">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie, anti-intrusion et énérgie renouvelable.
+                  <br>Nous vous invitons à découvrir la diversité de nos produits et services, et nous restons à votre disposition pour vous accompagner avec des études précises d'implantation et de coûts relatives à votre besoin réel.</h3>
                   <!--Single Service-->
 
                   <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
@@ -180,14 +286,14 @@
                       <div class="grow">
                    <a  class="font-weight-bold text-uppercase" ><h5 style="color: #F9C010;">CONFORT</h5></a>
                    </div>
-                      <p class="text-center " >Au travail, dans votre fauteuil, pendant un
+                      <h4 class="text-center " style="color: #06629C;" >Au travail, dans votre fauteuil, pendant un
                          voyage…, contrôlez quand vos appareils
                          électroniques, systèmes d’éclairage ou
                         systèmes de chauffage depuis votre
                          ordinateur, tablette ou Smartphone,
                             n’importe ou et n’importe quand.<br>
                           Un système domotique contribue a
-                          un confort de vie plus élevé</p>
+                          un confort de vie plus élevé</h4>
                   </div>
                   <!--end of Service=-->
                   <!--Single Service-->
@@ -199,8 +305,8 @@
                    <div class="grow">
                    <a  class="font-weight-bold text-uppercase"><h5 style="color: #F9C010;">ECONOMIE D'ENERGIE</h5></a>
                    </div>
-                 <p class=" text-center">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes.<br>
-                  En réduisant la consommation énergétique, vous diminuez le recours aux énergies fossiles traditionnelles et les émissions de gaz à effet de serre qui résultent de leur exploitation.</p>
+                 <h4 class=" text-center" style="color: #06629C;">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes.<br>
+                  En réduisant la consommation énergétique, vous diminuez le recours aux énergies fossiles traditionnelles et les émissions de gaz à effet de serre qui résultent de leur exploitation.</h4>
                 </div>
                 <!--end of Service=-->
                 <!--Single Service-->
@@ -211,7 +317,7 @@
            <div class="grow">
                    <a class="font-weight-bold text-uppercase"><h5 style="color: #F9C010;">SÉCURITÉ</h5></a>
                    </div>
-           <p class="text-center">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</p>
+           <h4 class="text-center" style="color: #06629C;">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</h4>
                 </div>
                 <!--end of Service=-->
               </div>
@@ -349,9 +455,9 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
           <ul class="list-unstyled list-inline social text-center">
-            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/winwats"><i class="fa fa-facebook" style="color: white;"></i></a></li>
             <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
-            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/winwat.s"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
             <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
           </ul>
         </div>
