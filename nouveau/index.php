@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>WINWATS</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css?<?php echo time(); ?>" />
     
      
     <link
@@ -32,21 +33,22 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+          <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item  dropdown  ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           PRODUITS
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <ul class="list-group list-group-horizontal-sm">
-          <a  style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img height="200" src="images/a.png" ></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img height="200"src="images/b.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img height="200" src="images/c.png"></a>
+          <ul class="list-group list-group-vertical-sm">
+          <a  style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><p>SMART HOME</p></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><p>SAFETY SYSTEM</p></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><p>GREEN ENERGY</p></a>
         </ul>
         </div>
       </li>
-      <li class="nav-item active">
-          <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="showroom.php">SHOWROOM</a>
       </li>
@@ -84,7 +86,7 @@
 
           </ol>
           <div class="carousel-inner">
-            <div  class="carousel-item carousel-image-1 active"  ><img src="images/s.png" class="img-responsive" style="width:100%" />
+            <div  class="carousel-item carousel-image-1 active"  ><img src="images/s.png" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   left:-200px;top:30px;">
@@ -95,7 +97,7 @@
               </div>
             </div>
     
-            <div class="carousel-item carousel-image-2 " ><img src="images/e.jpg" class="img-responsive" style="width:100%" />
+            <div class="carousel-item carousel-image-2 " ><img src="images/e.jpg" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   top:10px;left:-500px;">
@@ -106,7 +108,7 @@
               </div>
             </div>
     
-            <div class="carousel-item carousel-image-3 "  ><img src="images/ip1.jpeg" class="img-responsive" style="width:100%" />
+            <div class="carousel-item carousel-image-3 "  ><img src="images/ip1.jpeg" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   top:-40px;left:-400px;">
@@ -117,7 +119,7 @@
               </div>
             </div>
           
-          <div class="carousel-item carousel-image-4 " ><img src="images/ip2.png" class="img-responsive" style="width:100%" />
+          <div class="carousel-item carousel-image-4 " ><img src="images/ip2.png" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   top:10px;left:-500px;">
@@ -129,7 +131,7 @@
             </div>
 
 
-            <div class="carousel-item carousel-image-5 " ><img src="images/ip3.jpeg" class="img-responsive" style="width:100%" />
+            <div class="carousel-item carousel-image-5 " ><img src="images/ip3.jpeg" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   top:-30px;right:-400px;">
@@ -142,7 +144,7 @@ avec des solutions innovatives</p>
               </div>
             </div>
 
-            <div class="carousel-item carousel-image-6 " ><img src="images/ip4.jpeg" class="img-responsive" style="width:100%" />
+            <div class="carousel-item carousel-image-6 " ><img src="images/ip4.jpeg" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   top:-30px;right:-400px;">
@@ -155,7 +157,7 @@ avec des solutions innovatives</p>
 
 
 
-          <div class="carousel-item carousel-image-7 "  ><img src="images/slide4.png" class="img-responsive" style="width:100%" />
+          <div class="carousel-item carousel-image-7 "  ><img src="images/slide4.png" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-right mb-5" style="position:absolute;
   top:50px;">
@@ -167,7 +169,7 @@ avec des solutions innovatives</p>
             </div>
           
 
-          <div class="carousel-item carousel-image-8 "  ><img src="images/slide5.png" class="img-responsive" style="width:100%" />
+          <div class="carousel-item carousel-image-8 "  ><img src="images/slide5.png" class="img-responsive" style="width:100%;height:100%;" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-right mb-5" style="position:absolute;
   top:50px;">
@@ -318,8 +320,8 @@ avec des solutions innovatives</p>
       <section id="services" class="services py-5 text-center">
           <div class="container">
               <div class="row">
-                <h3 style="color: #06629C;" class="text-center">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie, anti-intrusion et énérgie renouvelable.
-                  <br>Nous vous invitons à découvrir la diversité de nos produits et services, et nous restons à votre disposition pour vous accompagner avec des études précises d'implantation et de coûts relatives à votre besoin réel.</h3>
+                <h4 style="color: #06629C;" class="text-center">La société WINWATS se distingue au Maroc par une offre globale de solutions clés en main dans les domaines de domotique, contrôle d’accès, système incendie, anti-intrusion et énérgie renouvelable.
+                  <br>Nous vous invitons à découvrir la diversité de nos produits et services, et nous restons à votre disposition pour vous accompagner avec des études précises d'implantation et de coûts relatives à votre besoin réel.</h4>
                   <!--Single Service-->
 
                   <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
@@ -327,16 +329,16 @@ avec des solutions innovatives</p>
                          <a ><i class="fas fa-medal"></i>  </a>                         
                       </span>
                       <div class="grow">
-                   <a  class="font-weight-bold text-uppercase" ><h5 style="color: #F9C010;">CONFORT</h5></a>
+                   <a  class="font-weight-bold text-uppercase" ><p style="color: #F9C010;">CONFORT</p></a>
                    </div>
-                      <h4 class="text-center " style="color: #06629C;" >Au travail, dans votre fauteuil, pendant un
+                      <p class="text-center " style="color: #06629C;" >Au travail, dans votre fauteuil, pendant un
                          voyage…, contrôlez quand vos appareils
                          électroniques, systèmes d’éclairage ou
                         systèmes de chauffage depuis votre
                          ordinateur, tablette ou Smartphone,
                             n’importe ou et n’importe quand.<br>
                           Un système domotique contribue a
-                          un confort de vie plus élevé</h4>
+                          un confort de vie plus élevé</p>
                   </div>
                   <!--end of Service=-->
                   <!--Single Service-->
@@ -346,10 +348,10 @@ avec des solutions innovatives</p>
                        <a ><i class="fas fa-battery-full"></i> </a>                        
                     </span>
                    <div class="grow">
-                   <a  class="font-weight-bold text-uppercase"><h5 style="color: #F9C010;">ECONOMIE D'ENERGIE</h5></a>
+                   <a  class="font-weight-bold text-uppercase"><p style="color: #F9C010;">ECONOMIE D'ENERGIE</p></a>
                    </div>
-                 <h4 class=" text-center" style="color: #06629C;">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes.<br>
-                  En réduisant la consommation énergétique, vous diminuez le recours aux énergies fossiles traditionnelles et les émissions de gaz à effet de serre qui résultent de leur exploitation.</h4>
+                 <p class=" text-center" style="color: #06629C;">Les solutions de domotique permettent une meilleure gestion de l'énergie, d'où des économies d'énergie importantes.<br>
+                  En réduisant la consommation énergétique, vous diminuez le recours aux énergies fossiles traditionnelles et les émissions de gaz à effet de serre qui résultent de leur exploitation.</p>
                 </div>
                 <!--end of Service=-->
                 <!--Single Service-->
@@ -358,15 +360,61 @@ avec des solutions innovatives</p>
                         <a ><i class="fas fa-lock"></i>  </a>                          
                     </span>
            <div class="grow">
-                   <a class="font-weight-bold text-uppercase"><h5 style="color: #F9C010;">SÉCURITÉ</h5></a>
+                   <a class="font-weight-bold text-uppercase"><p style="color: #F9C010;">SÉCURITÉ</p></a>
                    </div>
-           <h4 class="text-center" style="color: #06629C;">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</h4>
+           <p class="text-center" style="color: #06629C;">Pour les contrôles d’accès, seules les personnes habilitées à accéder à une zone pourront y parvenir.<br> La traçabilité et l’analyse statistique font partie intégrante de la réflexion sécuritaire d’un site.</p>
                 </div>
                 <!--end of Service=-->
               </div>
           </div>
       </section>
+
+
       <!---End of Service Section=======-->
+
+         <h4 style="color: #06629C;" class="text-center">Qu’est-ce qui fait la force de WINWATS</h4>
+      <section id="services2" class="services py-5 text-center">
+          <div class="container">
+              <div class="row">
+                
+                  <!--Single Service-->
+
+                  <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
+                      <span class="service-icon">
+                         <a ><i class="fas fa-tachometer-alt"></i>  </a>                         
+                      </span>
+                      <div class="grow">
+                   <a  class="font-weight-bold text-uppercase" ><p style="color: #F9C010;">RAPIDE & FIABLE</p></a>
+                   </div>
+                      <p class="text-center " style="color: #06629C;" >Grâce à l’extrême fiabilité du protocole bus CAN que nous utilisons, notre domotique vous épatera par sa vitesse d’exécution. Une simple pression sur le bouton et l’action demandée sera exécutée l’instant d’après !</p>
+                  </div>
+                  <!--end of Service=-->
+                  <!--Single Service-->
+                  <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
+                    <span class="service-icon">
+      
+                       <a ><i class="fas fa-check-circle"></i> </a>                        
+                    </span>
+                   <div class="grow">
+                   <a  class="font-weight-bold text-uppercase"><p style="color: #F9C010;">UN DESIGN RÉUSSI</p></a>
+                   </div>
+                 <p class=" text-center" style="color: #06629C;">En plus d’être rapides et fiables, nos solutions valent également le coup d’œil. Nos produits élaborés avec des matériaux de grande qualité sont parfaitement harmonisés les uns aux autres sur les plans visuel et tactile et peuvent s’intégrer dans n’importe quel type de bâtiment ou maison.</p>
+                </div>
+                <!--end of Service=-->
+                <!--Single Service-->
+                <div class="col-10 mx-auto col-md-6 col-lg-4 my-3">
+                    <span class="service-icon">
+                        <a ><i class="fas fa-thumbs-up"></i> </a>                          
+                    </span>
+           <div class="grow">
+                   <a class="font-weight-bold text-uppercase"><p style="color: #F9C010;">SERVICE ET FLEXIBILITÉ</p></a>
+                   </div>
+           <p class="text-center" style="color: #06629C;">Petit ou grand projet, vous pouvez compter sur notre accompagnement personnalisé selon vos souhaits et besoins. Notre service après-vente est toujours là pour vous, y compris en dehors des heures de bureau.</p>
+                </div>
+                <!--end of Service=-->
+              </div>
+          </div>
+      </section>
         <!--Contact us Section-->
        <!--Contact US-->
        
@@ -514,6 +562,27 @@ avec des solutions innovatives</p>
       </div>  
     </div>
   </section>
+
+
+
+
+
+  <!--<h1>My First Google Map</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWLuqqySZmDCXUbzG6Eef4Fvov7BpP1p8&callback=initMap"
+  type="text/javascript"></script>-->
   
   </body>
 </html>

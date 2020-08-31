@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>WINWATS</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?<?php echo time(); ?>" />
      
     <link
       rel="stylesheet"
@@ -30,21 +30,22 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+          <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item  dropdown  ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           PRODUITS
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <ul class="list-group list-group-horizontal-sm">
-          <a  style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><h5>SMART HOME</h5><img height="200" src="images/a.png" ></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><h5>SAFETY SYSTEM</h5><img height="200"src="images/b.png"></a>
-          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><h5>GREEN ENERGY</h5><img height="200" src="images/c.png"></a>
+          <ul class="list-group list-group-vertical-sm">
+          <a  style="text-decoration: none;"class="list-group-item" href="produit.php?genre=smart"><p>SMART HOME</p></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=safety"><p>SAFETY SYSTEM</p></a>
+          <a style="text-decoration: none;"class="list-group-item" href="produit.php?genre=green"><p>GREEN ENERGY</p></a>
         </ul>
         </div>
       </li>
-      <li class="nav-item active">
-          <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="showroom.php">SHOWROOM</a>
       </li>
