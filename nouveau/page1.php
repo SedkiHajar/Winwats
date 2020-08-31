@@ -8,13 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product Image Magnifier</title>
     <link rel="stylesheet" href="src/jquery.exzoom.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="css/styles.css?<?php echo time(); ?>" />
      
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="animate.min.css">
     <!-- google fony-->
@@ -135,7 +137,7 @@ $resu = $db->query("SELECT * FROM produit WHERE  titre='$titre' ");
   </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
     <script src="src/jquery.exzoom.js"></script>
     
 

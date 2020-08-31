@@ -414,9 +414,98 @@ avec des solutions innovatives</p>
                 <!--end of Service=-->
               </div>
           </div>
+      
+
+
+      <div class="gallery"  > 
+    <div class="container p-5">
+    <div class="row">
+    <div class="col-lg-4 mb-3 mb-lg-0" style="">
+    <a href="showroom.php"><div class="hover hover-1 text-white rounded"><img style="width: 19rem;height :13rem;" src="images/showroom2.jpg" /> 
+        <div class="hover-overlay" style="width: 88%;"></div>
+        <div class="hover-1-content text-center px-5 py-4">
+          <p style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
+            <span class="font-weight-light" style="text-align: center">VISITEZ NOTRE SPLENDIDE SHOWROOM</span>
+          </p>
+          <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
+          </p>-->
+        </div>
+        </div>
+      </div>
+      </a>
+      </div>
+    </div> 
+  </div>
+         
+   
+
+     
+
+
+
+ <?php 
+    
+// Include the database configuration file  
+require_once 'dbConfig.php'; 
+// Get image data from database 
+$result = $db->query("SELECT * FROM caregories WHERE genre='smart'"); 
+?>
+
+  <div class="gallery" > 
+    <div class="container p-5">
+    <div class="row">
+       <?php while($row = $result->fetch_assoc()){ ?> 
+      <!-- DEMO 1 Item-->
+       <?php ?>
+      <div class="col-lg-4 mb-3 mb-lg-0" style="margin-top: 40px;">
+      <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img style="width: 19rem;height :13rem;" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
+        <div class="hover-overlay" style="width: 88%;"></div>
+        <div class="hover-1-content text-center px-5 py-4">
+          <p style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
+            <span class="font-weight-light" style="text-align: center"><?php echo '<br>' .$row['nom']; ?></span>
+          </p>
+          <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
+          </p>-->
+        </div>
+        </div>
+      </div>
+      </a>
+      
+        <?php }$result = $db->query("SELECT * FROM caregories WHERE genre='safety'"); 
+?> 
+    
+<?php  ?> 
+    <?php while($row = $result->fetch_assoc()){ ?> 
+      <!-- DEMO 1 Item-->
+       <?php ?>
+      <div class="col-lg-4 mb-3 mb-lg-0" style="margin-top: 40px;">
+      <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img style="width: 19rem;height :13rem;" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
+        <div class="hover-overlay" style="width: 88%;"></div>
+        <div class="hover-1-content text-center px-5 py-4">
+          <p style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
+            <span class="font-weight-light" style="text-align: center"><?php echo '<br>' .$row['nom']; ?></span>
+          </p>
+          <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
+          </p>-->
+        </div>
+        </div>
+      </div>
+      </a>
+      <?php } ?>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
       </section>
         <!--Contact us Section-->
        <!--Contact US-->
+
+        
+
        
     <section id="contact" class="contact py-5">
       <div class="container">
@@ -425,18 +514,23 @@ avec des solutions innovatives</p>
             <div class="company-info">
                 <h3>Nos informations</h3>
                 <ul>
-                    <li><i class="fa fa-road "></i><br> 46, Bd Zerktouni 2ème étage App6 - Casablanca<br>
+                    <li>46, Bd Zerktouni 2ème étage App6 - Casablanca<br>
                                                  Showroom: 66 Hay Fath 3 rue n:4 Ain Chock Casablanca</li>
-                    <br><li><i class="fa fa-phone"></i><br> +212552-4744 </li>
-                    <br><li><i class="fa fa-envelope"></i><br> info@winwats.com</li>
-                </ul>
+                    <br><li><i class="fa fa-phone"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +212 5 2252-4744 </li>
+                    <br><li><i class="fa fa-phone"></i> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +212 6 6138-4807 </li>
+                    <br><li><i class="fa fa-envelope"></i> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   info@winwats.com</li>
+
+                </ul><br><br><br>
+                <ul>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13303.063591819653!2d-7.5914374!3d33.5334717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe113a7145b634f84!2sSmarthome%20%26%20Safety%20System!5e0!3m2!1sfr!2sma!4v1598905135525!5m2!1sfr!2sma" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+           </ul>
             </div>
 
           <!--alert message start-->
           
           <!--alert message end-->
 
-
+        
 
 
 
@@ -546,10 +640,10 @@ avec des solutions innovatives</p>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
           <ul class="list-unstyled list-inline social text-center">
-            <li class="list-inline-item"><a href="https://www.facebook.com/winwats"><i class="fa fa-facebook" style="color: white;"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/winwat.s"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
-            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/winwats"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+            <li class="list-inline-item"><a target="_blank" href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a  target="_blank" href="https://www.instagram.com/winwat.s"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a target="_blank" href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
           </ul>
         </div>
         <hr>

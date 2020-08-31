@@ -1,4 +1,3 @@
-<?php include 'sendemail.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>WINWATS</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css?<?php echo time(); ?>" />
+   <link rel="stylesheet" type="text/css" href="css/styles.css?<?php echo time(); ?>" />
      
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="animate.min.css">
     <!-- google fony-->
@@ -20,7 +19,7 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg  bg-light">
+    <nav class="navbar navbar-expand-lg  bg-light">
   <a class="navbar-brand" href="index.php" >
     <img src="images/logo.png" width="70" height="50" class="d-inline-block align-top" alt="" loading="lazy">
   </a>
@@ -105,7 +104,27 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'");
     <p class="status error">Image(s) not found...</p> 
 <?php } ?>
 
-
+<section id="footer" style="background: #92BDE7 !important;margin-top:70px;">
+     
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"style="color: white;" ></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fab fa-linkedin"style="color: white;" ></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>  
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 text-center">©Copyright WINWATS.</p>
+        </div>
+        <hr>
+      </div>  
+    </div>
+  </section>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -113,5 +132,5 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'");
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
   </body>
-  <?php include 'footer.php';  ?>
+  <?php //include 'footer.php';  ?>
 </html>

@@ -941,7 +941,7 @@ section .section-title {
 
 .contacter form p {
     margin: 0;
-}
+    }
 
 .contacter form .full {
     grid-column: 1 / 3;
