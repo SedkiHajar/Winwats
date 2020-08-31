@@ -21,8 +21,17 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg  " >
-    <ul class="navbar-nav  ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+    <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    WINWATS
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto ">
       <li class="nav-item active">
         <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
       </li>
@@ -46,26 +55,24 @@
       </li>
       
     </ul>
-    <ul class="navbar-nav mx-auto ">
-  <a class="navbar-brand" href="index.php" >
-    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    WINWATS
-  </a>
-  </ul>
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ">
-        <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
-      </li>
+    
+  
+  
+    
+     
+        </div><a class="btn-nav   nav-link" href="index.php#contact">CONTACTEZ-NOUS</a>
+     
       <!--<li class="nav-item">
         <a class="btn-nav   nav-link" href="#">login</a>
       </li>-->
-    </ul>
+    
   </div>
 </nav>
    <div class="showa"> 
       <div class="uppage">
-        <h1>Showroom</h1>
+        <h1>Produits</h1>
       </div>
+   </div>
    <?php 
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
@@ -91,7 +98,7 @@ $result = $db->query("SELECT * FROM produit WHERE idcat=$id ");
     </div>
     </div>
         <?php } ?> 
-    </div>
+    
     </div> 
   </div>
 <?php }else{ ?> 

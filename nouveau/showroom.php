@@ -20,7 +20,7 @@
   <body>
 
 <?php include 'header.php';  ?>
-  <div class="showa"> 
+  <div class="showa" id="showa"> 
       <div class="uppage" style="padding: 60px; margin-bottom: 40px;
   background-image: linear-gradient( #92BDE7 , #92BDE7);">
         <h1>Showroom</h1>
@@ -43,11 +43,24 @@
                       <li data-target="#showroom" data-slide-to="0" class="active"></li>
                       <li data-target="#showroom" data-slide-to="1"></li>
                       <li data-target="#showroom" data-slide-to="2"></li>
+                      <li data-target="#showroom" data-slide-to="3"></li>
+                      <li data-target="#showroom" data-slide-to="4"></li>
+                      <li data-target="#showroom" data-slide-to="5"></li>
                   </ol>
                       <div class="carousel-inner">
                             <div class="carousel-item active">
                                     <img src="images/showroom2.jpg" width="100%" height="400px" alt="...">
                             </div>
+                            <div class="carousel-item">
+                                    <img src="images/dr.jpg" width="100%" height="400px" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                    <img src="images/er.jpg" width="100%" height="400px" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                    <img src="images/ep.jpg" width="100%" height="400px" alt="...">
+                            </div>
+
                             <div class="carousel-item">
                                      <img src="images/showroom1.jpg" width="100%" height="400px" alt="...">
                             </div>
@@ -60,6 +73,7 @@
             </div>
       </div>
       </div>
+    </div>
     <!--<div  style="margin-bottom: 700px"></div>
   </div>-->
     <!-- Optional JavaScript -->

@@ -22,11 +22,16 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg  " >
-    <ul class="navbar-nav  ">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
-      </li>
+    <nav class="navbar navbar-expand-lg  bg-light">
+  <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="70" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+  </a>
+  <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item  dropdown  ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           PRODUITS
@@ -39,63 +44,80 @@
         </ul>
         </div>
       </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="showroom.php">SHOWROOM</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="formation.php" >FORMATION</a>
       </li>
+  </div>
       
-    </ul>
-    <ul class="navbar-nav mx-auto ">
-  <a class="navbar-brand" href="index.php" >
-    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    WINWATS
-  </a>
-  </ul>
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ">
         <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
-      </li>
+      
       <!--<li class="nav-item">
         <a class="btn-nav   nav-link" href="#">login</a>
       </li>-->
     </ul>
-  </div>
+  
 </nav>
     <!-- nav<-->
    
     <!-- end nav -->
+    
 
-    <section id="main" style="margin-top: -70px;">
-        <div id="Carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+
+    <section id="main" style="margin-top: -60px; ">
+        <div id="Carousel" class="carousel slide" data-ride="carousel" >
+          <ol class="carousel-indicators" >
+            <li data-target="#Carousel" data-slide-to="0" class="active" ></li>
             <li data-target="#Carousel" data-slide-to="1"></li>
             <li data-target="#Carousel" data-slide-to="2"></li>
             <li data-target="#Carousel" data-slide-to="3"></li>
             <li data-target="#Carousel" data-slide-to="4"></li>
+            <li data-target="#Carousel" data-slide-to="5"></li>
+            <li data-target="#Carousel" data-slide-to="6"></li>
+            <li data-target="#Carousel" data-slide-to="7"></li>
+            
 
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item carousel-image-1 active" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
-    background-image:url('images/slide2.jpg');
-    background-size: cover;
-    height:800px;height: 750px;">
+            <div  class="carousel-item carousel-image-1 active"  ><img src="images/s.png" class="img-responsive" style="width:100%" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
-  left:-400px;top:30px;">
+  left:-200px;top:30px;">
                   <h1 class="display-3 h-color">SmartHome</h1>
-                  <p class="lead">Nous mettons à profit notre expertise et notre créativité <br>pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.</p>
+                  <p class="lead"> Paul Bennett : « Le design est dans les détails »</p>
                   <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
                 </div>
               </div>
             </div>
     
-            <div class="carousel-item carousel-image-2 " style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
-    background-image:url('images/e.jpg');
-    background-size: cover;
-    height:800px;height: 750px;">
+            <div class="carousel-item carousel-image-2 " ><img src="images/e.jpg" class="img-responsive" style="width:100%" />
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
+  top:10px;left:-500px;">
+                  <h1 class="display-3 h-color">SmartHome</h1>
+                  <p class="lead">Steve Jobs : « La créativité consiste à connecter les choses »</p>
+                  
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item carousel-image-3 "  ><img src="images/ip1.jpeg" class="img-responsive" style="width:100%" />
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
+  top:-40px;left:-400px;">
+                  <h1 class="display-3 h-color">SmartHome</h1>
+                  <p class="lead">Pablo Picasso : « Everything you can imagine is real »</p>
+                  
+                </div>
+              </div>
+            </div>
+          
+          <div class="carousel-item carousel-image-4 " ><img src="images/ip2.png" class="img-responsive" style="width:100%" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
   top:10px;left:-500px;">
@@ -105,42 +127,61 @@
                 </div>
               </div>
             </div>
-    
-            <div class="carousel-item carousel-image-3 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
-    background-image:url('images/p.jpg');
-    background-size: cover;
-    height:800px;height: 750px;">
+
+
+            <div class="carousel-item carousel-image-5 " ><img src="images/ip3.jpeg" class="img-responsive" style="width:100%" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
-  top:50px;">
+  top:-30px;right:-400px;">
+                  <h1 class="display-3 h-color">SmartHome</h1>
+                  <p class="lead">Nous sommes un distributeur exclusif
+des produits d'origine belge<br>
+avec des solutions innovatives</p>
+                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item carousel-image-6 " ><img src="images/ip4.jpeg" class="img-responsive" style="width:100%" />
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="position:absolute;
+  top:-30px;right:-400px;">
                   <h1 class="display-3 h-color">SmartHome</h1>
                   <p class="lead">Nous mettons à profit notre expertise et notre créativité <br>pour vous aider à réaliser les maisons et les bâtiments intelligents de vos rêves.</p>
                   <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
                 </div>
               </div>
             </div>
-          
 
 
 
-          <div class="carousel-item carousel-image-4 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
-    background-image:url('images/slide4.jpg');
-    background-size: cover;
-    height:800px;height: 750px;">
+          <div class="carousel-item carousel-image-7 "  ><img src="images/slide4.png" class="img-responsive" style="width:100%" />
               <div class="container">
                 <div class="carousel-caption d-none d-sm-block text-right mb-5" style="position:absolute;
   top:50px;">
                   <h1 class="display-3 h-color">Safety System</h1>
                   <p class="lead">Nos Objectifs sont le Confort et la sécurité Total de vous et Vos Logements.</p>
-                  <button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>
+                  <!--<button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>-->
                 </div>
               </div>
             </div>
           
 
+          <div class="carousel-item carousel-image-8 "  ><img src="images/slide5.png" class="img-responsive" style="width:100%" />
+              <div class="container">
+                <div class="carousel-caption d-none d-sm-block text-right mb-5" style="position:absolute;
+  top:50px;">
+                  <h1 class="display-3 h-color">Green energy</h1>
+                  <p class="lead">Notre équipe possède une solide expérience dans la pose de panneaux solaires.</p>
+                  <!--<button  onclick="window.location.href = 'files/duotecno.pdf';" type="button" class="animated jackInTheBox delay-1s">Catalogue</button>-->
+                  
+                </div>
+              </div>
+            </div>
 
 
-          <div class="carousel-item carousel-image-5 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+
+          <!--<div class="carousel-item carousel-image-8 "  style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
     background-image:url('images/slide5.jpg');
     background-size: cover;
     height:800px;height: 750px;">
@@ -153,17 +194,19 @@
                   
                 </div>
               </div>
-            </div>
+            </div>-->
+
+
           </div>
 
     
-          <a href="#Carousel" data-slide="prev" class="carousel-control-prev">
+          <!--<a href="#Carousel" data-slide="prev" class="carousel-control-prev">
             <span class="carousel-control-prev-icon"></span>
           </a>
     
           <a href="#Carousel" data-slide="next" class="carousel-control-next">
             <span class="carousel-control-next-icon"></span>
-          </a>
+          </a>-->
         </div>
       </section>
 

@@ -20,11 +20,16 @@
   </head>
   <body>
 
-<nav class="navbar navbar-expand-lg  " >
-    <ul class="navbar-nav  ">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
-      </li>
+<nav class="navbar navbar-expand-lg  bg-light">
+  <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="70" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+  </a>
+  <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item  dropdown  ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           PRODUITS
@@ -37,31 +42,25 @@
         </ul>
         </div>
       </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="showroom.php">SHOWROOM</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="formation.php" >FORMATION</a>
       </li>
+  </div>
       
-    </ul>
-    <ul class="navbar-nav mx-auto ">
-  <a class="navbar-brand" href="index.php" >
-    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    WINWATS
-  </a>
-  </ul>
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ">
         <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
-      </li>
+      
       <!--<li class="nav-item">
         <a class="btn-nav   nav-link" href="#">login</a>
       </li>-->
     </ul>
-  </div>
+  
 </nav>
-
 
 
 

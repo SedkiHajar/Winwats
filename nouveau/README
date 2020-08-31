@@ -1,0 +1,10 @@
+dbConfig.php ==== connexion bdd
+
+La base de donnée se trouve dans le Dossier bdd 
+Nom bdd= winwats.sql
+Tables bdd= caregories, produit , imageprod
+
+Les fichiers a changer sont : sendform.php et sendemail.php
+
+Sendform.php pour la reception du formulaire formation(formation.php) sur la boite mail(phpMailer)
+Sendemail.php pour la reception du formulaire contactez-nous sur la boite mail(phpMailer)

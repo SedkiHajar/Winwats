@@ -24,13 +24,13 @@ try{
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'sedkihajar1998@gmail.com';                 // SMTP username
-$mail->Password = 'sedkih@j@r1998';                           // SMTP password
+$mail->Username = 'info@winwats.com';                 // SMTP username
+$mail->Password = 'winwats@rachid2018';                           // SMTP password
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('sedkihajar1998@gmail.com');
-$mail->addAddress('sedkihajar1998@gmail.com');     // Add a recipient
+$mail->setFrom('info@winwats.com');
+$mail->addAddress('info@winwats.com');     // Add a recipient
                // Name is optional
 //$mail->addReplyTo(EMAIL);
 

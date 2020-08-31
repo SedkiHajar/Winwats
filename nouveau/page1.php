@@ -23,8 +23,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg  " >
-    <ul class="navbar-nav  ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+    <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    WINWATS
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto ">
       <li class="nav-item active">
         <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
       </li>
@@ -48,20 +57,17 @@
       </li>
       
     </ul>
-    <ul class="navbar-nav mx-auto ">
-  <a class="navbar-brand" href="index.php" >
-    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    WINWATS
-  </a>
-  </ul>
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ">
-        <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
-      </li>
+    
+  
+  
+    
+     
+        </div><a class="btn-nav   nav-link" href="index.php#contact">CONTACTEZ-NOUS</a>
+     
       <!--<li class="nav-item">
         <a class="btn-nav   nav-link" href="#">login</a>
       </li>-->
-    </ul>
+    
   </div>
 </nav>
 <?php 
@@ -111,7 +117,7 @@ $resu = $db->query("SELECT * FROM produit WHERE  titre='$titre' ");
 
  </div>
 
-<section id="footer" style="background: #92BDE7 !important;margin-top:350px;">
+<section id="footer" style="background: #92BDE7 !important;margin-top:450px;">
      
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">

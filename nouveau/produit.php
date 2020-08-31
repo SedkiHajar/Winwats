@@ -20,8 +20,17 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg  " >
-    <ul class="navbar-nav  ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light " >
+    <a class="navbar-brand" href="index.php" >
+    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    WINWATS
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto ">
       <li class="nav-item active">
         <a class="nav-link" href="index.php" >ACCUEIL <span class="sr-only">(current)</span></a>
       </li>
@@ -45,22 +54,25 @@
       </li>
       
     </ul>
-    <ul class="navbar-nav mx-auto ">
-  <a class="navbar-brand" href="index.php" >
-    <img src="images/logo.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    WINWATS
-  </a>
-  </ul>
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ">
-        <a class="btn-nav   nav-link" href="index.php#contact">NOUS CONTACTER</a>
-      </li>
+    
+  
+  
+    
+     
+        </div><a class="btn-nav   nav-link" href="index.php#contact">CONTACTEZ-NOUS</a>
+     
       <!--<li class="nav-item">
         <a class="btn-nav   nav-link" href="#">login</a>
       </li>-->
-    </ul>
+    
   </div>
 </nav>
+<div class="showa"> 
+      <div class="uppage" style="padding: 60px; margin-bottom: 40px;
+  background-image: linear-gradient( #92BDE7 , #92BDE7);">
+        <h1>Catégories</h1>
+      </div>
+   </div>
 
 
      <?php 
@@ -97,6 +109,9 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='$genre'");
 <?php }else{ ?> 
     <p class="status error">Image(s) not found...</p> 
 <?php } ?>
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
