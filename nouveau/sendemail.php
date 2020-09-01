@@ -7,7 +7,7 @@ require_once "phpmailer/Exception.php";
 
 $mail = new PHPMailer(true);
 $alert='';
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']) && $_POST['somme']=9 ){
 
 $nom= $_POST['nom'];
 $email= $_POST['email'];
@@ -18,6 +18,8 @@ $ville= $_POST['ville'];
 $tel= $_POST['tel'];
 $societe= $_POST['societe'];
 $suis= $_POST['suis'];
+
+
 //$mail->SMTPDebug = 4;                               // Enable verbose debug output
 
 try{

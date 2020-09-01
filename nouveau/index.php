@@ -1,9 +1,10 @@
 <?php include 'sendemail.php';  ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>WINWATS</title>
@@ -417,7 +418,7 @@ avec des solutions innovatives</p>
       
 
 
-      <div class="gallery"  > 
+      <!--<div class="gallery"  > 
     <div class="container p-5">
     <div class="row">
     <div class="col-lg-4 mb-3 mb-lg-0" style="">
@@ -428,29 +429,29 @@ avec des solutions innovatives</p>
             <span class="font-weight-light" style="text-align: center">VISITEZ NOTRE SPLENDIDE SHOWROOM</span>
           </p>
           <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
-          </p>-->
+          </p>
         </div>
         </div>
       </div>
       </a>
       </div>
     </div> 
-  </div>
+  </div>-->
          
    
 
      
+<br><br><br>
+<h4 style="color: #06629C;" class="text-center">SMARTHOME</h4>
 
-
-
- <?php 
-    
+<?php 
+   
 // Include the database configuration file  
 require_once 'dbConfig.php'; 
 // Get image data from database 
 $result = $db->query("SELECT * FROM caregories WHERE genre='smart'"); 
 ?>
-
+<?php if($result->num_rows > 0){ ?> 
   <div class="gallery" > 
     <div class="container p-5">
     <div class="row">
@@ -461,40 +462,59 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='smart'");
       <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img style="width: 19rem;height :13rem;" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
         <div class="hover-overlay" style="width: 88%;"></div>
         <div class="hover-1-content text-center px-5 py-4">
-          <p style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
+          <h5 style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
             <span class="font-weight-light" style="text-align: center"><?php echo '<br>' .$row['nom']; ?></span>
-          </p>
+          </h5>
           <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
           </p>-->
         </div>
         </div>
       </div>
       </a>
-      
-        <?php }$result = $db->query("SELECT * FROM caregories WHERE genre='safety'"); 
-?> 
-    
-<?php  ?> 
-    <?php while($row = $result->fetch_assoc()){ ?> 
+        <?php } ?> 
+    </div>
+    </div> 
+  </div>
+<?php }else{ ?> 
+    <p class="status error">Image(s) not found...</p> 
+<?php } ?>
+
+<br><br><br>
+<h4 style="color: #06629C;" class="text-center">SAFETY SYSTEM</h4>
+<?php 
+     
+// Include the database configuration file  
+require_once 'dbConfig.php'; 
+// Get image data from database 
+$result = $db->query("SELECT * FROM caregories WHERE genre='safety'"); 
+?>
+<?php if($result->num_rows > 0){ ?> 
+  <div class="gallery" > 
+    <div class="container p-5">
+    <div class="row">
+       <?php while($row = $result->fetch_assoc()){ ?> 
       <!-- DEMO 1 Item-->
        <?php ?>
       <div class="col-lg-4 mb-3 mb-lg-0" style="margin-top: 40px;">
       <a href="voirplus.php?id=<?php echo ($row['id']); ?>"><div class="hover hover-1 text-white rounded"><img style="width: 19rem;height :13rem;" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
         <div class="hover-overlay" style="width: 88%;"></div>
         <div class="hover-1-content text-center px-5 py-4">
-          <p style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
+          <h5 style= "color:" class="hover-1-title text-uppercase font-weight-bold mb-0">
             <span class="font-weight-light" style="text-align: center"><?php echo '<br>' .$row['nom']; ?></span>
-          </p>
+          </h5>
           <!--<p class="hover-1-description font-weight-light mb-0"><?php echo '<br>' .$row['description'] ?>
           </p>-->
         </div>
         </div>
       </div>
       </a>
-      <?php } ?>
+        <?php } ?> 
     </div>
+    </div> 
   </div>
-</div>
+<?php }else{ ?> 
+    <p class="status error">Image(s) not found...</p> 
+<?php } ?>
 
 
 
@@ -580,6 +600,10 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='smart'");
                         <label for="msg">Message</label>
                         <textarea required="" class="form-control" name="msg" id="msg" cols="30" rows="5"></textarea>
                     </p>
+                    <p>
+                        <label for="somme">7+2=</label>
+                        <input required=""  type="number" name="somme" id="somme">
+                    </p>
                     <p class="full">
                         <button name="submit" class="send-btn" type="submit" >Envoyer</button>
                     </p>
@@ -651,10 +675,29 @@ $result = $db->query("SELECT * FROM caregories WHERE genre='smart'");
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
           <p class="h6 text-center">©Copyright WINWATS.</p>
+
         </div>
         <hr>
       </div>  
     </div>
+    <div class="row" style="margin-left: 20px;">
+    <video width="320" height="240" controls>
+  <source src="files/w.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<div class="row" style="margin-left: 20px;">
+    <video width="320" height="240" controls>
+  <source src="files/a.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<div class="row" style="margin-left: 20px;">
+    <video width="820" height="100" controls>
+  <source src="files/z.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+
   </section>
 
 

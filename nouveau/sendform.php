@@ -7,7 +7,7 @@ require_once "phpmailer/Exception.php";
 
 $mail = new PHPMailer(true);
 $alert='';
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']) && $_POST['somme']=9 ){
 
 $nom= $_POST['nom'];
 $email= $_POST['email'];
