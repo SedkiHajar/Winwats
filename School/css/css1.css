@@ -103,7 +103,7 @@
     font-weight: 600;
     color: #0062cc;
 }
-.update{
-  display:block; 
+#update{
+  display:none;
 }
 /*fin de la page page de profile*/

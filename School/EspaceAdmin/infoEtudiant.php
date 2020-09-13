@@ -26,13 +26,14 @@
 <!-- debut de profile  -->
 <!-- Appel de la base de dennée -->
 <?php require_once '../database/dbConfig.php'; ?>
+  <div id="info">
 <!-- slect info from table -->
 <?php $CIN=$_GET['CIN']; ?>
 <?php   $result = $db->query("SELECT * FROM etudiant WHERE CIN='$CIN' ");
  if($result->num_rows > 0){?>
    <?php while($row = $result->fetch_assoc()){?>
 <div class="container emp-profile">
-            <form method="post">
+            <form >
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img ">
@@ -59,7 +60,9 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn btn-info" name="btnAddMore" value="Edit Profile"/>
+                      <a  onclick="switche()" href="#"  class="btn btn-primary " >edite pofeile </a>
+
+
                     </div>
                 </div>
                 <div class="row">
@@ -200,7 +203,8 @@
         </div>
           <?php } ?>
             <?php } ?>
-            <div class="update">
+        </div>
+            <div id="update">
               <!-- Appel de la base de dennée -->
               <!-- slect info from table -->
 
@@ -267,7 +271,7 @@
                                                       </div>
                                                       <div class="row">
                                                           <div class="col-md-6">
-                                                              <label>Adresse</label>
+                                                              <label >Adresse</label>
                                                           </div>
                                                           <div class="col-md-6">
                                                               <p><input class="form-control" type="text" name="adresse" value=" <?php echo $row['adresse']; ?>" ></p>
@@ -291,7 +295,7 @@
                                                       </div>
                                                       <div class="row">
                                                           <div class="col-md-6">
-                                                              <label>Email</label>
+                                                              <label >Email</label>
                                                           </div>
                                                           <div class="col-md-6">
                                                               <p><input class="form-control" type="email" name="mail" value=" <?php echo $row['mail']; ?> "></p>
@@ -310,7 +314,7 @@
                                                               <label>CIN</label>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <p   ><input  id="a" class="form-control" type="text" name="CIN"  value=" <?php echo $row['CIN']; ?>  "></p>
+                                                              <p   ><input  id="a" class="form-control" type="text" name="CIN"  value=" <?php echo $row['CIN']; ?>"</p>
                                                           </div>
                                                       </div>
                                                       <div class="row">
@@ -379,16 +383,26 @@
                                               </div>
                                           </div>
                                       </div>
+
                                   </div>
+                                  <button   class="btn btn-primary" type="submit" name="sybmit" value="update">
+                                </form>
                               </div>
                             <?php } ?>
                               <?php } ?>
 
-                              <button onclick="UpdateValue()" class="btn btn-primary" type="submit" name="submit" value="Enregistrer le chagement">
-                            </form>
-                      </div>
 
-            </div>
+                      </div>
+                        </div>
+                      <script type="text/javascript">
+                      function switche (){
+                          document.getElementById("info").style.display = "none";
+                          document.getElementById("update").style.display = "block";
+
+                        }
+                      </script>
+
+
         <!-- java Script script-->
          <script src="js/AjouterEtud.js?2"></script>
         <!-- Bootstrap core JavaScript-->

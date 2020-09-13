@@ -24,12 +24,12 @@ $choix=$_GET['choix'];
         $sexe= $_POST['sexe'];
         $tel= $_POST['tel'];
         $classe= $_POST['classe'];
-        $CIN= $_POST['CIN'];
-        echo $CIN;
+        $CIN=str_replace(' ', '', $_POST['CIN']);
+
 
           // Get info for parent
         $nomP=$_POST['nomP'];
-        $prenom=$_POST['prenomP'];
+        $prenomP=$_POST['prenomP'];
         $adresseC=$_POST['adresseP'];
         $telP=$_POST['telP'];
         $emailP =$_POST['emailP'];
@@ -51,8 +51,8 @@ $choix=$_GET['choix'];
             }
             }
             }
-              echo $CIN;
-                echo $choix;
+
+
             if ($choix=='delete') {
                 $CIN=$_GET['CIN'];
               // code...
@@ -67,8 +67,9 @@ $choix=$_GET['choix'];
           }
           else {
 
-            
-          $sql = "UPDATE etudiant SET nom='$nom',prenom='$prenom',adresse='$adresse',codePostal='$codeP',mail='$email' WHERE CIN='$CIN'";
+
+          $sql = "UPDATE etudiant SET nom='$nom',prenom='$prenom',adresse='$adresse',codePostal='$codeP',mail='$email',villeN='$villeN',anneeS='$anneeS',dateN='$dateN',sexe='$sexe',tel='$tel',classe='$classe'WHERE CIN='$CIN'";
+          echo $CIN;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
             } else {
