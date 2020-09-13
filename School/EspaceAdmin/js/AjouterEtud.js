@@ -18,3 +18,9 @@ else{
 }
 
 }
+function UpdateValue() {
+var a=document.getElementById("a").value;
+console.log(a);
+a.value = "";
+
+}
