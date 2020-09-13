@@ -49,7 +49,7 @@
       </li>
 
       <!-- Divider -->
-      <hr class="sidebar-divider">
+     
       <!-- Nav Item - Prof item -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProf" aria-expanded="true" aria-controls="collapseProf">
@@ -63,6 +63,42 @@
           </div>
         </div>
       </li>
+
+
+
+
+      <!--<hr class="sidebar-divider">-->
+      <!-- Nav Item - Prof item -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMat" aria-expanded="true" aria-controls="collapseMat">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Espace Matiere</span>
+        </a>
+        <div id="collapseMat" class="collapse" aria-labelledby="headingMat" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="AjouterMat.php">Ajouter les matieres</a>
+            <a class="collapse-item" href="gestionMat.php">Gerer les matieres</a>
+          </div>
+        </div>
+      </li>
+
+
+      
+      <!-- Nav Item - Prof item -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCl" aria-expanded="true" aria-controls="collapseCl">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Espace Classe</span>
+        </a>
+        <div id="collapseCl" class="collapse" aria-labelledby="headingCl" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="AjouterCl.php">Ajouter les classes</a>
+            <a class="collapse-item" href="gestionCl.php">Gerer les classes</a>
+          </div>
+        </div>
+      </li>
+
+
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">

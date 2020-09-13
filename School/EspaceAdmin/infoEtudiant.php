@@ -12,7 +12,7 @@
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href= src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" rel="stylesheet">
+  <link src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
@@ -83,6 +83,14 @@
                     <div class="col-md-8 shadow">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>codepostal</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><?php echo $row['codePostal']; ?></p>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Classe</label>
@@ -263,6 +271,13 @@
                                           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                                       <div class="row">
                                                           <div class="col-md-6">
+                                                              <label>code</label>
+                                                          </div>
+                                                          <div class="col-md-6">
+                                                              <p>  <input class="form-control" type="text" name="codeP" value=" <?php echo $row['codePostal']; ?> ">  </p>
+                                                          </div>
+                                                      <div class="row">
+                                                          <div class="col-md-6">
                                                               <label>Classe</label>
                                                           </div>
                                                           <div class="col-md-6">
@@ -282,7 +297,7 @@
                                                               <label>Date de nassence</label>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <p><input class="form-control" type="date" name="dateN" value=" <?php echo $row['dateN']; ?> "></p>
+                                                              <p><input class="form-control" type="date" name="dateN" value="<?php echo $row['dateN'];?>"></p>
                                                           </div>
                                                       </div>
                                                       <div class="row">
@@ -298,7 +313,7 @@
                                                               <label >Email</label>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <p><input class="form-control" type="email" name="mail" value=" <?php echo $row['mail']; ?> "></p>
+                                                              <p><input class="form-control" type="email" name="email" value=" <?php echo $row['mail']; ?> "></p>
                                                           </div>
                                                       </div>
                                                       <div class="row">
@@ -314,7 +329,7 @@
                                                               <label>CIN</label>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <p   ><input  id="a" class="form-control" type="text" name="CIN"  value=" <?php echo $row['CIN']; ?>"</p>
+                                                              <p><input  id="a" class="form-control" type="text" name="CIN"  value=" <?php echo $row['CIN']; ?>" > </p>
                                                           </div>
                                                       </div>
                                                       <div class="row">
@@ -330,7 +345,7 @@
                                                               <label >Année scolaire</label>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <p><input class="form-control" type="date" name="anneeS" value=" <?php echo $row['anneeS']; ?> "></p>
+                                                              <p><input class="form-control" type="date" name="anneeS" value="<?php echo $row['anneeS']; ?>"></p>
                                                           </div>
                                                       </div>
                                           </div>
