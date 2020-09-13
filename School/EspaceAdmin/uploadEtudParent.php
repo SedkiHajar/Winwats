@@ -4,8 +4,14 @@ require_once '../database/dbConfig.php';
 
 // If file upload form is submitted
 $status = $statusMsg = '';
+$choix=$_GET['choix'];
 
-    $status = 'error';
+
+  $status = 'error';
+
+    // code...
+
+  ;
         // Get info for prospect
         $nom=$_POST['nom'];
         $prenom=$_POST['prenom'];
@@ -19,6 +25,7 @@ $status = $statusMsg = '';
         $tel= $_POST['tel'];
         $classe= $_POST['classe'];
         $CIN= $_POST['CIN'];
+        echo $CIN;
 
           // Get info for parent
         $nomP=$_POST['nomP'];
@@ -26,8 +33,10 @@ $status = $statusMsg = '';
         $adresseC=$_POST['adresseP'];
         $telP=$_POST['telP'];
         $emailP =$_POST['emailP'];
-            $image = $_FILES['image']['tmp_name'];
+          $image = $_FILES['image']['tmp_name'];
         // insert prospect
+          if ($choix=='insertion') {
+            $CIN=$_GET['CIN'];
         for ($j = 0; $j <count($nom); $j++)
             {
             echo $image;
@@ -41,8 +50,32 @@ $status = $statusMsg = '';
                 $statusMsg = "File upload failed, please try again.";
             }
             }
+            }
+              echo $CIN;
+                echo $choix;
+            if ($choix=='delete') {
+                $CIN=$_GET['CIN'];
+              // code...
+            // delete section
+            $sql = "DELETE FROM etudiant WHERE CIN='$CIN'";
 
-          // insert prospect
+            if ($db->query($sql) === TRUE) {
+              echo "Record deleted successfully";
+            } else {
+              echo "Error deleting record: " . $db->error;
+            }
+          }
+          else {
+
+            
+          $sql = "UPDATE etudiant SET nom='$nom',prenom='$prenom',adresse='$adresse',codePostal='$codeP',mail='$email' WHERE CIN='$CIN'";
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+              }
+
 
 
 

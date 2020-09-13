@@ -144,10 +144,10 @@
       <td class=""><?php echo  $row['nom']; ?></td>
         <td ><?php echo  $row['prenom']; ?></td>
       <td class=""><?php echo $row['classe']; ?></td>
-      <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>&amp;nom=<?php echo ($row['nom']); ?>">Plus </a></td>
+      <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=insertion">Plus </a></td>
       <td class="bg-warning"><a style="color:white;" href="#">contacter</a></td>
       <td class="bg-success"><a  style="color:white;" href="#" >modifier</a></td>
-      <td class="bg-danger"><a   style="color:white;" href="delete.php?CIN=<?php echo ($row['CIN']); ?>">suprimer</a></td>
+      <td class="bg-danger"><a   style="color:white;" href="uploadEtudParent.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=delete">suprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
     </tr>
