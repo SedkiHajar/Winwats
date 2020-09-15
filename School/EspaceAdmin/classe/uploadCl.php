@@ -1,10 +1,10 @@
 <?php
 // Include the database configuration file
-require_once '../database/dbConfig.php';
+require_once '../../database/dbConfig.php';
 
 // If file upload form is submitted
 $status = $statusMsg = '';
-$choix=$_GET['choix'];
+
 
 
   $status = 'error';
@@ -13,30 +13,43 @@ $choix=$_GET['choix'];
 
   ;
         // Get info for prospect
-        $id=isset($_POST['id']) ? $_POST['id'] : NULL;
+       
         $nom=$_POST['nom'];
 
-        $truc = isset($_POST['truc']) ? $_POST['truc'] : NULL;
+       
         
         // insert prospect
-          if ($choix=='insertion') {
-            $id=$_GET['id'];
+          if (isset($_POST['inserer'])) {
+      
         for ($j = 0; $j <count($nom); $j++)
             {
            
 
-         $insert = $db->query("INSERT into classe(id,nom) VALUES ('$id[$j],'$nom[$j]')");
+         $insert = $db->query("INSERT into classe(nom) VALUES ('$nom[$j]')");
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
             }else{
-                $statusMsg = "File upload failed, please try again.";
+                $statusMsg = "File upload failed, please try again." . $db->error;
             }
             }
             }
 
 
-            if ($choix=='delete') {
+             if(isset($_POST['modifier'])) {
+             $id=$_GET['id'];
+
+          $sql = "UPDATE classe SET nom='$nom' WHERE id='$id'";
+          echo $id;
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+              }
+
+
+            if ($_GET['choix']=='delete') {
                 $id=$_GET['id'];
               // code...
             // delete section
@@ -48,17 +61,9 @@ $choix=$_GET['choix'];
               echo "Error deleting record: " . $db->error;
             }
           }
-          else {
 
 
-          $sql = "UPDATE classe SET nom='$nom' WHERE id='$id'";
-          echo $id;
-            if ($db->query($sql) === TRUE) {
-              echo "Record updated successfully";
-            } else {
-              echo "Error updating record: " . $db->error;
-            }
-              }
+          
 
 
 

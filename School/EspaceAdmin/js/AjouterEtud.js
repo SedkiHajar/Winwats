@@ -62,3 +62,10 @@ else{
 }
 
 }
+
+
+
+function ModifierMatCl{
+   document.getElementById("nom").innerHTML= '<input type="text" name="nom" value="entreteter">';
+   
+}

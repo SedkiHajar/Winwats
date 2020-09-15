@@ -11,21 +11,21 @@
   <title>AjouterEtudiant</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
   <!-- Mon css -->
-  <link href="../css/css1.css?<?php echo time(); ?>"rel="stylesheet">
+  <link href="../../css/css1.css?<?php echo time(); ?>"rel="stylesheet">
 
 </head>
 <body>
     <!-- Le code par defaut -->
-<?php require 'defaultAdmin.php';?>
+<?php require '../defaultAdmin.php';?>
 <!-- debut de profile  -->
 <!-- Appel de la base de dennée -->
-<?php require_once '../database/dbConfig.php'; ?>
+<?php require_once '../../database/dbConfig.php'; ?>
   <div id="info">
 <!-- slect info from table -->
 <?php $id=$_GET['id']; ?>
@@ -64,7 +64,7 @@
                if($result->num_rows > 0){?>
                  <?php while($row = $result->fetch_assoc()){?>
               <div class="container emp-profile">
-                        <form action="uploadMat.php"  role="form" method="post" enctype="multipart/form-data">
+                        <form action="uploadMat.php?id=<?php echo ($row['id']); ?>"  role="form" method="post" enctype="multipart/form-data">
                              
                               <div class="row">
                                 <div class="col-md-4">
@@ -89,7 +89,7 @@
                                          
 
                                   </div>
-                                  <button   class="btn btn-primary" type="submit" name="sybmit" value="update">
+                                  <button   class="btn btn-primary" type="submit" name="modifier" value="update">
                                 </form>
                               </div>
                             <?php } ?>
@@ -108,23 +108,23 @@
 
 
         <!-- java Script script-->
-         <script src="js/AjouterEtud.js?2"></script>
+         <script src="../js/AjouterEtud.js?2"></script>
         <!-- Bootstrap core JavaScript-->
-          <script src="../vendor/jquery/jquery.min.js"></script>
-          <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script src="../../vendor/jquery/jquery.min.js"></script>
+          <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
           <!-- Core plugin JavaScript-->
-          <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+          <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
           <!-- Custom scripts for all pages-->
-          <script src="../js/sb-admin-2.min.js"></script>
+          <script src="../../js/sb-admin-2.min.js"></script>
 
           <!-- Page level plugins -->
-          <script src="../vendor/chart.js/Chart.min.js"></script>
+          <script src="../../vendor/chart.js/Chart.min.js"></script>
 
           <!-- Page level custom scripts -->
-          <script src="../js/demo/chart-area-demo.js"></script>
-          <script src="../js/demo/chart-pie-demo.js"></script>
+          <script src="../../js/demo/chart-area-demo.js"></script>
+          <script src="../../js/demo/chart-pie-demo.js"></script>
 
         </body>
 

@@ -70,7 +70,7 @@ $status = $statusMsg = '';
 
 
 
-            else if($_GET['choix']=='delete'){
+            if($_GET['choix']=='delete'){
 
                 $CIN=$_GET['CIN'];
               // code...
