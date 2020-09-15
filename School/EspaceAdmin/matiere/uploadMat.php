@@ -3,6 +3,7 @@
 require_once '../database/dbConfig.php';
 
 // If file upload form is submitted
+
 $status = $statusMsg = '';
 $choix=$_GET['choix'];
 
@@ -13,18 +14,17 @@ $choix=$_GET['choix'];
 
   ;
         // Get info for prospect
-        $id=$_POST['id'];
+      
         $nom=$_POST['nom'];
         
         // insert prospect
           if ($choix=='insertion') {
-            $id=$_GET['id'];
+          
         for ($j = 0; $j <count($nom); $j++)
             {
-            echo $image;
-          $imgContent = addslashes(file_get_contents($image[$j]));
+            
 
-         $insert = $db->query("INSERT into matiere(id,nom) VALUES ('$id[$j],'$nom[$j]')");
+         $insert = $db->query("INSERT into matiere(nom) VALUES ($nom[$j]')");
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
@@ -50,7 +50,9 @@ $choix=$_GET['choix'];
           else {
 
 
-          $sql = "UPDATE etudiant SET nom='$nom' WHERE id='$id'";
+
+
+          $sql = "UPDATE matiere SET nom='$nom' WHERE id='$id'";
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";

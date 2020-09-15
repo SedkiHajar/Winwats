@@ -13,16 +13,17 @@ $choix=$_GET['choix'];
 
   ;
         // Get info for prospect
-        $id=$_POST['id'];
+        $id=isset($_POST['id']) ? $_POST['id'] : NULL;
         $nom=$_POST['nom'];
+
+        $truc = isset($_POST['truc']) ? $_POST['truc'] : NULL;
         
         // insert prospect
           if ($choix=='insertion') {
             $id=$_GET['id'];
         for ($j = 0; $j <count($nom); $j++)
             {
-            echo $image;
-          $imgContent = addslashes(file_get_contents($image[$j]));
+           
 
          $insert = $db->query("INSERT into classe(id,nom) VALUES ('$id[$j],'$nom[$j]')");
         if($insert){

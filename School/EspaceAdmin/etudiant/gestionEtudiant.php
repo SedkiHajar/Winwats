@@ -11,19 +11,19 @@
   <title>AjouterEtudiant</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
   <!-- Mon css -->
-  <link href="../css/css1.css" rel="stylesheet">
+  <link href="../../css/css1.css" rel="stylesheet">
 
 </head>
 <body>
-<?php require 'defaultAdmin.php';?>
+<?php require '../defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
-<<?php require_once '../database/dbConfig.php'; ?>
+<?php require_once '../../database/dbConfig.php'; ?>
 <!-- slect info from table -->
 <?php   $result = $db->query("SELECT * FROM etudiant ");
      $nbrEtudiant=0;
@@ -105,83 +105,83 @@
                 </div>
               </div>
             </div>
+  <!-- visualiser les etudiant dans un tableaux -->
+    <!-- Appel de la base de dennée -->
+    <!-- slect info from table -->
+   <?php   $result = $db->query("SELECT * FROM etudiant ");
+     if($result->num_rows > 0){
+         $i=1; ?>
+   <!-- Table of prosect  -->
+   <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+      <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead  class="table table-hover table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">CIN</th>
+      <th scope="col">ANNEE SCOLAIRE</th>
+      <th scope="col">NON</th>
+      <th scope="col">PRENOM</th>
+      <th scope="col">CLASSE</th>
+      <th scope="col">PLUS D'INFO</th>
+      <th scope="col">CONTACTER</th>
+      <th scope="col">MODIFIER</th>
+      <th scope="col">SUPPRIMER</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php while($row = $result->fetch_assoc()){?>
+    <tr>
+      <th class="bg-dark" scope="row"><?php echo $i; ?></th>
+      <td class=""><?php echo $row['CIN']; ?></td>
+      <td class=""><?php echo $row['anneeS']; ?></td>
+      <td class=""><?php echo  $row['nom']; ?></td>
+        <td ><?php echo  $row['prenom']; ?></td>
+      <td class=""><?php echo $row['classe']; ?></td>
+      <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=insertion">Plus </a></td>
+      <td class="bg-warning"><a style="color:white;" href="#">contacter</a></td>
+      <td class="bg-success"><a  style="color:white;" href="#" >modifier</a></td>
+      <td class="bg-danger"><a   style="color:white;" href="uploadEtudParent.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=delete">suprimer</a></td>
+      <?php $i++; ?>
+      <?php } ?>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
 
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Classes en totale </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- formulaire des etudiant a ajouter  -->
-            <div class="col-xl-12 col-lg-12 card shadow mb-4 "style="background-color:white;font-weight: bold;">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h2 class="m-0 font-weight-bold text-primary ">INFO MATIERE</h2>
-              </div>
-            </div>
-            <!--check box-->
-              <div class="form-group col-md-6 mx-auto">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text text-primary">Nombre de matieres a créer</span>
-              </div>
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input" id="myCheck"onclick=" AjouterEtudiant()">
-                </div>
-              </div>
-              <input type="number" class="form-control" aria-label="Text input with checkbox"id="nbrEtudiant" value="1">
-            </div>
-          </div>
-            <!--cors du formulaire-->
-           <form action="uploadEtudParent.php?choix=insertion" role="form" method="post" enctype="multipart/form-data">
-               <h3 class=" font-weight-bold text-info text-center shadow  titre"> MATIERE NUMERO  : 1</h3>
-                <div id="form" class="shadow "style="margin-top:20px;">
-  		        <div class="form-row">
-    		          <div class="form-group col-md-6">
-    			             <label for="nom">Nom</label>
-      			            <input type="text" class="form-control" id="nom" name="nom[]"  required>
-    		           </div>
-                   
+<?php } ?>
+<!-- Delete sction-->
 
-    	        </div>
-    	       
-          
-        </div>
-        <div id="AjoutDeform"></div>
-       <button type="submit">submit<button>
-</form>
-  </body>
-  </html>
+<script>
+
+
+</script>
+
 <!-- java Script script-->
- <script src="js/AjouterEtud.js?2"></script>
+ <script src="../js/AjouterEtud.js?2"></script>
 <!-- Bootstrap core JavaScript-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin-2.min.js"></script>
+  <script src="../../js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
+  <script src="../../vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="../js/demo/chart-area-demo.js"></script>
-  <script src="../js/demo/chart-pie-demo.js"></script>
+  <script src="../../js/demo/chart-area-demo.js"></script>
+  <script src="../../js/demo/chart-pie-demo.js"></script>
 
 </body>
 

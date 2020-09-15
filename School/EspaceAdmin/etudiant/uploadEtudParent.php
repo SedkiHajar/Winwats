@@ -1,10 +1,11 @@
 <?php
 // Include the database configuration file
-require_once '../database/dbConfig.php';
+require_once '../../database/dbConfig.php';
+error_reporting(0);
 
 // If file upload form is submitted
 $status = $statusMsg = '';
-$choix=$_GET['choix'];
+
 
 
   $status = 'error';
@@ -35,11 +36,11 @@ $choix=$_GET['choix'];
         $emailP =$_POST['emailP'];
           $image = $_FILES['image']['tmp_name'];
         // insert prospect
-          if ($choix=='insertion') {
-            $CIN=$_GET['CIN'];
+          if (isset($_POST['inserer'])) {
+            
         for ($j = 0; $j <count($nom); $j++)
             {
-            echo $image;
+          
           $imgContent = addslashes(file_get_contents($image[$j]));
 
          $insert = $db->query("INSERT into etudiant(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,classe,CIN) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$classe[$j]','$CIN[$j]')");
@@ -47,13 +48,30 @@ $choix=$_GET['choix'];
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
             }else{
-                $statusMsg = "File upload failed, please try again.";
+                $statusMsg = "File upload failed, please try again.". $db->error;
             }
+            echo $j;
             }
             }
 
 
-            if ($choix=='delete') {
+          if(isset($_POST['modifier'])) {
+
+
+          $sql = "UPDATE etudiant SET nom='$nom',prenom='$prenom',adresse='$adresse',codePostal='$codeP',mail='$email',villeN='$villeN',anneeS='$anneeS',dateN='$dateN',sexe='$sexe',tel='$tel',classe='$classe'WHERE CIN='$CIN'";
+          echo $CIN;
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+              }
+
+
+
+
+            else if($_GET['choix']=='delete'){
+
                 $CIN=$_GET['CIN'];
               // code...
             // delete section
@@ -65,17 +83,6 @@ $choix=$_GET['choix'];
               echo "Error deleting record: " . $db->error;
             }
           }
-          else {
-
-
-          $sql = "UPDATE etudiant SET nom='$nom',prenom='$prenom',adresse='$adresse',codePostal='$codeP',mail='$email',villeN='$villeN',anneeS='$anneeS',dateN='$dateN',sexe='$sexe',tel='$tel',classe='$classe'WHERE CIN='$CIN'";
-          echo $CIN;
-            if ($db->query($sql) === TRUE) {
-              echo "Record updated successfully";
-            } else {
-              echo "Error updating record: " . $db->error;
-            }
-              }
 
 
 

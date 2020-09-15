@@ -42,8 +42,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="AjouterEtudiant.php">Ajouter des  Etudiants</a>
-            <a class="collapse-item" href="gestionEtudiant.php">Gerer les Etudiants</a>
+            <a class="collapse-item" href="etudiant/AjouterEtudiant.php">Ajouter des  Etudiants</a>
+            <a class="collapse-item" href="etudiant/gestionEtudiant.php">Gerer les Etudiants</a>
           </div>
         </div>
       </li>
@@ -68,7 +68,7 @@
 
 
       <!--<hr class="sidebar-divider">-->
-      <!-- Nav Item - Prof item -->
+      <!-- Nav Item - matiere item -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMat" aria-expanded="true" aria-controls="collapseMat">
           <i class="fas fa-fw fa-cog"></i>
@@ -76,15 +76,15 @@
         </a>
         <div id="collapseMat" class="collapse" aria-labelledby="headingMat" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="AjouterMat.php">Ajouter les matieres</a>
-            <a class="collapse-item" href="gestionMat.php">Gerer les matieres</a>
+            <a class="collapse-item" href="matiere/AjouterMat.php">Ajouter les matieres</a>
+            <a class="collapse-item" href="matiere/gestionMat.php">Gerer les matieres</a>
           </div>
         </div>
       </li>
 
 
       
-      <!-- Nav Item - Prof item -->
+      <!-- Nav Item - class item -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCl" aria-expanded="true" aria-controls="collapseCl">
           <i class="fas fa-fw fa-cog"></i>
@@ -92,8 +92,8 @@
         </a>
         <div id="collapseCl" class="collapse" aria-labelledby="headingCl" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="AjouterCl.php">Ajouter les classes</a>
-            <a class="collapse-item" href="gestionCl.php">Gerer les classes</a>
+            <a class="collapse-item" href="classe/AjouterCl.php">Ajouter les classes</a>
+            <a class="collapse-item" href="classe/gestionCl.php">Gerer les classes</a>
           </div>
         </div>
       </li>
