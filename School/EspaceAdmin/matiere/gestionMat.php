@@ -137,10 +137,10 @@
     <tr>
       <th class="bg-dark" scope="row"><?php echo $i; ?></th>
      
-      <td class="" id="nom"><?php echo $row['nom']; ?></td>
+      <td class="nom" id=""onclick="ModifierMatCl()" ><?php echo $row['nom']; ?></td>
      
     
-      <td class="bg-success"><a  style="color:white;" href="#" onclick="ModifierMatCl()">modifier</a></td>
+      <td class="bg-success"><a  style="color:white;" href="#"  >modifier</a></td>
       <td class="bg-danger"><a   style="color:white;" href="uploadMat.php?id=<?php echo ($row['id']); ?>&amp;choix=delete">suprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
@@ -160,7 +160,7 @@
 </script>
 
 <!-- java Script script-->
- <script src="../js/AjouterEtud.js?2"></script>
+ <script src="../js/AjouterEtud.js"></script>
 <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

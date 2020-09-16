@@ -134,11 +134,11 @@
               <div class="form-group col-md-6 mx-auto">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text text-primary">Nombre de matieres a créer</span>
+                <span class="input-group-text text-primary">Nombre de niveau a crerer</span>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input" id="myCheck"onclick=" AjouterMat()">
+                  <input type="checkbox" aria-label="Checkbox for following text input" id="myCheck"onclick="AjouterMat()">
                 </div>
               </div>
               <input type="number" class="form-control" aria-label="Text input with checkbox"id="nbrEtudiant" value="1">
@@ -146,13 +146,28 @@
           </div>
             <!--cors du formulaire-->
            <form action="uploadMat.php" role="form" method="post" enctype="multipart/form-data">
-               <h3 class=" font-weight-bold text-info text-center shadow  titre"> MATIERE NUMERO  : 1</h3>
+               <h3 class=" font-weight-bold text-info text-center shadow  titre"> Ajouter des classes  </h3>
                 <div id="form" class="shadow "style="margin-top:20px;">
-  		        <div class="form-row">
-    		          <div class="form-group col-md-6">
-    			             <label for="nom">Nom</label>
-      			            <input type="text" class="form-control" id="nom" name="nom[]"  required>
-    		           </div>
+               <!--pour les classes-->
+                <div class="form-row">
+                   <div class="form-group col-md-6" id="ajoutC">
+    			             <label for="nom">Nom De la classe </label>
+      			            <input type="text" class="form-control"  name="nomC[]" required  >
+                   </div>
+                   <div class="form-group col-md-6" id="ajoutC1"></div>
+                   <a href="#ajouC1" class="btn btn-primary" onclick="AjouterC()">Ajouter Classe</a>
+              </div>
+              <h3 class=" font-weight-bold text-info text-center shadow  titre"> Ajouter des Matiere pour les classes selectionné </h3>
+              <div class="form-row">
+                 <!--pour les matierez-->
+                 <div class="form-group col-md-6" id="ajoutM">
+    			             <label for="nom">Nom De la MATIERE </label>
+      			            <input type="text" class="form-control"  name="nomM[]"  required>
+                   </div>]
+                   <div class="form-group col-md-6" id="ajoutM1"></div>
+                   </div>
+                   <a href="#ajouC1" class="btn btn-primary" onclick="AjouterM()">Ajouter De la matiere</a>
+              
                    
 
     	        </div>
@@ -164,6 +179,16 @@
 </form>
   </body>
   </html>
+  <script>
+    function AjouterC() {
+  var classe=document.getElementById("ajoutC").innerHTML;
+  document.getElementById("ajoutC1").innerHTML+=classe;
+}
+function AjouterM() {
+  var classe=document.getElementById("ajoutM").innerHTML;
+  document.getElementById("ajoutM1").innerHTML+=classe;
+}
+  </script>
 <!-- java Script script-->
  <script src="../js/AjouterEtud.js"></script>
 <!-- Bootstrap core JavaScript-->

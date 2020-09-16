@@ -14,26 +14,53 @@ $status = $statusMsg = '';
 
   ;
         // Get info for prospect
-      
-        $nom=$_POST['nom'];
-        
-        // insert prospect
-          if (isset($_POST['inserer']))  {
-          
-        for ($j = 0; $j <count($nom); $j++)
+        if (isset($_POST['inserer']))  {
+        $nomC=$_POST['nomC'];
+        $nomM=$_POST['nomM'];
+         // insert Matiere
+      for ($i = 0; $i <count($nomM); $i++)
+      {       
+             $insert = $db->query("INSERT into matiere(nom) VALUES ('$nomM[$i]')");
+             if($insert){
+               $db->query($insert);
+               printf ("New Matiere has id %d.\n", $id_Matiere=$db->insert_id);
+               $id_Matieres[$i] =$id_Matiere;
+                     $status = 'success';
+                     $statusMsg = "Mat upload successfully.";
+                 }else{
+                     $statusMsg = "File upload failed, please try again." . $db->error;
+                 }
+                }
+                echo $id_Matieres[1];
+            // insert Classe
+            for ($j = 0; $j <count($nomC); $j++)
             {
-            
+          $insert = $db->query("INSERT into classe(nom) VALUES ('$nomC[$j]')");
+          if($insert){
+          $db->query($insert);
 
-         $insert = $db->query("INSERT into matiere(nom) VALUES ('$nom[$j]')");
-        if($insert){
+          printf ("New Classe has id %d.\n", $id_Classe=$db->insert_id);
                 $status = 'success';
-                $statusMsg = "prospect upload successfully.";
+                $statusMsg = "Classe upload successfully.";
             }else{
                 $statusMsg = "File upload failed, please try again." . $db->error;
-            }
-            }
+            }                
+         
+          // insert MToisieme table
+    for ($t = 0; $t <count($id_Matieres); $t++)
+    {   
+            $insert = $db->query("INSERT into matclass(id_Mat,id_Class) VALUES ('$id_Matieres[$t]','$id_Classe')");
+            if($insert){
+              $db->query($insert);
+                    $status = 'success';
+                    $statusMsg = "bien wldi upload successfully.";
+                }else{
+                    $statusMsg = "File upload failed, please try again." . $db->error;
+                }
+ } }
             }
 
+ 
            
 
            if(isset($_POST['modifier'])) {
@@ -60,7 +87,9 @@ $status = $statusMsg = '';
             } else {
               echo "Error deleting record: " . $db->error;
             }
-          }
+          } 
+         
+        
           
 
 
