@@ -21,6 +21,7 @@
 
 </head>
 <body>
+    <!-- Le code par defaut -->
 <?php require '../defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
 <?php require_once '../../database/dbConfig.php'; ?>
@@ -108,12 +109,12 @@
   <!-- visualiser les etudiant dans un tableaux -->
     <!-- Appel de la base de dennée -->
     <!-- slect info from table -->
-   <?php   $result = $db->query("SELECT * FROM etudiant ");
+   <?php   $result = $db->query("SELECT * FROM classe ");
      if($result->num_rows > 0){
          $i=1; ?>
    <!-- Table of prosect  -->
    <!-- DataTales Example -->
-  <div class="card shadow mb-4">
+  <div class="card shadow col-xl-12 col-md-6 mb-4">
       <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
       </div>
@@ -123,33 +124,24 @@
             <thead  class="table table-hover table-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">CIN</th>
-      <th scope="col">ANNEE SCOLAIRE</th>
-      <th scope="col">NON</th>
-      <th scope="col">PRENOM</th>
-      <th scope="col">CLASSE</th>
-      <th scope="col">PLUS D'INFO</th>
-      <th scope="col">CONTACTER</th>
+     
+      <th scope="col">NOM</th>
       <th scope="col">MODIFIER</th>
       <th scope="col">SUPPRIMER</th>
+      
     </tr>
   </thead>
   <tbody>
     <?php while($row = $result->fetch_assoc()){?>
     <tr>
       <th class="bg-dark" scope="row"><?php echo $i; ?></th>
-      <td class=""><?php echo $row['CIN']; ?></td>
-      <td class=""><?php echo $row['anneeS']; ?></td>
-      <td class=""><?php echo  $row['nom']; ?></td>
-        <td ><?php echo  $row['prenom']; ?></td>
-        <?php $id_classe= $row['classe']?>
-        <?php   $result1 = $db->query("SELECT nom FROM classe WHERE id='$id_classe'");?>
-        <?php while($row1 = $result1->fetch_assoc()){?>
-      <td class=""><?php echo $row1['nom']; ?></td> <?php } ?>
-      <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=insertion">Plus </a></td>
-      <td class="bg-warning"><a style="color:white;" href="#">contacter</a></td>
+     
+      <td class=""><?php echo $row['nom']; ?></td>
+      
+     
+      
       <td class="bg-success"><a  style="color:white;" href="#" >modifier</a></td>
-      <td class="bg-danger"><a   style="color:white;" href="uploadEtudParent.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=delete">suprimer</a></td>
+      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id=<?php echo ($row['id']); ?>&amp;choix=delete">suprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
     </tr>

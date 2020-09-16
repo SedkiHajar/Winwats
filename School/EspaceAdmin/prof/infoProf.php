@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>AjouterEtudiant</title>
+  <title>AjouterProf</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -28,7 +28,7 @@
   <div id="info">
 <!-- slect info from table -->
 <?php $CIN=$_GET['CIN']; ?>
-<?php   $result = $db->query("SELECT * FROM etudiant WHERE CIN='$CIN' ");
+<?php   $result = $db->query("SELECT * FROM professeur WHERE CIN='$CIN' ");
  if($result->num_rows > 0){?>
    <?php while($row = $result->fetch_assoc()){?>
 <div class="container emp-profile">
@@ -37,10 +37,7 @@
                     <div class="col-md-4">
                         <div class="profile-img ">
                             <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -90,14 +87,7 @@
                                                 <p><?php echo $row['codePostal']; ?></p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Classe</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $row['classe']; ?></p>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Adresse</label>
@@ -215,18 +205,20 @@
               <!-- Appel de la base de dennée -->
               <!-- slect info from table -->
 
-              <?php   $result = $db->query("SELECT * FROM etudiant WHERE CIN='$CIN' ");
+              <?php   $result = $db->query("SELECT * FROM professeur WHERE CIN='$CIN' ");
                if($result->num_rows > 0){?>
                  <?php while($row = $result->fetch_assoc()){?>
               <div class="container emp-profile">
-                        <form action="uploadEtudParent.php"  role="form" method="post" enctype="multipart/form-data">
+                        <form action="uploadProf.php"  role="form" method="post" enctype="multipart/form-data">
                               <div class="row">
                                   <div class="col-md-4">
                                       <div class="profile-img ">
-                                          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt=""/>
+                                          <img id="output" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt=""/>
                                           <div class="file btn btn-lg btn-primary">
-                                              Change Photo
-                                              <input type="file" name="file"/>
+                                              <button class="btn btn-primary" >Change Photo
+                                              
+                                              <input type="file"  accept="image/*" name="image" id="image"  onchange="loadFile(event)" >
+                                            </button>
                                           </div>
                                       </div>
                                   </div>
@@ -238,7 +230,7 @@
                                                   </h2>
                                           <ul class="nav nav-tabs" id="myTab" role="tablist">
                                               <li class="nav-item">
-                                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">iformation etudiant</a>
+                                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">iformation professeur</a>
                                               </li>
                                               <li class="nav-item">
                                                   <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">information parent</a>
@@ -275,15 +267,7 @@
                                                           <div class="col-md-6">
                                                               <p>  <input class="form-control" type="text" name="codeP" value=" <?php echo $row['codePostal']; ?> ">  </p>
                                                           </div>
-                                                      <div class="row">
-                                                          <div class="col-md-6">
-                                                              <label>Classe</label>
-                                                          </div>
-                                                          <div class="col-md-6">
-
-                                                               <input class="form-control" type="text" name="classe" value=" <?php echo $row['classe']; ?> ">  </p>
-                                                          </div>
-                                                      </div>
+                                                      
                                                       <div class="row">
                                                           <div class="col-md-6">
                                                               <label >Adresse</label>
@@ -414,12 +398,11 @@
                           document.getElementById("info").style.display = "none";
                           document.getElementById("update").style.display = "block";
 
-                        }
-                      </script>
+                        }</script> 
 
 
        <!-- java Script script-->
- <script src="../js/AjouterEtud.js?2"></script>
+ <script src="../js/AjouterEtud.js"></script>
 <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

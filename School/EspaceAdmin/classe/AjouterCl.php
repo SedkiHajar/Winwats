@@ -134,63 +134,26 @@
               <div class="form-group col-md-6 mx-auto">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text text-primary">Nombre de niveau a crerer</span>
+                <span class="input-group-text text-primary">Nombre de classes a créer</span>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input" id="myCheck"onclick="AjouterMat()">
+                  <input type="checkbox" aria-label="Checkbox for following text input" id="myCheck"onclick=" AjouterCl()">
                 </div>
               </div>
               <input type="number" class="form-control" aria-label="Text input with checkbox"id="nbrEtudiant" value="1">
             </div>
           </div>
             <!--cors du formulaire-->
-           <form action="uploadMat.php" role="form" method="post" enctype="multipart/form-data">
-               <h3 class=" font-weight-bold text-info text-center shadow  titre"> Ajouter des classes  </h3>
+           <form action="uploadCl.php?choix=insertion" role="form" method="post" enctype="multipart/form-data">
+               <h3 class=" font-weight-bold text-info text-center shadow  titre"> CLASSE NUMERO  : 1</h3>
                 <div id="form" class="shadow "style="margin-top:20px;">
-               <!--pour les classes-->
-                <div class="form-row">
-                   <div class="form-group col-md-6" id="ajoutC">
-    			             <label for="nom">Nom De la classe </label>
-      			            <input type="text" class="form-control"  name="nomC[]" required  >
-                   </div>
-                   <div class="form-group col-md-6" id="ajoutC1"></div>
-                   <a href="#ajouC1" class="btn btn-primary" onclick="AjouterC()">Ajouter Classe</a>
-              </div>
-              <h3 class=" font-weight-bold text-info text-center shadow  titre"> Ajouter des Matiere/prof pour les classes selectionné </h3>
-              <div class="form-row" id="ajoutM">
-                 <!--pour les matierez-->
-                  <div class="form-group col-md-6" >
-    			             <label for="nom">Nom De la MATIERE </label>
-      			            <input type="text" class="form-control"  name="nomM[]"  required>
-                   </div>
-              
-              <div class="form-group col-md-6" id="ajoutP">
-              <label for="nom">Nom Du Prof </label>
-              <select class="custom-select" name="CIN[]" id="">
-                <option selected value="-1">prof</option>
-                <?php
-              //définir la requete
-               $result = $db->query("SELECT * FROM professeur ");?>
-               
-               // boucle sur les données
-               <?php while ($row =$result->fetch_assoc()) {
-               ?>
-               <option value="<?php echo $row['CIN']; ?>"><?php echo $row['nom'].'' .$row['prenom']; ?>
-                   
-               </option>
-                
-                <?php
-               }
-               ?>
-              </select>
-
-               
-            </div>
-             </div>
-             <div class="form-row" id="ajoutM1"></div>
-            <a href="#ajouM1" class="btn btn-primary" onclick="AjouterM()">Ajouter De la matiere</a>
-      </div>
+  		        <div class="form-row">
+    		          <div class="form-group col-md-6">
+    			             <label for="nom">Nom</label>
+      			            <input type="text" class="form-control" id="nom" name="nom[]"  required>
+                        
+    		           </div>
                    
 
     	        </div>
@@ -202,20 +165,6 @@
 </form>
   </body>
   </html>
-  <script>
-    function AjouterC() {
-  var classe=document.getElementById("ajoutC").innerHTML;
-  document.getElementById("ajoutC1").innerHTML+=classe;
-}
-function AjouterM() {
-  var classe=document.getElementById("ajoutM").innerHTML;
-  document.getElementById("ajoutM1").innerHTML+=classe;
-}
-function AjouterP() {
-  var classe=document.getElementById("ajoutP").innerHTML;
-  document.getElementById("ajoutP1").innerHTML+=classe;
-}
-  </script>
 <!-- java Script script-->
  <script src="../js/AjouterEtud.js"></script>
 <!-- Bootstrap core JavaScript-->

@@ -20,6 +20,28 @@ else{
 }
 
 
+function AjouterProf() {
+  var nbrContact=document.getElementById("nbrEtudiant").value;
+  var test=document.getElementById("myCheck");
+  var cont =document.getElementById("form").innerHTML;
+  console.log(nbrContact);
+  console.log(nbrContact);
+  console.log(cont);
+  if(test.checked==true){
+
+  var i;
+for (i = 0; i <(nbrContact-1); i++) {
+ document.getElementById("AjoutDeform").innerHTML+='<hr class="sidebar-divider">'+'<h3 class=" font-weight-bold text-info text-center shadow  titre">PROF NUMERO : '+(i+2)+' </h3>'+cont;
+
+}
+}
+else{
+  document.getElementById("AjoutDeform").innerHTML="";
+}
+
+}
+
+
 function AjouterMat() {
   var nbrContact=document.getElementById("nbrEtudiant").value;
   var test=document.getElementById("myCheck");
@@ -64,8 +86,12 @@ else{
 }
 
 
+var loadFile = function(event) {
+  var image = document.getElementById('output');
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
 
-function ModifierMatCl{
-   document.getElementById("nom").innerHTML= '<input type="text" name="nom" value="entreteter">';
-   
-}
+
+
+
+

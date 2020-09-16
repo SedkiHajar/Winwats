@@ -46,8 +46,8 @@
         </a>
         <div id="collapseProf" class="collapse" aria-labelledby="headingProf" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="buttons.html">Gerer les Professeur</a>
-            <a class="collapse-item" href="cards.html">Chercher Un Professeur</a>
+            <a class="collapse-item" href="/School/EspaceAdmin/prof/AjouterProf.php">Ajouter les Professeurs</a>
+            <a class="collapse-item" href="/School/EspaceAdmin/prof/gestionProf.php">Gerer les Professeurs</a>
           </div>
         </div>
       </li>

@@ -17,6 +17,7 @@ $status = $statusMsg = '';
         if (isset($_POST['inserer']))  {
         $nomC=$_POST['nomC'];
         $nomM=$_POST['nomM'];
+        $CIN=$_POST['CIN'];
          // insert Matiere
       for ($i = 0; $i <count($nomM); $i++)
       {       
@@ -25,16 +26,17 @@ $status = $statusMsg = '';
                $db->query($insert);
                printf ("New Matiere has id %d.\n", $id_Matiere=$db->insert_id);
                $id_Matieres[$i] =$id_Matiere;
+               $TableCIN=$CIN[$i];
                      $status = 'success';
                      $statusMsg = "Mat upload successfully.";
                  }else{
                      $statusMsg = "File upload failed, please try again." . $db->error;
                  }
-                }
+      }
                 echo $id_Matieres[1];
             // insert Classe
             for ($j = 0; $j <count($nomC); $j++)
-            {
+    {
           $insert = $db->query("INSERT into classe(nom) VALUES ('$nomC[$j]')");
           if($insert){
           $db->query($insert);
@@ -49,7 +51,7 @@ $status = $statusMsg = '';
           // insert MToisieme table
     for ($t = 0; $t <count($id_Matieres); $t++)
     {   
-            $insert = $db->query("INSERT into matclass(id_Mat,id_Class) VALUES ('$id_Matieres[$t]','$id_Classe')");
+            $insert = $db->query("INSERT into matclass(id_Mat,id_Class,id_prof) VALUES ('$id_Matieres[$t]','$id_Classe','$TableCIN[$t]')");
             if($insert){
               $db->query($insert);
                     $status = 'success';
@@ -58,6 +60,10 @@ $status = $statusMsg = '';
                     $statusMsg = "File upload failed, please try again." . $db->error;
                 }
  } }
+
+
+
+
             }
 
  

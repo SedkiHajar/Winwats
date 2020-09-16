@@ -174,9 +174,37 @@
                 <input type="date" class="form-control" id="anneeS" name="anneeS[]" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="societe">Classe</label>
-                <input type="text" class="form-control" id="classe" name="classe[]" required>
+              <label for="classe">Classe</label>
+              <select class="custom-select" name="classe[]" id="">
+                <option selected value="-1">Choisir...</option>
+                <?php
+              //définir la requete
+               $result = $db->query("SELECT * FROM classe ");?>
+               
+               // boucle sur les données
+               <?php while ($row =$result->fetch_assoc()) {
+               ?>
+               <option value="<?php echo $row['id']; ?>"><?php echo $row['nom']; ?>
+                   
+               </option>
+                
+                <?php
+               }
+               ?>
+              </select>
+              
             </div>
+
+            
+
+
+
+
+            
+
+
+
+
             <div class="form-group col-md-6">
                  <label for="adresse">Adresse</label>
                   <input type="text" class="form-control"  name="adresse[]" required>
