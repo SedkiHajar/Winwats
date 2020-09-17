@@ -158,14 +158,14 @@
                    <a href="#ajouC1" class="btn btn-primary" onclick="AjouterC()">Ajouter Classe</a>
               </div>
               <h3 class=" font-weight-bold text-info text-center shadow  titre"> Ajouter des Matiere/prof pour les classes selectionné </h3>
-              <div class="form-row" id="ajoutM">
+              <div class="form-row " id="ajoutM">
                  <!--pour les matierez-->
                   <div class="form-group col-md-6" >
     			             <label for="nom">Nom De la MATIERE </label>
       			            <input type="text" class="form-control"  name="nomM[]"  required>
                    </div>
               
-              <div class="form-group col-md-6" id="ajoutP">
+              <div class="form-group col-md-6" >
               <label for="nom">Nom Du Prof </label>
               <select class="custom-select" name="CIN[]" id="">
                 <option selected value="-1">prof</option>
@@ -176,7 +176,7 @@
                // boucle sur les données
                <?php while ($row =$result->fetch_assoc()) {
                ?>
-               <option value="<?php echo $row['CIN']; ?>"><?php echo $row['nom'].'' .$row['prenom']; ?>
+               <option value="<?php echo $row['CIN']; ?>"><?php echo $row['nom'].'   ' .$row['prenom']; ?>
                    
                </option>
                 
@@ -211,10 +211,7 @@ function AjouterM() {
   var classe=document.getElementById("ajoutM").innerHTML;
   document.getElementById("ajoutM1").innerHTML+=classe;
 }
-function AjouterP() {
-  var classe=document.getElementById("ajoutP").innerHTML;
-  document.getElementById("ajoutP1").innerHTML+=classe;
-}
+
   </script>
 <!-- java Script script-->
  <script src="../js/AjouterEtud.js"></script>

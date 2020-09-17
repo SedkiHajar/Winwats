@@ -146,7 +146,7 @@
         <?php   $result1 = $db->query("SELECT nom FROM classe WHERE id='$id_classe'");?>
         <?php while($row1 = $result1->fetch_assoc()){?>
       <td class=""><?php echo $row1['nom']; ?></td> <?php } ?>
-      <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=insertion">Plus </a></td>
+      <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>">Plus </a></td>
       <td class="bg-warning"><a style="color:white;" href="#">contacter</a></td>
       <td class="bg-success"><a  style="color:white;" href="#" >modifier</a></td>
       <td class="bg-danger"><a   style="color:white;" href="uploadEtudParent.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=delete">suprimer</a></td>

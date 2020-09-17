@@ -18,22 +18,29 @@ $status = $statusMsg = '';
         $nomC=$_POST['nomC'];
         $nomM=$_POST['nomM'];
         $CIN=$_POST['CIN'];
+        echo 'je suis le Cin' . $CIN[1];
          // insert Matiere
       for ($i = 0; $i <count($nomM); $i++)
-      {       
+
+      {      
+
+             $TableCIN[$i]=$CIN[$i];
              $insert = $db->query("INSERT into matiere(nom) VALUES ('$nomM[$i]')");
+
              if($insert){
                $db->query($insert);
                printf ("New Matiere has id %d.\n", $id_Matiere=$db->insert_id);
                $id_Matieres[$i] =$id_Matiere;
-               $TableCIN=$CIN[$i];
+               
+
                      $status = 'success';
                      $statusMsg = "Mat upload successfully.";
                  }else{
                      $statusMsg = "File upload failed, please try again." . $db->error;
                  }
+
       }
-                echo $id_Matieres[1];
+                echo $TableCIN[1].  'ECHOOOOOO';
             // insert Classe
             for ($j = 0; $j <count($nomC); $j++)
     {
@@ -59,6 +66,8 @@ $status = $statusMsg = '';
                 }else{
                     $statusMsg = "File upload failed, please try again." . $db->error;
                 }
+
+                echo $TableCIN[$t] .'fffffffffffffffff';
  } }
 
 
