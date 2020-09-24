@@ -130,7 +130,7 @@
       <th scope="col">CLASSE</th>
       <th scope="col">PLUS D'INFO</th>
       <th scope="col">CONTACTER</th>
-      <th scope="col">MODIFIER</th>
+      <th scope="col">ABSSENCE</th>
       <th scope="col">SUPPRIMER</th>
     </tr>
   </thead>
@@ -148,7 +148,7 @@
       <td class=""><?php echo $row1['nom']; ?></td> <?php } ?>
       <td class="bg-info"><a style="color:white;" href="infoEtudiant.php?CIN=<?php echo ($row['CIN']); ?>">Plus </a></td>
       <td class="bg-warning"><a style="color:white;" href="#">contacter</a></td>
-      <td class="bg-success"><a  style="color:white;" href="#" >modifier</a></td>
+      <td class="bg-dark"><a style="color:yellow;" href="absAdmin.php?CIN=<?php echo ($row['CIN']); ?>" >--></a></td>
       <td class="bg-danger"><a   style="color:white;" href="uploadEtudParent.php?CIN=<?php echo ($row['CIN']); ?>&amp;choix=delete">suprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
@@ -160,12 +160,6 @@
 </div>
 
 <?php } ?>
-<!-- Delete sction-->
-
-<script>
-
-
-</script>
 
 <!-- java Script script-->
  <script src="../js/AjouterEtud.js?2"></script>

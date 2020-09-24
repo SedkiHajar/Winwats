@@ -43,16 +43,16 @@ $status = $statusMsg = '';
           
           $imgContent = addslashes(file_get_contents($image[$j]));
 
-         $insert = $db->query("INSERT into etudiant(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,classe,CIN) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$classe[$j]','$CIN[$j]')");
+         $insert = $db->query("INSERT into etudiant(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,classe) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$classe[$j]')");
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
+                header("Location:gestionEtudiant.php"); 
             }else{
                 $statusMsg = "File upload failed, please try again.". $db->error;
             }
             echo $j;
             }
-            header("Location:infoEtudiant.php?CIN=$CIN");
             }
 
 

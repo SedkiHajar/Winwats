@@ -166,8 +166,6 @@
                 <?php
               //définir la requete
                $result = $db->query("SELECT * FROM classe ");?>
-               
-               // boucle sur les données
                <?php while ($row =$result->fetch_assoc()) {
                ?>
                <option value="<?php echo $row['id']; ?>"><?php echo $row['nom']; ?>
@@ -180,17 +178,6 @@
               </select>
               
             </div>
-
-            
-
-
-
-
-            
-
-
-
-
             <div class="form-group col-md-6">
                  <label for="adresse">Adresse</label>
                   <input type="text" class="form-control"  name="adresse[]" required>
@@ -207,32 +194,28 @@
                 <label for="societe">photos</label>
                 <input type="file" class="form-control" id="image" name="image[]" required>
             </div>
-            <div class="form-group col-md-6">
-                <label for="societe">CIN</label>
-                <input type="text" class="form-control" id="image" name="CIN[]" required>
-            </div>
             </div>
             <h5  class="m-0 font-weight-bold text-primary text-center card shadow titre">Infomration des parents</h5>
             <div   class="form-row ">
             <div class="form-group col-md-6">
                 <label for="societe">Nom  parent</label>
-                <input type="text" class="form-control"  name="nomP" required>
+                <input type="text" class="form-control"  name="nomP" >
             </div>
             <div class="form-group col-md-6">
                 <label for="societe">Prenom  parent</label>
-                <input type="text" class="form-control"  name="prenomP" required>
+                <input type="text" class="form-control"  name="prenomP" >
             </div>
             <div class="form-group col-md-6">
                 <label for="societe">Numero de tel parent</label>
-                <input type="tel" class="form-control"  name="telP" required>
+                <input type="tel" class="form-control"  name="telP" >
             </div>
             <div class="form-group col-md-6">
                 <label for="societe">E-mail parent</label>
-                <input type="text" class="form-control" name="emailP" required>
+                <input type="text" class="form-control" name="emailP" d>
             </div>
             <div class="form-group col-md-6">
                  <label for="adresse">Adresse des Parents</label>
-                  <input type="text" class="form-control"  name="adresseP" required>
+                  <input type="text" class="form-control"  name="adresseP" >
             </div>
           </div>
         </div>
