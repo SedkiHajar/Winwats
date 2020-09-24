@@ -27,6 +27,9 @@
 <body>
     <!-- Le code par defaut -->
 <?php require 'defaultProf.php';
+for ($j = 0; $j <count($_SESSION['nom_Mat']); $j++){
+    echo $_SESSION['nom_Mat'][$j];
+   }
 ?>
    <a href="logout.php">log out</a>
    

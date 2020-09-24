@@ -2,7 +2,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -42,7 +42,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProf" aria-expanded="true" aria-controls="collapseProf">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Espace Professeur</span>
+          <span>Notes et apreciation</span>
         </a>
         <div id="collapseProf" class="collapse" aria-labelledby="headingProf" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
