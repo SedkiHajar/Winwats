@@ -21,6 +21,7 @@
 
 </head>
 <body>
+
     <!-- Le code par defaut -->
 <?php require '../defaultAdmin.php';?>
 <!-- debut de profile  -->
@@ -123,76 +124,39 @@
     <!-- slect info from table.  SELECT mc.* FROM 'matclass' as mc 
                                  JOIN 'classe' as c 
                                  on c.id= mc.id_Mat 
-                                 ORDER BY c.name -->
-
-                                 
-                                 <?php $id_Class=$_GET['id_Class']; ?>
-   <?php   $result = $db->query(" SELECT * FROM matclass WHERE id_Class='$id_Class'");
-   
-     if($result->num_rows > 0){
-      
-         $i=1; ?>
-   <!-- Table of prosect  -->
-   <!-- DataTales Example -->
-  <div class="card shadow col-xl-12 col-md-6 mb-4">
-      <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-      </div>
-      <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-            <thead  class="table table-hover table-dark">
-    <tr>
-      <th scope="col">#</th>
-     
-      
-      <th scope="col">MATIERE</th>
-      <th scope="col">COEF</th>
-      <th scope="col">PROF</th>
-      <th scope="col">AJOUTER COURS</th>
-      
-      <th scope="col">SUPPRIMER</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <?php while($row = $result->fetch_assoc()){?>
-    <tr>
-      <th class="bg-dark" scope="row"><?php echo $i; ?></th>
-      <?php $id_Mat= $row['id_Mat']?>  
-      <?php   $result1 = $db->query("SELECT * FROM matiere WHERE id='$id_Mat'");?>
-      <?php while($row1 = $result1->fetch_assoc()){?> 
-      <td class=""><a href="infoCours.php?id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>"><?php echo $row1['nom']; ?></a></td><?php } ?>
+                               ORDER BY c.name -->
+ <?php $CIN=$_GET['id_prof']; ?>
+ <?php   $result1 = $db->query("SELECT * FROM professeur WHERE CIN='$CIN'");?>
+ <?php while($row1 = $result1->fetch_assoc()){?> 
+<form action="infoMatieresProf.php?CIN=<?php echo ($row1['CIN']); ?>"  role="form" method="post" enctype="multipart/form-data">  <?php
+               }
+               ?>    
+              <label for="classe">Classe</label>
+              <select class="custom-select" name="nomC" id="">
+                <option selected value="-1">Choisir...</option>
+                <?php
+              //définir la requete
+               $result = $db->query("SELECT * FROM classe  ");?>
+               
+               // boucle sur les données
+               <?php while ($row =$result->fetch_assoc()) {
+               ?>
+               <option value="<?php echo $row['id']; ?>"><?php echo $row['nom']; ?>
+                   
+               </option>
+                
+                <?php
+               }
+               ?>
+              </select>
 
 
-          <?php $id_Mat= $row['id_Mat']?>
-          <?php $result2 = $db->query("SELECT coef FROM matiere WHERE id='$id_Mat' ");?>
-          <?php while ($row2 =$result2->fetch_assoc()) {?>
-           <td class=""><?php echo $row2['coef']; ?>
-       <?php } ?>     
-      </td>
+                      
+                 <button   class="btn btn-primary" type="submit" name="voir" value="voir">
+                                </form>
 
-     <?php $id_prof= $row['id_prof']?>  
-      <?php   $result1 = $db->query("SELECT nom,prenom FROM professeur WHERE CIN='$id_prof'");?>
-      <?php while($row1 = $result1->fetch_assoc()){?> 
-      <td class=""><?php echo $row1['nom']."   " . $row1['prenom']?></td><?php } ?>
-      
-      <td class="bg-info"><a   style="color:white;" href="AjouterCours.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Ajouter Cours</a></td>
-     
-     
-      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>&amp;choix=supprimer">suprimer</a></td>
-      <?php $i++; ?>
-      <?php } ?>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
 
-<?php } ?>
-</div>
-</div>
+
 
 
 

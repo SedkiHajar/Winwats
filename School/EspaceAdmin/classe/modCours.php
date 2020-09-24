@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>AjouterEtudiant</title>
+  <title>Modifier cours</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -26,12 +26,6 @@
 <!-- debut de profile  -->
 <!-- Appel de la base de dennée -->
 <?php require_once '../../database/dbConfig.php'; ?>
-
-
-
-
-
-
 
 
 <?php   $result = $db->query("SELECT * FROM classe ");
@@ -118,16 +112,13 @@
                 </div>
               </div>
             </div>
-  <!-- visualiser les etudiant dans un tableaux -->
-    <!-- Appel de la base de dennée -->
-    <!-- slect info from table.  SELECT mc.* FROM 'matclass' as mc 
-                                 JOIN 'classe' as c 
-                                 on c.id= mc.id_Mat 
-                                 ORDER BY c.name -->
+
+
+
 
                                  
-                                 <?php $id_Class=$_GET['id_Class']; ?>
-   <?php   $result = $db->query(" SELECT * FROM matclass WHERE id_Class='$id_Class'");
+                                 <?php $id_Cours=$_GET['id_Cours']; ?>
+   <?php   $result = $db->query(" SELECT * FROM cours WHERE id='$id_Cours' ");
    
      if($result->num_rows > 0){
       
@@ -146,12 +137,12 @@
       <th scope="col">#</th>
      
       
-      <th scope="col">MATIERE</th>
-      <th scope="col">COEF</th>
-      <th scope="col">PROF</th>
-      <th scope="col">AJOUTER COURS</th>
+      <th scope="col">COURS</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">SUPPORT</th>
+      <th scope="col">MODIFIER</th>
       
-      <th scope="col">SUPPRIMER</th>
+      
       
     </tr>
   </thead>
@@ -159,28 +150,21 @@
     <?php while($row = $result->fetch_assoc()){?>
     <tr>
       <th class="bg-dark" scope="row"><?php echo $i; ?></th>
-      <?php $id_Mat= $row['id_Mat']?>  
-      <?php   $result1 = $db->query("SELECT * FROM matiere WHERE id='$id_Mat'");?>
+
+      <?php $id_Cours= $row['id']?>  
+      <?php   $result1 = $db->query("SELECT * FROM cours WHERE id='$id_Cours'");?>
       <?php while($row1 = $result1->fetch_assoc()){?> 
-      <td class=""><a href="infoCours.php?id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>"><?php echo $row1['nom']; ?></a></td><?php } ?>
+      <td class="bg-success">
+          <form action="uploadCl.php?id_Cours=<?php echo ($row['id']); ?>" role="form" method="post" enctype="multipart/form-data">
 
-
-          <?php $id_Mat= $row['id_Mat']?>
-          <?php $result2 = $db->query("SELECT coef FROM matiere WHERE id='$id_Mat' ");?>
-          <?php while ($row2 =$result2->fetch_assoc()) {?>
-           <td class=""><?php echo $row2['coef']; ?>
-       <?php } ?>     
-      </td>
-
-     <?php $id_prof= $row['id_prof']?>  
-      <?php   $result1 = $db->query("SELECT nom,prenom FROM professeur WHERE CIN='$id_prof'");?>
-      <?php while($row1 = $result1->fetch_assoc()){?> 
-      <td class=""><?php echo $row1['nom']."   " . $row1['prenom']?></td><?php } ?>
+          <input name=nomCours value="<?php echo ($row['nom']); ?>" >
+        </td> 
+      <td class="bg-warning">
+        <textarea rows="4" cols="50" class="form-control" id="description" name="description" ><?php echo ($row['description']); ?></textarea></td>
+      <td class="bg-danger">
+        <input type="file"   name="file" value="<?php echo base64_encode($row['support']); ?>" ></td><?php } ?>
+      <td class="bg-primary"><button class="btn btn-primary" type="submit" name="modifierCours">modifier<button></td></form>
       
-      <td class="bg-info"><a   style="color:white;" href="AjouterCours.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Ajouter Cours</a></td>
-     
-     
-      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>&amp;choix=supprimer">suprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
     </tr>
@@ -203,20 +187,7 @@
 
 
 
-
- 
-
-
-
-
-
-                      <script type="text/javascript">
-                      function switche (){
-                          document.getElementById("info").style.display = "none";
-                          document.getElementById("update").style.display = "block";
-
-                        }
-                      </script>
+  
 
 
         <!-- java Script script-->

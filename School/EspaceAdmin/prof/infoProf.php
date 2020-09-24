@@ -30,6 +30,7 @@
 <!-- slect info from table -->
 <?php $CIN=$_GET['CIN']; ?>
 <?php   $result = $db->query("SELECT * FROM professeur WHERE CIN='$CIN' ");
+
  if($result->num_rows > 0){?>
    <?php while($row = $result->fetch_assoc()){?>
 <div class="container emp-profile">
@@ -56,8 +57,9 @@
                     </div>
                     <div class="col-md-2">
                       <a  onclick="switche()" href="#"  class="btn btn-primary " >modifier profil </a>
-
-
+                       <a   href="../classe/infoMatieres.php?id_prof=<?php echo ($row['CIN']); ?>"  class="btn btn-primary " >voir mes matieres </a>
+                      <br>
+              
                     </div>
                 </div>
                 <div class="row">

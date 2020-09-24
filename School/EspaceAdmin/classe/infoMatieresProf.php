@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>AjouterEtudiant</title>
+  <title>Voir matieres</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -21,6 +21,7 @@
 
 </head>
 <body>
+
     <!-- Le code par defaut -->
 <?php require '../defaultAdmin.php';?>
 <!-- debut de profile  -->
@@ -118,16 +119,14 @@
                 </div>
               </div>
             </div>
-  <!-- visualiser les etudiant dans un tableaux -->
-    <!-- Appel de la base de dennée -->
-    <!-- slect info from table.  SELECT mc.* FROM 'matclass' as mc 
-                                 JOIN 'classe' as c 
-                                 on c.id= mc.id_Mat 
-                                 ORDER BY c.name -->
 
+
+  <?php if (isset($_POST['voir'])) {?>
+
+                                 <?php $CIN=$_GET['CIN']; ?>
+                                 <?php $id_Class=$_POST['nomC']; ?>
                                  
-                                 <?php $id_Class=$_GET['id_Class']; ?>
-   <?php   $result = $db->query(" SELECT * FROM matclass WHERE id_Class='$id_Class'");
+   <?php   $result = $db->query(" SELECT * FROM matclass WHERE id_Class='$id_Class' AND id_prof='$CIN'");
    
      if($result->num_rows > 0){
       
@@ -178,8 +177,7 @@
       <td class=""><?php echo $row1['nom']."   " . $row1['prenom']?></td><?php } ?>
       
       <td class="bg-info"><a   style="color:white;" href="AjouterCours.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Ajouter Cours</a></td>
-     
-     
+      
       <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>&amp;choix=supprimer">suprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
@@ -193,30 +191,11 @@
 <?php } ?>
 </div>
 </div>
+<?php } ?>
 
 
 
 
-
-
-
-
-
-
-
- 
-
-
-
-
-
-                      <script type="text/javascript">
-                      function switche (){
-                          document.getElementById("info").style.display = "none";
-                          document.getElementById("update").style.display = "block";
-
-                        }
-                      </script>
 
 
         <!-- java Script script-->

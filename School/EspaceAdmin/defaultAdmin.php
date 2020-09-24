@@ -83,7 +83,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCl" aria-expanded="true" aria-controls="collapseCl">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Espace classe/matiere</span>
+          <span>Espace classe</span>
         </a>
         <div id="collapseCl" class="collapse" aria-labelledby="headingCl" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -112,6 +112,8 @@
         </a>
         
       </li>
+
+      
 
       <!-- Nav Item - Utilities Collapse Menu -->
        <!--<li class="nav-item">

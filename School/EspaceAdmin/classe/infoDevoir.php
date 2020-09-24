@@ -12,27 +12,20 @@
 
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
   <!-- Mon css -->
-  <link href="../../css/css1.css?<?php echo time(); ?>"rel="stylesheet">
+  <link href="../../css/css1.css" rel="stylesheet">
 
 </head>
 <body>
     <!-- Le code par defaut -->
 <?php require '../defaultAdmin.php';?>
-<!-- debut de profile  -->
 <!-- Appel de la base de dennée -->
 <?php require_once '../../database/dbConfig.php'; ?>
-
-
-
-
-
-
-
+<!-- slect info from table -->
 
 <?php   $result = $db->query("SELECT * FROM classe ");
      $nbrClass=0;
@@ -124,10 +117,11 @@
                                  JOIN 'classe' as c 
                                  on c.id= mc.id_Mat 
                                  ORDER BY c.name -->
-
-                                 
-                                 <?php $id_Class=$_GET['id_Class']; ?>
-   <?php   $result = $db->query(" SELECT * FROM matclass WHERE id_Class='$id_Class'");
+                                
+                                <?php $id_Class=$_GET['id_Class'];?>
+                                <?php $id_Mat=$_GET['id_Mat'];?>
+                                <?php $id_prof=$_GET['id_prof'];?>
+   <?php   $result = $db->query(" SELECT * FROM devoir WHERE id_Mat='$id_Mat' AND id_Class='$id_Class' AND id_prof='$id_prof'");
    
      if($result->num_rows > 0){
       
@@ -145,12 +139,12 @@
     <tr>
       <th scope="col">#</th>
      
-      
-      <th scope="col">MATIERE</th>
-      <th scope="col">COEF</th>
-      <th scope="col">PROF</th>
-      <th scope="col">AJOUTER COURS</th>
-      
+      <th scope="col">DEVOIR</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">AJOUTER SUPPORT</th>
+      <!--<th scope="col">MATIERE</th>
+      <th scope="col">PROF</th>-->
+      <th scope="col">MODIFIER</th>
       <th scope="col">SUPPRIMER</th>
       
     </tr>
@@ -159,28 +153,34 @@
     <?php while($row = $result->fetch_assoc()){?>
     <tr>
       <th class="bg-dark" scope="row"><?php echo $i; ?></th>
-      <?php $id_Mat= $row['id_Mat']?>  
-      <?php   $result1 = $db->query("SELECT * FROM matiere WHERE id='$id_Mat'");?>
+
+
+     
+      <td class=""  ><a href="infoSD.php?id_Devoir=<?php echo ($row['id']); ?>"><?php echo $row['nom']; ?></td>
+
+
+      <td class=""  ><?php echo $row['description']; ?></td><?php  ?>
+
+
+
+      <td class="bg-success"><a   style="color:white;" href="AjouterSupport.php?id_Devoir=<?php echo ($row['id']); ?>">Ajouter support</a></td>
+      
+
+      
+     
+
+      <!--<?php $id_Mat= $row['id_Mat']?>  
+      <?php   $result1 = $db->query("SELECT nom FROM matiere WHERE id='$id_Mat'");?>
       <?php while($row1 = $result1->fetch_assoc()){?> 
-      <td class=""><a href="infoCours.php?id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>"><?php echo $row1['nom']; ?></a></td><?php } ?>
+      <td class=""><?php echo $row1['nom']; ?></td><?php } ?>-->
 
-
-          <?php $id_Mat= $row['id_Mat']?>
-          <?php $result2 = $db->query("SELECT coef FROM matiere WHERE id='$id_Mat' ");?>
-          <?php while ($row2 =$result2->fetch_assoc()) {?>
-           <td class=""><?php echo $row2['coef']; ?>
-       <?php } ?>     
-      </td>
-
-     <?php $id_prof= $row['id_prof']?>  
+      <!--<?php $id_prof= $row['id_prof']?>  
       <?php   $result1 = $db->query("SELECT nom,prenom FROM professeur WHERE CIN='$id_prof'");?>
       <?php while($row1 = $result1->fetch_assoc()){?> 
-      <td class=""><?php echo $row1['nom']."   " . $row1['prenom']?></td><?php } ?>
+      <td class=""><?php echo $row1['nom']."   " . $row1['prenom']?></td><?php } ?>-->  
       
-      <td class="bg-info"><a   style="color:white;" href="AjouterCours.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Ajouter Cours</a></td>
-     
-     
-      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Mat=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>&amp;choix=supprimer">suprimer</a></td>
+      <td class="bg-info"><a style="color:white;" href="modDevoir.php?id_Devoir=<?php echo ($row['id']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Modifier </a></td>
+      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Devoir=<?php echo ($row['id']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>&amp;choix=deleteDevoir">supprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
     </tr>
@@ -194,50 +194,29 @@
 </div>
 </div>
 
+<!-- Delete sction-->
 
 
 
+<!-- java Script script-->
+ <script src="../js/AjouterEtud.js?2"></script>
+<!-- Bootstrap core JavaScript-->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Core plugin JavaScript-->
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- Custom scripts for all pages-->
+  <script src="../../js/sb-admin-2.min.js"></script>
 
+  <!-- Page level plugins -->
+  <script src="../../vendor/chart.js/Chart.min.js"></script>
 
+  <!-- Page level custom scripts -->
+  <script src="../../js/demo/chart-area-demo.js"></script>
+  <script src="../../js/demo/chart-pie-demo.js"></script>
 
+</body>
 
-
- 
-
-
-
-
-
-                      <script type="text/javascript">
-                      function switche (){
-                          document.getElementById("info").style.display = "none";
-                          document.getElementById("update").style.display = "block";
-
-                        }
-                      </script>
-
-
-        <!-- java Script script-->
-         <script src="../js/AjouterEtud.js?2"></script>
-        <!-- Bootstrap core JavaScript-->
-          <script src="../../vendor/jquery/jquery.min.js"></script>
-          <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-          <!-- Core plugin JavaScript-->
-          <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-          <!-- Custom scripts for all pages-->
-          <script src="../../js/sb-admin-2.min.js"></script>
-
-          <!-- Page level plugins -->
-          <script src="../../vendor/chart.js/Chart.min.js"></script>
-
-          <!-- Page level custom scripts -->
-          <script src="../../js/demo/chart-area-demo.js"></script>
-          <script src="../../js/demo/chart-pie-demo.js"></script>
-
-        </body>
-
-        </html>
+</html>
