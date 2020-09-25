@@ -1,3 +1,7 @@
+<?php
+   error_reporting(0);
+   include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,10 +88,10 @@ $result2 = $db->query("SELECT DISTINCT matiere.nom,matiere.id FROM matiere INNER
             <?php 
             ?>
                     <?php } ?>
-                    <button class="btn btn-primary" type="submit">valide</button>
+                    <button class="btn btn-primary" type="submit">valider</button>
               <form>
                  <?php $url=$_SERVER['HTTP_REFERER'];?>
-                    <a href="<?php echo $url;?>" class="btn btn-info">retuour a la teble d'abssences</a>
+                    <a href="<?php echo $url;?>" class="btn btn-info">retuour a la table d'absence</a>
 
 <!-- java Script script-->
 <script src="../js/AjouterEtud.js?2"></script>

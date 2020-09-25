@@ -1,3 +1,7 @@
+<?php
+   //session_start();
+   include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,10 +122,9 @@
                                  on c.id= mc.id_Mat 
                                  ORDER BY c.name -->
                                 
-                                <?php $id_Class=$_GET['id_Class'];?>
-                                <?php $id_Mat=$_GET['id_Mat'];?>
-                                <?php $id_prof=$_GET['id_prof'];?>
-   <?php   $result = $db->query(" SELECT * FROM devoir WHERE id_Mat='$id_Mat' AND id_Class='$id_Class' AND id_prof='$id_prof'");
+                                <?php $id_Cours=$_GET['id_Cours'];?>
+                                
+   <?php   $result = $db->query(" SELECT * FROM devoir WHERE id_Cours='$id_Cours'");
    
      if($result->num_rows > 0){
       

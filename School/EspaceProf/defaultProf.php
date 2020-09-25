@@ -14,7 +14,7 @@
       <hr class="sidebar-divider my-0">
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/School/EspaceProf/welcome.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -25,114 +25,78 @@
         Interface
       </div>
       <!-- Nav Item - Etudiant item -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Espace Etudiant</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/etudiant/AjouterEtudiant.php">Ajouter cours</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/etudiant/gestionEtudiant.php">Gestion des cour</a>
-          </div>
-        </div>
       </li>
+       <li class="nav-item">
+        <a class="nav-link " href="#">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Profil</span>
+        </a>
+        
+      </li>
+    
+      
       <!-- Divider -->
       <!-- Nav Item - Prof item -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProf" aria-expanded="true" aria-controls="collapseProf">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Notes et apreciation</span>
-        </a>
-        <div id="collapseProf" class="collapse" aria-labelledby="headingProf" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/prof/AjouterProf.php">Mes matieres</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/prof/gestionProf.php">Note</a>
-          </div>
-        </div>
-      </li>
+      
 
 
 
       <!--<hr class="sidebar-divider">-->
       <!-- Nav Item - matiere item -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMat" aria-expanded="true" aria-controls="collapseMat">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Espace Matiere</span>
-        </a>
-        <div id="collapseMat" class="collapse" aria-labelledby="headingMat" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/matiere/AjouterMat.php">Programer un examen</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/matiere/gestionMat.php">Gerer les examens</a>
-          </div>
-        </div>
-      </li>
+      
 
 
       <!-- Nav Item - class item -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCl" aria-expanded="true" aria-controls="collapseCl">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Espace Classe</span>
-        </a>
-        <div id="collapseCl" class="collapse" aria-labelledby="headingCl" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/classe/AjouterCl.php">espace parent</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/classe/gestionCl.php"></a>
-          </div>
-        </div>
-      </li>
+      
        <!-- Nav Item - class item -->
-       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCl" aria-expanded="true" aria-controls="collapseCl">
+       
+      <li class="nav-item">
+        <a class="nav-link " href="/School/EspaceProf/classe/infoMatieres.php?id_prof=<?php echo $id_Prof;?>">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Espace Classe</span>
+          <span>Espace Matiere</span>
         </a>
-        <div id="collapseCl" class="collapse" aria-labelledby="headingCl" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/classe/AjouterCl.php">emplois de temps</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/classe/gestionCl.php"></a>
-          </div>
-        </div>
       </li>
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+
+     
+
+        <li class="nav-item">
+        <a class="nav-link " href="/School/EspaceProf/abs.php">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Gestion d'absence</span>
+        </a>
+      </li>
+
+
+        <li class="nav-item">
+        <a class="nav-link " href="/School/EspaceProf/note.php">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Gestion de notes</span>
+        </a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link " href="#">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Emploi du temps</span>
+        </a>
+       </li>
+
+       <li class="nav-item">
+        <a class="nav-link " href="#">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Espace Parental</span>
+        </a>
+       </li>
+
+       <li class="nav-item">
+        <a class="nav-link " href="#">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Espace Admin</span>
+        </a>
+        </li>
+   
       <!-- Heading -->
-      <div class="sidebar-heading">
-        Addons
-      </div>
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
-          </div>
-        </div>
-      </li>
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li>
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
+      
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
       <!-- Sidebar Toggler (Sidebar) -->

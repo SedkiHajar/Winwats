@@ -1,3 +1,7 @@
+<?php
+   //session_start();
+   include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,14 +134,13 @@
             </div>
           </div>
             <!--cors du formulaire-->
-           <?php $id_Class=$_GET['id_Class']; ?>
-           <?php $id_Mat=$_GET['id_Mat']; ?>
-           <?php $id_prof=$_GET['id_prof']; ?>
-           <?php   $result1 = $db->query("SELECT * FROM matclass WHERE id_Class='$id_Class' AND id_Mat='$id_Mat'  AND id_prof='$id_prof'" );?>
+           
+           <?php $id_Cours=$_GET['id_Cours']; ?>
+           <?php   $result1 = $db->query("SELECT * FROM cours WHERE id='$id_Cours' " );?>
            <?php while($row1 = $result1->fetch_assoc()){?>
            
 
-           <form action="uploadCl.php?id_Class=<?php echo ($row1['id_Class']); ?>&id_Mat=<?php echo ($row1['id_Mat']); ?>&id_prof=<?php echo ($row1['id_prof']); ?>" role="form" method="post" enctype="multipart/form-data"><?php }?>
+           <form action="uploadCl.php?id_Cours=<?php echo ($row1['id']); ?>" role="form" method="post" enctype="multipart/form-data"><?php }?>
                <h3 class=" font-weight-bold text-info text-center shadow  titre"> DEVOIR NUMERO  : 1</h3>
                 <div id="form" class="shadow "style="margin-top:20px;">
                 <div class="form-row">

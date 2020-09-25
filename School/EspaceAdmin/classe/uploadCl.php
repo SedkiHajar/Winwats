@@ -1,3 +1,4 @@
+
 <?php
 // Include the database configuration file
 require_once '../../database/dbConfig.php';
@@ -407,16 +408,15 @@ $status = $statusMsg = '';
            
             $nom=$_POST['nom'];
             $description=$_POST['description'];
-            $id_Class=$_GET['id_Class'];
-            $id_Mat=$_GET['id_Mat'];
-            $id_prof=$_GET['id_prof'];
+            $id_Cours=$_GET['id_Cours'];
+            
       
         for ($j = 0; $j <count($nom); $j++)
             {
              
                
 
-         $insert = $db->query("INSERT into devoir(nom,description,id_Class,id_Mat,id_prof) VALUES ('$nom[$j]','$description[$j]','$id_Class','$id_Mat','$id_prof')");
+         $insert = $db->query("INSERT into devoir(nom,description,id_Cours) VALUES ('$nom[$j]','$description[$j]','$id_Cours')");
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";

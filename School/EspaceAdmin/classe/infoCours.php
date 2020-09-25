@@ -1,3 +1,7 @@
+<?php
+   //session_start();
+   include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,7 +125,7 @@
                                 <?php $id_Class=$_GET['id_Class'];?>
                                 <?php $id_Mat=$_GET['id_Mat'];?>
                                 <?php $id_prof=$_GET['id_prof'];?>
-   <?php   $result = $db->query(" SELECT * FROM cours WHERE id='$id_Cours' ");
+   <?php   $result = $db->query(" SELECT * FROM cours WHERE id_Mat='$id_Mat' AND id_Class='$id_Class' AND id_prof='$id_prof'");
    
      if($result->num_rows > 0){
       
@@ -157,7 +161,7 @@
 
 
      
-      <td class=""  ><a href="infoDevoir.php?id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>"><?php echo $row['nom']; ?></a></td>
+      <td class=""  ><a href="infoDevoir.php?id_Cours=<?php echo ($row['id']); ?>"><?php echo $row['nom']; ?></a></td>
 
 
       <td class=""  ><?php echo $row['description']; ?></td><?php  ?>
@@ -167,7 +171,7 @@
       <td class="bg-success"><a   style="color:white;" href="infoSC.php?id_Cours=<?php echo ($row['id']); ?>">Voir les supports Cours</a></td>
       
 
-      <td class="bg-info"><a   style="color:white;" href="AjouterDevoir.php?id_Devoir=<?php echo ($row['id_Mat']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Ajouter Devoir</a></td>
+      <td class="bg-info"><a   style="color:white;" href="AjouterDevoir.php?id_Cours=<?php echo ($row['id']); ?>">Ajouter Devoir</a></td>
      
 
       <!--<?php $id_Mat= $row['id_Mat']?>  

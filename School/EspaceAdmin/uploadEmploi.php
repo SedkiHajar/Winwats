@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php
+   //session_start();
+   include('session.php');
+?>
 <?php
  require_once '../database/dbConfig.php';
 // Get the incoming image data

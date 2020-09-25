@@ -1,3 +1,7 @@
+<?php
+   //session_start();
+   include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +28,20 @@
 <?php require '../defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
 <?php require_once '../../database/dbConfig.php'; ?>
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
 <!-- slect info from table -->
 <?php   $result = $db->query("SELECT * FROM classe ");
      $nbrClass=0;

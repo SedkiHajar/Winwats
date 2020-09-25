@@ -8,7 +8,8 @@
       
       $sql = "SELECT CIN FROM professeur WHERE mail = '$mail' and mdp = '$password'";
       $result = mysqli_query($db,$sql);
-      if($result->num_rows > 0){
+      if($result->num_rows >0){
+        
         $_SESSION['mail'] = $mail;
       // If result matched $myusername and $mypassword, table row must be 1 row
          header("location: welcome.php");
