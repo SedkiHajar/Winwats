@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Include the database configuration file
 require_once '../../database/dbConfig.php';
 error_reporting(0);
@@ -26,6 +27,8 @@ $status = $statusMsg = '';
         $tel= $_POST['tel'];
         $classe= $_POST['classe'];
         $CIN=str_replace(' ', '', $_POST['CIN']);
+        $id_admin=$_SESSION['id'];
+        $mdp=$_POST['mdp'];
 
 
           // Get info for parent
@@ -34,7 +37,7 @@ $status = $statusMsg = '';
         $adresseC=$_POST['adresseP'];
         $telP=$_POST['telP'];
         $emailP =$_POST['emailP'];
-          $image = $_FILES['image']['tmp_name'];
+        $image = $_FILES['image']['tmp_name'];
         // insert prospect
           if (isset($_POST['inserer'])) {
             
@@ -43,7 +46,7 @@ $status = $statusMsg = '';
           
           $imgContent = addslashes(file_get_contents($image[$j]));
 
-         $insert = $db->query("INSERT into etudiant(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,classe) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$classe[$j]')");
+         $insert = $db->query("INSERT into etudiant(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,classe,id_admin,mdp) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$classe[$j]','$id_admin','$mdp[$j]')");
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
@@ -57,16 +60,25 @@ $status = $statusMsg = '';
 
 
           if(isset($_POST['modifier'])) {
-               $imgContent = addslashes(file_get_contents($image));
+               if(!empty($image)){
+               $imgContent = addslashes(file_get_contents($image));}
+               else{
+                $imgContent=$_SESSION['image'];
+                ?>
+                <img id="output" src="data:image/jpg;charset=utf8;base64,<?php echo $image; ?>" alt=""/>
+                <?php 
+                
+               }
 
           $sql = "UPDATE etudiant SET image='$imgContent', nom='$nom',prenom='$prenom',adresse='$adresse',codePostal='$codeP',mail='$email',villeN='$villeN',anneeS='$anneeS',dateN='$dateN',sexe='$sexe',tel='$tel',classe='$classe'WHERE CIN='$CIN'";
           echo $CIN;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+
             } else {
               echo "Error updating record: " . $db->error;
             }
-            header("Location:infoEtudiant.php?CIN=$CIN");
+            
               }
 
 

@@ -1,6 +1,6 @@
 <?php
-   //session_start();
-   include('session.php');
+   require_once '../../database/dbConfig.php';
+   include('../session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -152,7 +152,10 @@
                                                 <label>Année scolaire</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $row['anneeS']; ?></p>
+                                              <?php $id_anneeS= $row['anneeS']?>                      
+      <?php   $result1 = $db->query("SELECT nom FROM anneeS WHERE id='$id_anneeS'");?>  
+        <?php while($row1 = $result1->fetch_assoc()){?> 
+                                                <p><?php echo $row1['nom']; ?></p><?php } ?>
                                             </div>
                                         </div>
                             </div>
@@ -348,8 +351,33 @@
                                                               <label >Année scolaire</label>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <p><input class="form-control" type="date" name="anneeS" value="<?php echo $row['anneeS']; ?>"></p>
+                                                              
+                                                              <?php $id_anneeS= $row['anneeS']?>                      
+                                                   <?php   $result1 = $db->query("SELECT nom FROM anneeS WHERE id='$id_anneeS'");?>  
+                                                <?php while($row1 = $result1->fetch_assoc()){?> 
+                                              
+                                                              <label for="classe">Année scolaire</label>
+                                                             <select class="custom-select" name="anneeS[]" id="">
+                                                               <option selected value="-1"><?php echo $row1['nom']; ?></option><?php } ?>
+                                                              <?php
+                
+                                                            $result = $db->query("SELECT * FROM anneeS ");
+                
+                                                               ?>
+                                                             <?php while ($row =$result->fetch_assoc()) {
+                                                               ?>
+                                                       <option value="<?php echo $row['id']; ?>"><?php echo $row['nom']; ?>
+                                                       </option>
+                                                       <?php
+                                                        }
+                                                         ?>
+                                                                </select>
                                                           </div>
+
+
+        
+
+
                                                       </div>
                                           </div>
                                           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">

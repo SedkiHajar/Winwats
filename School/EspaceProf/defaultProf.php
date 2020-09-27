@@ -1,15 +1,22 @@
+
 <body id="page-top">
+
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Prof <sup>2</sup></div>
-      </a>
+      <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="sidebar-brand-text col-md-2">
+                  <?php $id_admin=$_SESSION['id_admin'] ?>
+                <?php   $result = $db->query("SELECT * FROM admin WHERE id='$id_admin' ");
+                if($result->num_rows > 0){?>
+               <?php while($row = $result->fetch_assoc()){?>
+                <img class="img-profile rounded-circle " src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode( $row['image']); ?>">
+              <?php echo $row['nomE']; ?></div>
+              </a>
+            </li><?php }} ?>
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
       <!-- Nav Item - Dashboard -->

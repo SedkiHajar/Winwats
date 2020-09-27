@@ -1,6 +1,7 @@
 <?php
-   //session_start();
+   require_once '../database/dbConfig.php'; 
    include('session.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>AjouterEtudiant</title>
+  <title>Welcome Admin</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -32,15 +33,48 @@
     echo $_SESSION['nom_Mat'][$j];
    }*/
 ?>
-<?php require_once '../database/dbConfig.php'; ?>
+
+<?php if($_SERVER["REQUEST_METHOD"] == "GET") {
+    $_SESSION['anneeS'] = $_GET['id_anneeS'];
+    $id_anneeS=$_SESSION['anneeS'];
+ }?>
+
+<?php if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION['anneeS'] = $_POST['anneeS'];
+    $id_anneeS=$_SESSION['anneeS'];
+ }?>
 
 
-
+   <div class="col-md-12">
+   <form action="welcome.php?id_anneeS=<?php echo $_SESSION['anneeS']; ?>" role="form" method="post" enctype="multipart/form-data">
+   <div class="col-xl-12 col-md-6 mb-4">
+   
+              <label for="classe">Année scolaire</label>
+              <select class="custom-select" name="anneeS" id="">
+                <option selected value="<?php echo $_SESSION['anneeS']; ?>">Choisir...</option>
+                  <?php
+                  //définir la requete
+                  $result = $db->query("SELECT * FROM anneeS ");
+               
+                  // boucle sur les données
+                  ?>
+                  <?php while ($row =$result->fetch_assoc()) {
+                  ?>
+                   <option value="<?php echo $row['id']; ?>"><?php echo $row['nom']; ?>
+                   </option>
+                 <?php
+               }
+               ?>
+              </select>
+              <button type="submit" class="btn btn-info" name="inserer">CHOISIR</button>
+  </form>
+</div>
+         
 
 <h1 class="m-0 font-weight-bold text-primary " >BIENVENUE DANS L'ESPACE ADMIN</h1><br>
 
 
-<?php   $result = $db->query("SELECT * FROM professeur ");
+<?php   $result = $db->query("SELECT * FROM professeur  where anneeS='$id_anneeS'");
      $nbrEtudiant=0;
      $nbrFille=0;
      $nbrGarcon=0; ?>
@@ -126,7 +160,7 @@
 
 
 
-<?php   $result = $db->query("SELECT * FROM etudiant ");
+<?php   $result = $db->query("SELECT * FROM etudiant where anneeS='$id_anneeS'");
      $nbrEtudiant=0;
      $nbrFille=0;
      $nbrGarcon=0; ?>
@@ -279,9 +313,14 @@
 
             <!-- Earnings (Monthly) Card Example -->
             
-
-
+   
+   <div class="col-xl-6 col-md-6 mb-4">
    <a class="btn btn-danger "href="logout.php">log out</a>
+   </div>
+
+
+
+ </div>
    
    
 <!-- java Script script-->

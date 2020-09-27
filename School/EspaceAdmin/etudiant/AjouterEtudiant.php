@@ -1,6 +1,7 @@
 <?php
-   //session_start();
-   include('session.php');
+    //session_start();
+    require_once '../../database/dbConfig.php'; 
+    include('../session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +23,16 @@
 <body>
 <?php require '../defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
-<?php require_once '../../database/dbConfig.php'; ?>
 <!-- slect info from table -->
-<?php   $result = $db->query("SELECT * FROM etudiant ");
+
+<?php require_once '../../database/dbConfig.php'; ?>
+<?php if($_SERVER["REQUEST_METHOD"] == "GET") {
+    $_SESSION['anneeS'] = $_GET['id_anneeS'];
+    $id_anneeS=$_SESSION['anneeS'];
+ }?>
+
+
+<?php   $result = $db->query("SELECT * FROM etudiant WHERE anneeS='$id_anneeS'  ");
      $nbrEtudiant=0;
      $nbrFille=0;
      $nbrGarcon=0; ?>
@@ -160,8 +168,23 @@
                 <input type="date" class="form-control" id="dateN" name="dateN[]" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="societe">Années scolaire</label>
-                <input type="date" class="form-control" id="anneeS" name="anneeS[]" required>
+              <label for="classe">Année scolaire</label>
+              <select class="custom-select" name="anneeS[]" id="">
+                <option selected value="-1">Choisir...</option>
+                  <?php
+                  //définir la requete
+                  $result = $db->query("SELECT * FROM anneeS ");
+               
+                  // boucle sur les données
+                  ?>
+                  <?php while ($row =$result->fetch_assoc()) {
+                  ?>
+                   <option value="<?php echo $row['id']; ?>"><?php echo $row['nom']; ?>
+                   </option>
+                 <?php
+               }
+               ?>
+              </select>
             </div>
             <div class="form-group col-md-6">
               <label for="classe">Classe</label>
@@ -198,6 +221,10 @@
                 <label for="societe">photos</label>
                 <input type="file" class="form-control" id="image" name="image[]" required>
             </div>
+            <div class="form-group col-md-6">
+                <label for="societe">password</label>
+                <input type="text" class="form-control" id="image" name="mdp[]" required>
+            </div>
             </div>
             <h5  class="m-0 font-weight-bold text-primary text-center card shadow titre">Infomration des parents</h5>
             <div   class="form-row ">
@@ -221,6 +248,7 @@
                  <label for="adresse">Adresse des Parents</label>
                   <input type="text" class="form-control"  name="adresseP" >
             </div>
+            
           </div>
         </div>
         <div id="AjoutDeform"></div>

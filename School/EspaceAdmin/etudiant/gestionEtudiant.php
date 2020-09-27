@@ -1,6 +1,6 @@
 <?php
-   //session_start();
-   include('session.php');
+   require_once '../../database/dbConfig.php';
+   include('../session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +27,14 @@
 <body>
 <?php require '../defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
+
 <?php require_once '../../database/dbConfig.php'; ?>
+<?php if($_SERVER["REQUEST_METHOD"] == "GET") {
+    $_SESSION['anneeS'] = $_GET['id_anneeS'];
+    $id_anneeS=$_SESSION['anneeS'];
+ }?>
 <!-- slect info from table -->
-<?php   $result = $db->query("SELECT * FROM etudiant ");
+<?php   $result = $db->query("SELECT * FROM etudiant WHERE anneeS='$id_anneeS' ");
      $nbrEtudiant=0;
      $nbrFille=0;
      $nbrGarcon=0; ?>
@@ -112,7 +117,7 @@
   <!-- visualiser les etudiant dans un tableaux -->
     <!-- Appel de la base de dennée -->
     <!-- slect info from table -->
-   <?php   $result = $db->query("SELECT * FROM etudiant ");
+   <?php   $result = $db->query("SELECT * FROM etudiant WHERE anneeS='$id_anneeS' ");
      if($result->num_rows > 0){
          $i=1; ?>
    <!-- Table of prosect  -->
@@ -134,7 +139,7 @@
       <th scope="col">CLASSE</th>
       <th scope="col">PLUS D'INFO</th>
       <th scope="col">CONTACTER</th>
-      <th scope="col">ABSSENCE</th>
+      <th scope="col">ABSENCE</th>
       <th scope="col">SUPPRIMER</th>
     </tr>
   </thead>
@@ -143,7 +148,10 @@
     <tr>
       <th class="bg-dark" scope="row"><?php echo $i; ?></th>
       <td class=""><?php echo $row['CIN']; ?></td>
-      <td class=""><?php echo $row['anneeS']; ?></td>
+      <?php $id_anneeS= $row['anneeS']?>                      
+      <?php   $result1 = $db->query("SELECT nom FROM anneeS WHERE id='$id_anneeS'");?>  
+        <?php while($row1 = $result1->fetch_assoc()){?> 
+      <td class=""><?php echo $row1['nom']; ?></td><?php  } ?>
       <td class=""><?php echo  $row['nom']; ?></td>
         <td ><?php echo  $row['prenom']; ?></td>
         <?php $id_classe= $row['classe']?>

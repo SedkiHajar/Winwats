@@ -1,20 +1,22 @@
+
 <body id="page-top">
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Admin <sup>2</sup></div>
-      </a>
+          <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="sidebar-brand-text col-md-2">
+                <img class="img-profile rounded-circle " src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode( $_SESSION['image']); ?>">
+              <?php echo $login_session; ?></div>
+              </a>
+            </li>
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/School/EspaceAdmin/welcome.php">
+        <a class="nav-link" href="/School/EspaceAdmin/welcome.php?id_anneeS=<?php echo $_SESSION['anneeS'] ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -25,6 +27,19 @@
         Interface
       </div>
       <!-- Nav Item - Etudiant item -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsea" aria-expanded="true" aria-controls="collapsea">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Annee scolaire</span>
+        </a>
+        <div id="collapsea" class="collapse" aria-labelledby="headinga" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="/School/EspaceAdmin/annee/AjouterAnnee.php">Ajouter annee scolaire</a>
+            <a class="collapse-item" href="/School/EspaceAdmin/annee/gestionAnnee.php">Voir les annee scolaires</a>
+          </div>
+        </div>
+      </li>
+     
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseParent" aria-expanded="true" aria-controls="collapseParent">
           <i class="fas fa-fw fa-cog"></i>
@@ -41,8 +56,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/etudiant/AjouterEtudiant.php">Ajouter des  Etudiants</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/etudiant/gestionEtudiant.php">Gerer les Etudiants</a>
+            <a class="collapse-item" href="/School/EspaceAdmin/etudiant/AjouterEtudiant.php?id_anneeS=<?php echo $_SESSION['anneeS'] ?>">Ajouter des  Etudiants</a>
+            <a class="collapse-item" href="/School/EspaceAdmin/etudiant/gestionEtudiant.php?id_anneeS=<?php echo $_SESSION['anneeS'] ?>">Gerer les Etudiants</a>
           </div>
         </div>
       </li>
@@ -55,8 +70,9 @@
         </a>
         <div id="collapseProf" class="collapse" aria-labelledby="headingProf" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/School/EspaceAdmin/prof/AjouterProf.php">Ajouter les Professeurs</a>
-            <a class="collapse-item" href="/School/EspaceAdmin/prof/gestionProf.php">Gerer les Professeurs</a>
+
+            <a class="collapse-item" href="/School/EspaceAdmin/prof/AjouterProf.php?id_anneeS=<?php echo $_SESSION['anneeS'] ?>">Ajouter les Professeurs</a>
+            <a class="collapse-item" href="/School/EspaceAdmin/prof/gestionProf.php?id_anneeS=<?php echo $_SESSION['anneeS'] ?>">Gerer les Professeurs</a>
           </div>
         </div>
       </li>
@@ -314,8 +330,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $login_session;?></span>
-                <img class="img-profile rounded-circle" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode( $_SESSION['image']); ?>">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">ADMIN</span>
+                <!--<img class="img-profile rounded-circle" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode( $_SESSION['image']); ?>">-->
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

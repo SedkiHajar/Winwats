@@ -28,6 +28,8 @@ $status = $statusMsg = '';
         $tel= $_POST['tel'];
         $classe= $_POST['classe'];
         $CIN=str_replace(' ', '', $_POST['CIN']);
+        $id_admin=$_SESSION['id'];
+        $mdp=$_POST['mdp'];
 
 
           // Get info for parent
@@ -45,7 +47,7 @@ $status = $statusMsg = '';
           
           $imgContent = addslashes(file_get_contents($image[$j]));
 
-         $insert = $db->query("INSERT into professeur(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,CIN) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$CIN[$j]')");
+         $insert = $db->query("INSERT into professeur(image,nom,prenom,adresse,codePostal,mail,villeN,anneeS,dateN,sexe,tel,id_admin,mdp) VALUES ('$imgContent','$nom[$j]','$prenom[$j]','$adresse[$j]','$codeP[$j]','$email[$j]','$villeN[$j]','$anneeS[$j]','$dateN[$j]','$sexe[$j]','$tel[$j]','$id_admin','$mdp[$j]')");
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
@@ -73,7 +75,7 @@ $status = $statusMsg = '';
           echo $CIN;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
-              session_destroy();
+               //header("Location:infoProf.php?CIN=$CIN");
             } else {
               echo "Error updating record: " . $db->error;
             }

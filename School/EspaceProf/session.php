@@ -8,11 +8,9 @@
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
    $id_Prof=$row['CIN'];
    $_SESSION['id']= $row['CIN'];
+   $_SESSION['id_admin']= $row['id_admin'];
    $login_session = $row['nom'].' '.$row['prenom'];
    $_SESSION['image']=$row['image'];
-
-   
-   
    if(!isset($_SESSION['id'])){
       header("location:login.php");
       die();

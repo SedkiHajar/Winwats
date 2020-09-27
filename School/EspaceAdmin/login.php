@@ -4,9 +4,9 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       $mail = mysqli_real_escape_string($db,$_POST['email']);
-      $password = mysqli_real_escape_string($db,$_POST['password']); 
+      $mdp = mysqli_real_escape_string($db,$_POST['mdp']); 
       
-      $sql = "SELECT * FROM admin WHERE mail = '$mail' and mdp = '$password'";
+      $sql = "SELECT * FROM admin WHERE mail = '$mail' and mdp = '$mdp'";
       $result = mysqli_query($db,$sql);
       if($result->num_rows > 0){
         $_SESSION['mail'] = $mail;
@@ -61,7 +61,7 @@
 
               <div class="form-label-group">
                 <label for="inputPassword">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"required>
+                <input type="text" id="inputPassword" class="form-control" placeholder="Password" name="mdp"required>
                 
               </div>
 
