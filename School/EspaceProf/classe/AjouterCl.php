@@ -13,7 +13,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>AjouterClasse</title>
+  <title>AjouterEtudiant</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,6 +29,20 @@
 <?php require '../defaultProf.php';?>
 <!-- Appel de la base de dennée -->
 <?php require_once '../../database/dbConfig.php'; ?>
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
 <!-- slect info from table -->
 <?php   $result = $db->query("SELECT * FROM classe ");
      $nbrClass=0;

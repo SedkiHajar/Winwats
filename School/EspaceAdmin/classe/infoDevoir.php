@@ -145,7 +145,7 @@
      
       <th scope="col">DEVOIR</th>
       <th scope="col">DESCRIPTION</th>
-      <th scope="col">AJOUTER SUPPORT</th>
+      <th scope="col">SUPPORT DEVOIR</th>
       <!--<th scope="col">MATIERE</th>
       <th scope="col">PROF</th>-->
       <th scope="col">MODIFIER</th>
@@ -160,14 +160,14 @@
 
 
      
-      <td class=""  ><a href="infoSD.php?id_Devoir=<?php echo ($row['id']); ?>"><?php echo $row['nom']; ?></td>
+      <td class=""  ><?php echo $row['nom']; ?></td>
 
 
       <td class=""  ><?php echo $row['description']; ?></td><?php  ?>
 
 
 
-      <td class="bg-success"><a   style="color:white;" href="AjouterSupport.php?id_Devoir=<?php echo ($row['id']); ?>">Ajouter support</a></td>
+      <td class="bg-success"><a   style="color:white;" href="infoSD.php?id_Devoir=<?php echo ($row['id']); ?>">Voir les supports Devoir</a></td>
       
 
       
@@ -183,8 +183,8 @@
       <?php while($row1 = $result1->fetch_assoc()){?> 
       <td class=""><?php echo $row1['nom']."   " . $row1['prenom']?></td><?php } ?>-->  
       
-      <td class="bg-info"><a style="color:white;" href="modDevoir.php?id_Devoir=<?php echo ($row['id']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>">Modifier </a></td>
-      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Devoir=<?php echo ($row['id']); ?>&id_Class=<?php echo ($row['id_Class']); ?>&id_Mat=<?php echo ($row['id_Mat']); ?>&id_prof=<?php echo ($row['id_prof']); ?>&amp;choix=deleteDevoir">supprimer</a></td>
+      <td class="bg-info"><a style="color:white;" href="modDevoir.php?id_Devoir=<?php echo ($row['id']); ?>">Modifier </a></td>
+      <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id_Devoir=<?php echo ($row['id']); ?>&amp;choix=deleteDevoir">supprimer</a></td>
       <?php $i++; ?>
       <?php } ?>
     </tr>

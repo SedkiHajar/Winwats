@@ -1,6 +1,8 @@
 <?php
 // Include the database configuration file
-require_once '../database/dbConfig.php';
+ require_once '../database/dbConfig.php'; 
+   include('session.php');
+   
 $id_Prof= $_SESSION['id'];
 $id_Etudiant=$_GET['CIN'];
 $id_Mat=$_GET['id_mat'];

@@ -143,11 +143,10 @@
     <tr>
       <th scope="col">#</th>
      
-      <th scope="col">SUPPORT DEVOIR pdf</th>
-      <th scope="col">SUPPORT DEVOIR video</th>
-      <!--<th scope="col">MATIERE</th>
-      <th scope="col">PROF</th>-->
-      <th scope="col">MODIFIER</th>
+      <th scope="col">SUPPORT DEVOIR </th>
+     
+      
+      <!--<th scope="col">MODIFIER</th>-->
       <th scope="col">SUPPRIMER</th>
       
     </tr>
@@ -159,10 +158,9 @@
 
 
      
-      <td class="bg-success"  ><a   style="color:white;" href="pdfSD.php?id=<?php echo ($row['id']); ?>">SUPPORT DEVOIR pdf</a></td>
-      <td class="bg-success"  ><a   style="color:white;" href="pdfSDV.php?id=<?php echo ($row['id']); ?>">SUPPORT DEVOIR video</a></td>
+       <td class="bg-success"  ><a   style="color:white;" href="<?php echo htmlspecialchars($row['nom'])?>">Voir Support Devoir</a></td>
       
-      <td class="bg-info"><a style="color:white;" href="modSD.php?id=<?php echo ($row['id']); ?>">Modifier </a></td>
+      <!--<td class="bg-info"><a style="color:white;" href="modSD.php?id=<?php echo ($row['id']); ?>">Modifier </a></td>-->
       <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id=<?php echo ($row['id']); ?>&amp;choix=deleteSD">supprimer</a></td>
       <?php $i++; ?>
       <?php } ?>

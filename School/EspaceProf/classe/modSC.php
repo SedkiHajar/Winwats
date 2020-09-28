@@ -162,7 +162,7 @@
         
       
       <td class="bg-danger">
-        <input type="file"   name="file" value="<?php echo base64_encode($row['nom']); ?>" ></td>
+        <input type="file"   name="file" value="<?php echo htmlspecialchars($row['nom'])?>" ></td>
       <td class="bg-primary"><button class="btn btn-primary" type="submit" name="modifierSC">modifier<button></td></form>
       
       <?php $i++; ?>

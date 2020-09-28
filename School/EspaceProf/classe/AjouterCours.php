@@ -121,7 +121,7 @@
               </div>
             </div>
             <!--check box-->
-              <div class="form-group col-md-6 mx-auto">
+              <!--<div class="form-group col-md-6 mx-auto">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text text-primary">Nombre de cours a créer</span>
@@ -133,7 +133,7 @@
               </div>
               <input type="number" class="form-control" aria-label="Text input with checkbox"id="nbrEtudiant" value="1">
             </div>
-          </div>
+          </div>-->
             <!--cors du formulaire-->
            <?php $id_Class=$_GET['id_Class']; ?>
            <?php $id_Mat=$_GET['id_Mat']; ?>
@@ -143,49 +143,26 @@
            
 
            <form action="uploadCl.php?id_Class=<?php echo ($row1['id_Class']); ?>&id_Mat=<?php echo ($row1['id_Mat']); ?>&id_prof=<?php echo ($row1['id_prof']); ?>" role="form" method="post" enctype="multipart/form-data"><?php }?>
-               <h3 class=" font-weight-bold text-info text-center shadow  titre"> COURS NUMERO  : 1</h3>
+               <h3 class=" font-weight-bold text-info text-center shadow  titre"> COURS </h3>
                 <div id="form" class="shadow "style="margin-top:20px;">
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                       <label for="societe">Nombre de fichiers</label>
-                       <input type="number" name="nF[]" required="">
-                      </div>
+                 
                       <div class="form-group col-md-6">
-                       <label for="societe">Support pdf</label>
-                       <input type="file"  id="image" name="file[]"  multiple="multiple" >
+                      <label for="societe">Supports</label>
+                       <input type="file"  id="file" name="file[]"  multiple="multiple" >
                       </div>
-                
-                      <div class="form-group col-md-6">
-                       <label for="societe">Nombre de videos</label>
-                       <input type="number" name="nV[]">
-                       </div>
-                  <div class="form-group col-md-6">
-                       <label for="societe">Support video</label>
-                       <input type="file"  id="image" name="video[]"  multiple="multiple" >
-                  </div>
+        
                   <div class="form-group col-md-12">
                        <label for="nomCours">Nom</label>
-                       <input type="text" class="form-control" id="nom" name="nom[]"  required>
+                       <input type="text" class="form-control" id="nom" name="nom"  required>
                   </div>
                   <div class="form-group col-md-12">
                        <label for="societe">Description</label>
-                       <textarea rows="4" cols="50" class="form-control" id="description" name="description[]" ></textarea>
+                       <textarea rows="4" cols="50" class="form-control" id="description" name="description" ></textarea>
                   </div>
-                  
-                     
-                 
-
-                  
-
-
-
                 </div>
-             <div class="form-row">
-             
-           
             
-            
-          </div>
+               </div>
         </div>
         <div id="AjoutDeform"></div>
         </div>

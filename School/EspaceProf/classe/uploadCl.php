@@ -1,9 +1,6 @@
+
 <?php
-   //session_start();
-   require_once '../../database/dbConfig.php';
-   include('../session.php');
-?>
-<?php
+session_start();
 // Include the database configuration file
 require_once '../../database/dbConfig.php';
 error_reporting(0);
@@ -103,89 +100,13 @@ $status = $statusMsg = '';
 
 
 
-            if(isset($_POST['modifierCours'])) {
-               $id_Class=$_GET['id_Class'];
-               $id_Mat=$_GET['id_Mat'];
-               $id_prof=$_GET['id_prof'];
-               $id_Cours=$_GET['id_Cours'];
-               $nomCours=$_POST['nomCours'];
-               $description=$_POST['description'];
-               $file = $_FILES['file']['tmp_name'];
-              
-                  $fileContent = addslashes(file_get_contents($file));
-          $sql = "UPDATE cours SET description='$description',nom='$nomCours',support='$fileContent' WHERE id='$id_Cours'";
-          echo $id;
-            if ($db->query($sql) === TRUE) {
-              echo "Record updated successfully";
-            } else {
-              echo "Error updating record: " . $db->error;
-            }
-                 
-              
-               }
-
-
-       if(isset($_POST['modifierDevoir'])) {
-               $id_Class=$_GET['id_Class'];
-               $id_Mat=$_GET['id_Mat'];
-               $id_prof=$_GET['id_prof'];
-               $id_Devoir=$_GET['id_Devoir'];
-               $nomDevoir=$_POST['nomDevoir'];
-               $description=$_POST['description'];
-               $file = $_FILES['file']['tmp_name'];
-              
-                  $fileContent = addslashes(file_get_contents($file));
-          $sql = "UPDATE devoir SET description='$description',nom='$nomDevoir',support='$fileContent' WHERE id='$id_Devoir'";
-          echo $id;
-            if ($db->query($sql) === TRUE) {
-              echo "Record updated successfully";
-            } else {
-              echo "Error updating record: " . $db->error;
-            }
-                 
-              
-               }
-
-
-
-               if(isset($_POST['modifierSD'])) {
-               
-               $id=$_GET['id'];
-              
-               $file = $_FILES['file']['tmp_name'];
-              
-                  $fileContent = addslashes(file_get_contents($file));
-          $sql = "UPDATE tableSD SET nom='$fileContent' WHERE id='$id'";
-          echo $id;
-            if ($db->query($sql) === TRUE) {
-              echo "Record updated successfully";
-            } else {
-              echo "Error updating record: " . $db->error;
-            }
-                 
-              
-               }
+          
 
 
 
 
-               if(isset($_POST['modifierSC'])) {
-               
-               $id=$_GET['id'];
+
               
-               $file = $_FILES['file']['tmp_name'];
-              
-                  $fileContent = addslashes(file_get_contents($file));
-          $sql = "UPDATE tableSC SET nom='$fileContent' WHERE id='$id'";
-          echo $id;
-            if ($db->query($sql) === TRUE) {
-              echo "Record updated successfully";
-            } else {
-              echo "Error updating record: " . $db->error;
-            }
-                 
-              
-               }
          
 
 
@@ -232,7 +153,7 @@ $status = $statusMsg = '';
                 $id_Devoir=$_GET['id_Devoir'];
               // code...
             // delete section
-            $sql = "DELETE FROM devoir WHERE id_Class='$id_Class' AND id_Mat='$id_Mat' AND id_prof='$id_prof' AND id='$id_Devoir' ";
+            $sql = "DELETE FROM devoir WHERE  id='$id_Devoir' ";
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
@@ -337,99 +258,156 @@ $status = $statusMsg = '';
 
             
 
-       
-        
-        // insert prospect
+    
           if (isset($_POST['insererCours'])) {
-
-             foreach ($_FILES['file']['name'] as $name ) {
-              $file[] =var_dump($name);
-              //echo 'nbr fciheirs: ';
-              //echo count($file). '<br>';
-                   }
-            
-            $s=0;$total=0;
-            $file = $_FILES['file']['tmp_name'];
-            //$video = $_FILES['video']['tmp_name'];
+            $dest=[];
             $nom=$_POST['nom'];
-            $nbrF=$_POST['nF'];
-            //$nbrV=$_POST['nV'];
             $description=$_POST['description'];
             $id_Class=$_GET['id_Class'];
             $id_Mat=$_GET['id_Mat'];
             $id_prof=$_GET['id_prof'];
-            //$total+=$nbrF[$j];
-            
-        for ($j = 0; $j <count($nom); $j++)
-            { 
-              //echo 'indice cours: '.$j. '  nbre fiche de  : '.$j .'est :'.count($file).'<br>';
-               
+            $insert = $db->query("INSERT into cours(nom,description,id_Class,id_Mat,id_prof) VALUES ('$nom','$description','$id_Class','$id_Mat','$id_prof')");
+            $select= $db->query("SELECT * FROM cours WHERE id_Mat=$id_Mat AND id_Class=$id_Class AND id_prof=$id_prof AND nom='$nom' ");
+            while($row1 = $select->fetch_assoc()){
+              $id_Cours=$row1['id'];  }
 
-         $insert = $db->query("INSERT into cours(nom,description,id_Class,id_Mat,id_prof) VALUES ('$nom[$j]','$description[$j]','$id_Class','$id_Mat','$id_prof')");
-         $select= $db->query("SELECT * FROM cours WHERE id_Mat=$id_Mat AND id_Class=$id_Class AND id_prof=$id_prof AND nom='$nom[$j]' ");
-           $total+=$nbrF[$j];
-             //$total=count($file); echo 'total: '. $total . 'indice cours j: '. $j.'<br>';
-              //pppppbpbpb
-        //$results = $db->query("SELECT nom FROM matiere WHERE id='$id_Mat'");
-        while($row1 = $select->fetch_assoc()){
-              $id_Cours[]=$row1['id'];  }
-              for($i=$s;$i<$total;$i++){
-                //echo ' indice cours: '.$j. '  nbre fiche de cour  : '.$j .'est :'.$nbrF[$j].'<br>';
-                //echo 'total: '.$total.'<br>';
-                //nbre fichier dans input
-             // echo $file .  'indice fichier: '.$i. '  fich : '.$file[$i]. 'couri: '. $id_Cours[$j].'<br>';;
-              $fileContent = addslashes(file_get_contents($file[$i]));
-              //$videoContent = addslashes(file_get_contents($video[$i]));
-         //$id_Cours[] =$id_Cours;
-         //echo 'Jjjj '.$id_Cours;
-        if($insert){
-                $insert1 = $db->query("INSERT into tableSC(nom,id_Cours) VALUES ('$fileContent','$id_Cours[$j]')");
-                 if($insert1){
-                    $status = 'success';
-                    $statusMsg = "prospect upload successfully.";
-                    $s+=1;//echo $s;//$total=0;
-                 }else{
-                    $statusMsg = "File upload failed, please try again." . $db->error;
-              }    
-                $status = 'success';
-                $statusMsg = "prospect upload successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again." . $db->error;
-            }
-            }//$total+=$nbrF[$j];
-            }
+            if(isset($_FILES['file'])){
+            foreach ($_FILES['file']['name'] as $i=>$name ) {
+            $name = $_FILES['file']['name'][$i] ;
+            $tmp=$_FILES['file']['tmp_name'][$i];
+            $chaine='../../files/';
+       
+            move_uploaded_file($tmp,$chaine.$name);
+            array_push($dest,$chaine.$name);
+            $insert1 = $db->query("INSERT into tableSC(nom,id_Cours) VALUES ('$dest[$i]','$id_Cours')");
           }
+         }
+         }
+
+
+          if(isset($_POST['modifierSD'])) {
+               
+              $id=$_GET['id'];
+              $name = $_FILES['file']['name'] ;
+              $tmp=$_FILES['file']['tmp_name'];
+              $chaine='../../files/';
+       
+            move_uploaded_file($tmp,$chaine.$name);
+            array_push($dest,$chaine.$name);
+              
+          $sql = "UPDATE tableSD SET nom='$dest' WHERE id='$id'";
+          echo $id;
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+                 
+              
+               }
+
+
+
+
+               if(isset($_POST['modifierSC'])) {
+               
+               $id=$_GET['id'];
+              
+               $name = $_FILES['file']['name'] ;
+              $tmp=$_FILES['file']['tmp_name'];
+              $chaine='../../files/';
+       
+            move_uploaded_file($tmp,$chaine.$name);
+            array_push($dest,$chaine.$name);
+          $sql = "UPDATE tableSC SET nom='$dest' WHERE id='$id'";
+          echo $id;
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+                 
+              
+               }
             
+
+
+
+            if(isset($_POST['modifierCours'])) {
+               $id_Class=$_GET['id_Class'];
+               $id_Mat=$_GET['id_Mat'];
+               $id_prof=$_GET['id_prof'];
+               $id_Cours=$_GET['id_Cours'];
+               $nom=$_POST['nom'];
+               $description=$_POST['description'];
+              
+              
+                  
+          $sql = "UPDATE cours SET description='$description',nom='$nom' WHERE id='$id_Cours'";
+          echo $id;
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+                 
+              
+               }
+
+
+
+
+
+       if(isset($_POST['modifierDevoir'])) {
+               $id_Class=$_GET['id_Class'];
+               $id_Mat=$_GET['id_Mat'];
+               $id_prof=$_GET['id_prof'];
+               $id_Devoir=$_GET['id_Devoir'];
+               $nom=$_POST['nom'];
+               $description=$_POST['description'];
+            
+          $sql = "UPDATE devoir SET description='$description',nom='$nom' WHERE id='$id_Devoir'";
+          echo $id;
+            if ($db->query($sql) === TRUE) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . $db->error;
+            }
+                 
+              
+               }
+
+
+
+
+
 
 
 
 
 
         if (isset($_POST['insererDevoir'])) {
-
-          
-
-           
+            $dest=[];
             $nom=$_POST['nom'];
             $description=$_POST['description'];
             $id_Cours=$_GET['id_Cours'];
-            
-      
-        for ($j = 0; $j <count($nom); $j++)
-            {
-             
-               
+            $insert = $db->query("INSERT into devoir(nom,description,id_Cours) VALUES ('$nom','$description','$id_Cours')");
+            $select= $db->query("SELECT * FROM devoir WHERE id_Cours=$id_Cours AND nom='$nom' ");
+            while($row1 = $select->fetch_assoc()){
+              $id_Devoir=$row1['id'];  }
 
-         $insert = $db->query("INSERT into devoir(nom,description,id_Cours) VALUES ('$nom[$j]','$description[$j]','$id_Cours')");
-        if($insert){
-                $status = 'success';
-                $statusMsg = "prospect upload successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again." . $db->error;
-            }
-            }
-            }
-            
+            if(isset($_FILES['file'])){
+            foreach ($_FILES['file']['name'] as $i=>$name ) {
+            $name = $_FILES['file']['name'][$i] ;
+            $tmp=$_FILES['file']['tmp_name'][$i];
+            $chaine='../../files/';
+       
+            move_uploaded_file($tmp,$chaine.$name);
+            array_push($dest,$chaine.$name);
+            $insert1 = $db->query("INSERT into tableSD(nom,id_Devoir) VALUES ('$dest[$i]','$id_Devoir')");
+          }
+         }
+         }
 
        
 

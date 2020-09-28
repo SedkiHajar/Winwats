@@ -57,14 +57,24 @@
       
        <!-- Nav Item - class item -->
        
-      <li class="nav-item">
-        <a class="nav-link " href="/School/EspaceProf/classe/infoMatieres.php?id_prof=<?php echo $id_Prof;?>">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Espace Matiere</span>
-        </a>
-      </li>
+      
 
      
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCl" aria-expanded="true" aria-controls="collapseCl">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Espace classe</span>
+        </a>
+        <div id="collapseCl" class="collapse" aria-labelledby="headingCl" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="/School/EspaceProf/classe/AjouterCl.php">Ajouter les classes<br>et les matieres</a>
+            <a class="collapse-item" href="/School/EspaceProf/classe/infoMatieres.php?id_prof=<?php echo $id_Prof;?>">Gerer les classes</a>  
+            
+          </div>
+        </div>
+      </li>
+
+
 
         <li class="nav-item">
         <a class="nav-link " href="/School/EspaceProf/abs.php">

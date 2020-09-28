@@ -1,6 +1,7 @@
 <?php
-   //session_start();
+    require_once '../database/dbConfig.php'; 
    include('session.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

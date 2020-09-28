@@ -117,23 +117,11 @@
             <div class="col-xl-12 col-lg-12 card shadow mb-4 "style="background-color:white;font-weight: bold;">
               <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h2 class="m-0 font-weight-bold text-primary ">INFO COURS</h2>
+                  <h2 class="m-0 font-weight-bold text-primary ">INFO DEVOIR</h2>
               </div>
             </div>
             <!--check box-->
-              <div class="form-group col-md-6 mx-auto">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text text-primary">Nombre de cours a créer</span>
-              </div>
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input" id="myCheck"onclick=" AjouterCours()">
-                </div>
-              </div>
-              <input type="number" class="form-control" aria-label="Text input with checkbox"id="nbrEtudiant" value="1">
-            </div>
-          </div>
+              
             <!--cors du formulaire-->
            
            <?php $id_Cours=$_GET['id_Cours']; ?>
@@ -142,20 +130,22 @@
            
 
            <form action="uploadCl.php?id_Cours=<?php echo ($row1['id']); ?>" role="form" method="post" enctype="multipart/form-data"><?php }?>
-               <h3 class=" font-weight-bold text-info text-center shadow  titre"> DEVOIR NUMERO  : 1</h3>
+               <h3 class=" font-weight-bold text-info text-center shadow  titre"> DEVOIR </h3>
                 <div id="form" class="shadow "style="margin-top:20px;">
-                <div class="form-row">
-                  <div class="form-group col-md-6">
+                 <div class="form-row">
+                 
+                      <div class="form-group col-md-6">
+                      <label for="societe">Supports</label>
+                       <input type="file"  id="image" name="file[]"  multiple="multiple" >
+                      </div>
+        
+                  <div class="form-group col-md-12">
                        <label for="nomCours">Nom</label>
-                       <input type="text" class="form-control" id="nom" name="nom[]"  required>
+                       <input type="text" class="form-control" id="nom" name="nom"  required>
                   </div>
-                  <!--<div class="form-group col-md-6">
-                       <label for="societe">Support</label>
-                       <input type="file" class="form-control" id="image" name="file[]"  multiple >
-                  </div>-->
                   <div class="form-group col-md-12">
                        <label for="societe">Description</label>
-                       <textarea rows="4" cols="50" class="form-control" id="description" name="description[]" ></textarea>
+                       <textarea rows="4" cols="50" class="form-control" id="description" name="description" ></textarea>
                   </div>
                 </div>
              <div class="form-row">

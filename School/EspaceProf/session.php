@@ -1,6 +1,6 @@
 <?php
  session_start();
- require_once '../database/dbConfig.php'; 
+// require_once '../../database/dbConfig.php'; 
    $user_check = $_SESSION['mail'];
    
    $ses_sql = mysqli_query($db,"select * from professeur where mail = '$user_check' ");

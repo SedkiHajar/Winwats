@@ -147,7 +147,7 @@
       
       <!--<th scope="col">MATIERE</th>
       <th scope="col">PROF</th>-->
-      <th scope="col">MODIFIER</th>
+      <!--<th scope="col">MODIFIER</th>-->
       <th scope="col">SUPPRIMER</th>
       
     </tr>
@@ -159,9 +159,9 @@
 
 
      
-      <td class="bg-success"  ><a   style="color:white;" href="pdfSC.php?id=<?php echo ($row['id']); ?>">Voir Support Cours</a></td>
+      <td class="bg-success"  ><a   style="color:white;" href="<?php echo htmlspecialchars($row['nom'])?>">Voir Support Cours</a></td>
       
-      <td class="bg-info"><a style="color:white;" href="modSC.php?id=<?php echo ($row['id']); ?>">Modifier </a></td>
+      <!--<td class="bg-info"><a style="color:white;" href="modSC.php?id=<?php echo ($row['id']); ?>">Modifier </a></td>-->
       <td class="bg-danger"><a   style="color:white;" href="uploadCl.php?id=<?php echo ($row['id']); ?>&amp;choix=deleteSC">supprimer</a></td>
       <?php $i++; ?>
       <?php } ?>

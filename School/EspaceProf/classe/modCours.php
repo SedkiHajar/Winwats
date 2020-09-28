@@ -144,7 +144,7 @@
       
       <th scope="col">COURS</th>
       <th scope="col">DESCRIPTION</th>
-      <th scope="col">SUPPORT</th>
+      
       <th scope="col">MODIFIER</th>
       
       
@@ -162,12 +162,11 @@
       <td class="bg-success">
           <form action="uploadCl.php?id_Cours=<?php echo ($row['id']); ?>" role="form" method="post" enctype="multipart/form-data">
 
-          <input name=nomCours value="<?php echo ($row['nom']); ?>" >
+          <input name="nom" value="<?php echo ($row['nom']); ?>" >
         </td> 
       <td class="bg-warning">
         <textarea rows="4" cols="50" class="form-control" id="description" name="description" ><?php echo ($row['description']); ?></textarea></td>
-      <td class="bg-danger">
-        <input type="file"   name="file" value="<?php echo base64_encode($row['support']); ?>" ></td><?php } ?>
+     <?php } ?>
       <td class="bg-primary"><button class="btn btn-primary" type="submit" name="modifierCours">modifier<button></td></form>
       
       <?php $i++; ?>
