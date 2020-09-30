@@ -1,9 +1,10 @@
 <?php
    //session_start();
+   require_once '../database/dbConfig.php'; 
+
    include('session.php');
 ?>
 <?php
- require_once '../database/dbConfig.php';
 // Get the incoming image data
 $image = $_POST["image"];
 $id=$_SESSION['emplois'];

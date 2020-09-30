@@ -1,6 +1,8 @@
 
 <?php
    //session_start();
+   require_once '../database/dbConfig.php'; 
+
    include('session.php');
 ?>
 <!DOCTYPE html>
@@ -28,7 +30,6 @@
 <body>
 <?php require 'defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
-<?php require_once '../database/dbConfig.php'; ?>
 <!-- slect info from table -->
 <!-- get date -->
 <?php

@@ -50,7 +50,7 @@ $id_prof=$_SESSION['id'];
 
 
 
-<?php   $result = $db->query("SELECT * FROM etudiant e  INNER JOIN matclass m ON m.id_Class=e.classe WHERE m.id_prof='$id_prof' ");
+<?php   $result = $db->query("SELECT DISTINCT (CIN) FROM etudiant e  INNER JOIN matclass m ON m.id_Class=e.classe WHERE m.id_prof='$id_prof' ");
      $nbrEtudiant=0;
      $nbrFille=0;
      $nbrGarcon=0; ?>
@@ -92,38 +92,7 @@ $id_prof=$_SESSION['id'];
                 </div>
               </div>
             </div>
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 ">Filles inscrites</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $nbrFille; ?></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Garcon Inscrits</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $nbrGarcon; ?></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+         
 
 
 
@@ -132,15 +101,14 @@ $id_prof=$_SESSION['id'];
 
 
 
-
-<?php   $result = $db->query("SELECT * FROM classe e INNER JOIN matclass m ON m.id_Class=e.id WHERE m.id_prof='$id_prof'");
+<?php   $result = $db->query("SELECT DISTINCT * FROM classe e INNER JOIN matclass m ON m.id_Class=e.id WHERE m.id_prof='$id_prof'");
      $nbrClass=0;
       ?>
      <?php while($row = $result->fetch_assoc()){
       $nbrClass++;}
        ?>
 
-<?php   $result = $db->query("SELECT * FROM matiere e INNER JOIN matclass m ON m.id_Class=e.id WHERE m.id_prof='$id_prof'");
+<?php   $result = $db->query("SELECT DISTINCT* FROM matiere e INNER JOIN matclass m ON m.id_Class=e.id WHERE m.id_prof='$id_prof'");
      $nbrMat=0;
       ?>
      <?php while($row = $result->fetch_assoc()){

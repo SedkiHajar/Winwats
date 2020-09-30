@@ -30,7 +30,7 @@
 
 <?php require_once '../../database/dbConfig.php'; ?>
 <?php if($_SERVER["REQUEST_METHOD"] == "GET") {
-    $_SESSION['anneeS'] = $_GET['id_anneeS'];
+    
     $id_anneeS=$_SESSION['anneeS'];
  }?>
 <!-- slect info from table -->
