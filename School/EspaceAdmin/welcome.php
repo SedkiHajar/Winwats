@@ -34,10 +34,7 @@
    }*/
 ?>
 
-<?php if($_SERVER["REQUEST_METHOD"] == "GET") {
-    $_SESSION['anneeS'] = $_GET['id_anneeS'];
-    $id_anneeS=$_SESSION['anneeS'];
- }?>
+
 
 <?php if($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['anneeS'] = $_POST['anneeS'];

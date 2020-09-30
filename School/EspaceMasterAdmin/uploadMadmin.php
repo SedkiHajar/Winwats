@@ -34,6 +34,7 @@ $status = $statusMsg = '';
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
+                header('Location:gestionMadmin.php');
                 ?>
                 <div class="foot"><a href="list_pm.php">Retour &agrave; mes messages priv&eacute;s</a><?php 
             }else{

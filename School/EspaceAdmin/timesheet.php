@@ -1,5 +1,7 @@
 <?php
    //session_start();
+    require_once '../database/dbConfig.php'; 
+
    include('session.php');
 ?>
 
@@ -28,7 +30,6 @@
 <body>
 <?php require 'defaultAdmin.php';?>
 <!-- Appel de la base de dennée -->
-<?php require_once '../database/dbConfig.php'; ?>
 <!-- slect info from table -->
 <h3 class=" font-weight-bold text-info text-center shadow  titre" style="margin-top: 50px;"> Espace des emplois du temps </h3>
 <div class="col-xl-12 col-lg-12 card shadow mb-4 "style="background-color:white;font-weight: bold; margin-top:100px;">
