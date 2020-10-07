@@ -35,6 +35,7 @@ $status = $statusMsg = '';
 
                      $status = 'success';
                      $statusMsg = "Mat upload successfully.";
+
                  }else{
                      $statusMsg = "File upload failed, please try again." . $db->error;
                  }
@@ -63,6 +64,8 @@ $status = $statusMsg = '';
               $db->query($insert);
                     $status = 'success';
                     $statusMsg = "bien wldi upload successfully.";
+                    $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
                 }else{
                     $statusMsg = "File upload failed, please try again." . $db->error;
                 }
@@ -84,6 +87,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -99,6 +104,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }

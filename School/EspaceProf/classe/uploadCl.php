@@ -66,6 +66,8 @@ $status = $statusMsg = '';
               $db->query($insert);
                     $status = 'success';
                     $statusMsg = "bien wldi upload successfully.";
+                    $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
                 }else{
                     $statusMsg = "File upload failed, please try again." . $db->error;
                 }
@@ -90,6 +92,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -118,6 +122,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
@@ -139,6 +145,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
@@ -157,6 +165,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
@@ -173,6 +183,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
@@ -188,6 +200,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
@@ -208,6 +222,8 @@ $status = $statusMsg = '';
           
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -248,6 +264,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -280,6 +298,8 @@ $status = $statusMsg = '';
             move_uploaded_file($tmp,$chaine.$name);
             array_push($dest,$chaine.$name);
             $insert1 = $db->query("INSERT into tableSC(nom,id_Cours) VALUES ('$dest[$i]','$id_Cours')");
+            $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
           }
          }
          }
@@ -299,6 +319,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -323,6 +345,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -347,6 +371,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -370,6 +396,8 @@ $status = $statusMsg = '';
           echo $id;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -405,6 +433,8 @@ $status = $statusMsg = '';
             move_uploaded_file($tmp,$chaine.$name);
             array_push($dest,$chaine.$name);
             $insert1 = $db->query("INSERT into tableSD(nom,id_Devoir) VALUES ('$dest[$i]','$id_Devoir')");
+            $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
           }
          }
          }
@@ -438,6 +468,8 @@ $status = $statusMsg = '';
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
+                $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             }else{
                 $statusMsg = "File upload failed, please try again." . $db->error;
             }

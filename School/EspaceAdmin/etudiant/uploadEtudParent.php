@@ -50,7 +50,8 @@ $status = $statusMsg = '';
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
-                header("Location:gestionEtudiant.php"); 
+                $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             }else{
                 $statusMsg = "File upload failed, please try again.". $db->error;
             }
@@ -74,6 +75,8 @@ $status = $statusMsg = '';
           echo $CIN;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
 
             } else {
               echo "Error updating record: " . $db->error;
@@ -93,11 +96,13 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
 
-            header('Location:gestionEtudiant.php');
+          
           }
 
 

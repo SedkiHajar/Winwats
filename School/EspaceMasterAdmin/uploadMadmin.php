@@ -34,7 +34,8 @@ $status = $statusMsg = '';
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
-                header('Location:gestionMadmin.php');
+               $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
                 ?>
                 <div class="foot"><a href="list_pm.php">Retour &agrave; mes messages priv&eacute;s</a><?php 
             }else{
@@ -63,6 +64,8 @@ $status = $statusMsg = '';
           
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
              
             } else {
               echo "Error updating record: " . $db->error;
@@ -82,10 +85,12 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
-              header('Location:gestionMadmin.php');
+              
           }
 
 
@@ -98,10 +103,12 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
-              header('Location:gestionMadmin.php');
+              
           }
 
 
@@ -118,14 +125,17 @@ $status = $statusMsg = '';
     $insert = $db->query("INSERT INTO pm (title,user1,user2,message) VALUES ('$title','$id_eme','$id_dest','$message')");
      if($insert){
                 $status = 'success';
-                $statusMsg = "prospect upload successfully.";?>
+                $statusMsg = "prospect upload successfully.";
+                $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");?>
+
                 <!--<div class="message">Le message a bien &eacute;t&eacute; envoy&eacute;.<br />
                 <a href="list_pm.php">Liste de mes messages priv&eacute;s</a></div>-->
             <?php }
      else{
                 $statusMsg = "File upload failed, please try again.". $db->error;
             }
-            header('Location:gestionMadmin.php');          
+                   
 
 }
 

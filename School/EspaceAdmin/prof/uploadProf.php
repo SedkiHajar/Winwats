@@ -51,8 +51,11 @@ $status = $statusMsg = '';
         if($insert){
                 $status = 'success';
                 $statusMsg = "prospect upload successfully.";
+                $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             }else{
                 $statusMsg = "File upload failed, please try again.". $db->error;
+               
             }
             echo $j;
             }
@@ -75,7 +78,7 @@ $status = $statusMsg = '';
           echo $CIN;
             if ($db->query($sql) === TRUE) {
               echo "Record updated successfully";
-               //header("Location:infoProf.php?CIN=$CIN");
+               header("Location:infoProf.php?CIN=$CIN");
             } else {
               echo "Error updating record: " . $db->error;
             }
@@ -94,6 +97,8 @@ $status = $statusMsg = '';
 
             if ($db->query($sql) === TRUE) {
               echo "Record deleted successfully";
+              $url=$_SERVER['HTTP_REFERER'];
+  header("location:$url");
             } else {
               echo "Error deleting record: " . $db->error;
             }
@@ -107,4 +112,5 @@ $status = $statusMsg = '';
 // Display status message
 echo $statusMsg;
 ?>
-<a href="view.php">view</a>
+<!-- <a href="view.php">view</a>
+ -->
